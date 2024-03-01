@@ -13487,6 +13487,9 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
     border-top: 1px solid var(--t-border-color);
   }
 }
+.t-documentation {
+  height: 100%;
+}
 .t-documentation > div:nth-of-type(2) {
   height: 95% !important;
 }
