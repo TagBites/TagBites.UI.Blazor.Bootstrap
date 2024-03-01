@@ -1,0 +1,128 @@
+.ts-modal,
+.ts-popup,
+.ts-wait {
+    @extend .modal;
+    position: absolute !important;
+    backdrop-filter: blur(1.5px);
+    overflow-y: hidden;
+    max-height: 100svh;
+    display: flex;
+    --bs-modal-margin: 1.75rem;
+    > .tw-modal,
+    .tw-popup,
+    .tw-menu {
+        @extend .modal-dialog;
+        max-width: 60%;
+        min-width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        height: min-content;
+        > .page {
+            @extend .modal-content;
+            max-height: calc(100svh - 56px);
+            border-radius: var(--modal-radius);
+            border: none;
+            -webkit-box-shadow: 0px 0px 15px px rgba(0, 0, 0, 0.35);
+            -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+            > header {
+                @extend .modal-header;
+                border-top-left-radius: var(--modal-radius);
+                border-top-right-radius: var(--modal-radius);
+                font-weight: bold;
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    margin-bottom: 0px;
+                }
+                .btn-close {
+                    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+                }
+            }
+            > section {
+                @extend .modal-body;
+                overflow: hidden;
+                overflow-y: auto;
+            }
+            > footer {
+                @extend .modal-footer;
+                float: right;
+                padding: 6px 12px;
+                border-bottom-left-radius: var(--modal-radius);
+                border-bottom-right-radius: var(--modal-radius);
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .tw-modal,
+    .tw-popup,
+    .tw-menu,
+    .tw-wait {
+        max-width: 95% !important;
+        min-width: 95% !important;
+    }
+}
+.ts-popup {
+    height: 100%;
+    backdrop-filter: none;
+    .tw-popup{
+        height: auto!important;
+        .tl-stack{
+            > div{
+                padding: 0px !important;
+                margin-bottom: 0px !important;;
+                .td-datagrid{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+.ts-screen-backdrop{
+    position: absolute;  
+    left: 0;  
+    top: 0;  
+    width: 100%;  
+    height: 100%;  
+}
+
+
+.tw-menu {
+    nav {
+        overflow-x: auto;
+    }
+    min-width: 250px!important;
+    .tn-menu{
+        li{
+            display: block;
+        }
+    }
+}
+
+.ts-wait {
+    animation: show-ts-wait 0.3s linear;
+    > .page > section {
+        background-color: transparent !important;
+        display: flex;
+        justify-content: center;
+    }
+}
+@keyframes show-ts-wait {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity:1 ;
+    }
+    
+}
+.b2b-add-to-basket-popup-modal{
+    min-width: 5%!important;
+    max-width: none!important;
+    width: auto!important;
+}

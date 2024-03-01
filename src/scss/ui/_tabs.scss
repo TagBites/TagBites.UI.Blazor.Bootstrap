@@ -1,0 +1,220 @@
+.tb-nav {
+    @extend .nav;
+}
+.tb-nav-tabs {
+    @extend .nav-tabs;
+}
+.tb-nav-item {
+    @extend .nav-item;
+}
+.tb-nav-link {
+    @extend .nav-link;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.tc-tabs {
+    > header > ul {
+        @extend .nav;
+        @extend .nav-tabs;
+        position: relative;
+        z-index: 1000;
+        border-bottom: 0;
+        overflow: hidden;
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        li {
+            @extend .nav-item;
+            display: flex;
+            align-items: center;
+            flex: 0 0 auto;
+            //background: rgba(53, 64, 82, 0.024);
+            background-color: #f3f4f4;
+            border: 1px solid var(--t-border-color);
+            padding: var(--tabs-nav-padding);
+            color: var(--tabs-nav-link-color);
+            font-size: var(--tabs-font-size);
+            border-top:none;
+            border-bottom: none;
+            &:not(:first-child) a{
+                border-top-left-radius: 0;
+            }
+
+            &:not(:last-child) a {
+                border-top-right-radius: 0;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+            i{
+                margin-right: 6px;
+            }
+            + li {
+                margin-left: -1px;
+            }
+
+            &.tf-active,
+            &:active,
+            &:hover {
+                border-color: rgba(110, 117, 130, 0.2);
+                box-shadow: none !important;
+            }
+
+            &.tf-active {
+                background: #ffffff;
+                color: var(--tabs-nav-link-active-color);
+                a{
+                    background-color: #ffffff!important;
+                }
+            }
+
+            button{
+                padding-top: 0px;
+                padding-bottom: 0px;
+                padding-right: 0px;
+            }
+        }
+        > li:has(button){
+            padding-right: 8px;
+            button{
+                margin-left: 6px;  
+                margin-top: -5px;  
+                margin-bottom: -5px;  
+                padding: 5px; 
+                border:none;
+                &:focus{
+                    box-shadow: none;
+                }
+                i{
+                    margin-right: 0px; 
+                }
+            }
+        }
+    }
+    > section {
+        @extend .card-body;
+        border: 1px solid var(--t-border-color);
+        padding: 12px;
+        height: 100%;
+        max-height: calc(100% - 44px);
+        overflow-y: auto;
+        background-color: #fff;
+        margin-bottom: 12px;
+    }
+}
+.tc-tabs.tf-noborder {
+    padding: 0px !important;
+    margin: 0px;
+    margin-top: -12px;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: -16px;
+    height: calc(100% + 24px);
+    > header > ul {
+        @extend .nav;
+        @extend .nav-tabs;
+        position: relative;
+        z-index: 1000;
+        border-bottom: 0;
+        overflow: hidden;
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        height: 44px;
+        li {
+            @extend .nav-item;
+            //display: inline-block;
+            flex: 0 0 auto;
+            &:not(:first-child) a{
+                border-top-left-radius: 0;
+            }
+
+            &:not(:last-child) a {
+                border-top-right-radius: 0;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+            i{
+                margin-right: 6px;
+            }
+            + li {
+                margin-left: -1px;
+            }
+
+
+            a {
+                /*@extend .nav-link;
+                //background: rgba(53, 64, 82, 0.024);
+                background-color: #f3f4f4;
+                border: 1px solid var(--t-border-color);
+                border-top:none;
+                padding: var(--tabs-nav-padding);
+                color: var(--tabs-nav-link-color);
+                font-size: var(--tabs-font-size);
+                &.active,
+                &:active,
+                &:hover {
+                    border-color: rgba(110, 117, 130, 0.2);
+                    box-shadow: none !important;
+                }
+
+                &.active {
+                    background: #ffffff;
+                    color: var(--tabs-nav-link-active-color);
+                }*/
+            }
+        }
+    }
+    > section {
+        @extend .card-body;
+        border: none;
+        border-top: 1px solid var(--t-border-color);
+        padding: 12px;
+        height: 100%;
+        max-height: calc(100% - 44px);
+        overflow-y: auto;
+        background-color: var(--tabs-body-background);
+        .tb-card:last-child{
+            margin-bottom: 0px;
+        }
+        .tf-noborder{
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+    }
+}
+
+.ts-modal{
+    .tc-tabs.tf-noborder{
+        margin-top: -16px;
+        > section{
+            border:none;
+            border-bottom: 1px solid var(--t-border-color);
+            border-top: 1px solid var(--t-border-color);
+        }
+    }
+}
+
+.tc-tabs.tf-noborder[id^="CurrentPage.View.DetailsObjectVM"],
+.tc-tabs.tf-noborder[id^="CurrentPage.View.Articles.DetailsObjectVM"],
+.tc-tabs.tf-noborder[id^="CurrentPage.View.Orders.DetailsObjectVM"],
+.tc-tabs.tf-noborder[id^="CurrentPage.View.Items.DetailsObjectVM"],
+.tc-tabs.tf-noborder[id^="CurrentPage.View.Content.DetailsObjectVM"],
+.tc-tabs.tf-noborder[id^="CurrentPage.View.Events.DetailsObjectVM"]{
+    border-left:1px solid var(--t-border-color);
+    margin-left: -12px;
+    margin-right: -12px;
+    header{
+        ul li:first-child a{
+            border-left: 0px;
+        }
+    }
+}
+.tc-workspace-it .tc-tabs li{
+    border-top: 1px solid var(--t-border-color);
+}
+.tc-workspace-it > .tc-tabs > section > .tc-tabs > header > ul > li{
+        border-top: none;
+}

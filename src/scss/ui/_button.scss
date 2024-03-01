@@ -1,0 +1,208 @@
+button {
+	@extend .btn;
+}
+.tb-btn-group {
+	@extend .btn-group;
+}
+.tb-form-control-plaintext {
+	@extend .form-control-plaintext;
+}
+
+.tp-button {
+	@extend .btn-outline-secondary;
+	display: flex;
+	padding: 6px 18px;
+	align-items: center;
+	margin: 3px 6px;
+	overflow: hidden;
+	justify-content: center;
+	*:focus {
+		box-shadow: none;
+	}
+	i {
+		/*margin-right: 6px;*/
+		+ div,
+		+ span {
+			//display: inline-block;
+			margin-left: 6px;
+			//width: min-content;
+		}
+	}
+
+	//border-color: var(--t-border-color);
+	border-radius: var(--button-border-radius);
+}
+.tb-button-group {
+	button {
+		display: inline-flex;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: nowrap;
+		margin-bottom: 6px;
+		min-height: 38px;
+		div {
+			display: inline-block;
+			color: var(--tb-button-color) !important;
+		}
+		i {
+			color: var(--tb-button-color) !important;
+		}
+	}
+}
+.tb-button-group-custom-color {
+	@extend .tb-button-group;
+	button {
+		background-color: var(--tb-button-bg);
+	}
+}
+
+.tb-button-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 220px);
+	grid-row-gap: 4px;
+	grid-column-gap: 8px;
+	justify-content: center;
+	button {
+		display: grid;
+		grid-template-columns: 50px calc(100% - 50px);
+		padding: 10px;
+		i {
+			font-size: 40px;
+			+ div {
+				margin-left: 0px;
+			}
+		}
+	}
+}
+.tb-button-grid-square {
+	@extend .tb-button-grid;
+	button {
+		grid-template-rows: 146px 72px;
+		grid-template-columns: none;
+		width: 220px;
+		height: 220px;
+		i {
+			font-size: 110px;
+			display: block;
+		}
+		div {
+			display: block;
+		}
+	}
+}
+
+.tl-stack {
+	@extend .row;
+	> button + button {
+		margin-top: 6px;
+	}
+	> * {
+		@extend .col-12;
+	}
+}
+
+.tl-formgroup {
+	//margin-bottom: 1rem;
+	button + button {
+		margin-top: 0px;
+	}
+}
+
+.tl-buttons {
+	@extend .btn-group;
+	@extend .form-control-plaintext;
+	//margin-bottom: 1rem;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	.tf-checked {
+		@extend .active;
+		font-weight: 500;
+    	color: rgb(108, 117, 125)!important;
+    	background-color: rgb(225 225 225)!important;
+	}
+	.tp-button {
+		margin: 0px;
+	}
+}
+.tp-image {
+	@extend .img-fluid;
+	display: block !important;
+}
+
+.tp-button-dropdown {
+	@extend .dropdown-toggle;
+}
+
+.tn-toolbox {
+	button {
+		border: none;
+		&:active,
+		&:focus,
+		&:focus-visible {
+			outline: none !important;
+			border: none !important;
+			box-shadow: none !important;
+		}
+		& + button {
+			margin-top: 0px;
+		}
+	}
+}
+.col-auto .tn-toolbox {
+	margin-left: -1rem;
+}
+aside {
+	.tn-toolbox {
+		button {
+			color: var(--bs-white);
+		}
+	}
+}
+
+.tl-wrapgrid {
+	display: grid;
+	align-content: center;
+	justify-content: start;
+	align-items: center;
+	justify-items: stretch;
+
+	--grid-layout-gap: 6px;
+	--grid-column-count: 8; /* This gets overridden by an inline style. */
+	--grid-item--min-width: 250px; /* This gets overridden by an inline style. */
+
+	/**
+	 * Calculated values.
+	 */
+	--gap-count: calc(var(--data-columns) - 1);
+	--total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+	--grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--data-columns));
+
+	grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+	grid-gap: var(--grid-layout-gap);
+
+	.tp-button.vstack{
+		max-height: 110px!important; 
+		i{
+			font-size: 32px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.tl-wrapgrid{
+		.tp-button.vstack{
+			max-height: 60px!important; 
+			i{
+				font-size: 22px;
+			}
+		}
+	}
+
+}
+.btn-info, .btn-danger, .btn-success, .btn-primary{
+	color: #ffffff;
+}
+.btn-warning { 
+	color: var(--t-font-color)
+}

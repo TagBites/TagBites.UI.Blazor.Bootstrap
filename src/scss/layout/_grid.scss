@@ -1,0 +1,22 @@
+.tl-grid .row + .row{
+    //@extend .mt-4; //TODO
+}
+
+.col-auto{
+    max-width: 200px;
+    .tc{
+        max-width: 200px;
+    }
+}
+@media (max-width: 767.98px) {
+    .col-auto{
+        width: 100%;
+        max-width: 100%;
+        .tc{
+            max-width: inherit;
+        }
+    }
+    .col-auto:has(.tn-toolbox){
+        width: auto;
+    }
+}

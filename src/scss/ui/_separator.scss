@@ -1,0 +1,42 @@
+div.tp-separator {
+    margin-top: 6px;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #a5a5a5;
+    font-size: 14px;
+    width:100%!important;
+    &::before,
+    &::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid #c3c4c5;
+    }
+    &:not(:empty)::before {
+        margin-right: 0.25em;
+    }
+    &:not(:empty)::after {
+        margin-left: 0.25em;
+    }
+    &.tb-left {
+        float: none!important;
+        &::before {
+            content: none;
+        }
+    } 
+    &.tb-right {
+        float: none!important;
+        &::after {
+            content: none;
+        }
+    }
+    &:empty{
+        margin-top:12px;
+        margin-bottom:6px;
+    }
+}
+ul hr{
+    width: 100%!important;
+    padding: 0.3rem 0!important;
+}

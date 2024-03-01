@@ -1,0 +1,99 @@
+.tf-noborder{}
+.tf-readonly{}
+.tf-active{
+    @extend .active;
+}
+aside.tf-asview{
+    background: var(--content-background-color);
+    border-right: 1px solid var(--t-border-color);
+    overflow-y: auto;
+    color: var(--t-font-color);
+    *{
+        color: var(--t-font-color);
+    }
+    &::-webkit-scrollbar-track {
+        background: #b3b3b3!important;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: #888!important;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555!important;
+    }
+    > .td-datagrid{
+        margin-left: 0!important;
+        margin-bottom: 0;
+        background: var(--content-background-color);
+        tr,td{
+            background: var(--content-background-color);
+            border: none;
+        }
+    }
+}
+
+.te-readonly{
+    font-size: var(--t-font-size)!important;
+}
+
+.td-datagrid.tf-noborder *{
+    border:none!important;
+}
+
+.tf-nomargin{
+    > .page > section {
+        padding: 0 !important;  
+        > div{
+            margin: 0 !important; 
+        }
+    }
+}
+
+.tf-topactive {
+    font-weight: bold;
+}
+.tf-fill{
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+    .t-fill-box{
+        height: 100%;
+        > .row{
+            height: 100%;
+            > .col-lg-6{
+                max-height: 100%;
+                overflow: auto;
+                flex: 1 1 auto;
+                > .tf-noborder{
+                    margin-top: 0px;
+                    height: auto;
+                    margin-right: -12px;
+                    header{
+                        ul{
+                            li{
+                                border-top: 1px solid var(--t-border-color);
+                                a{
+                                    
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.t-documentation{
+    > div:nth-of-type(2){
+        height: 95%!important;
+    }
+    
+}

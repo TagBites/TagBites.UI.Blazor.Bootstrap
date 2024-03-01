@@ -1,0 +1,7 @@
+.tp-progress{
+    @extend .progress;
+    margin-bottom: 12px!important;
+    > div{
+        @extend .progress-bar;
+    }
+}

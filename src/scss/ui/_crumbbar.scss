@@ -1,0 +1,8 @@
+.tn-crumbar{
+    ol{
+        @extend .breadcrumb;
+        li{
+            @extend .breadcrumb-item;
+        }
+    }
+}

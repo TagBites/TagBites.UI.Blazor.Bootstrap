@@ -1,0 +1,104 @@
+/* Workspace */
+.tc-workspace {
+    position: relative;
+    height: 100%;
+}
+
+.tc-workspace-bs {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.tc-workspace-gr {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.tc-workspace-gr-v {
+    flex-direction: column;
+}
+.tc-workspace-gr-h {
+    flex-direction: row;
+}
+.tc-workspace-sp {
+    padding: 0;
+    z-index: 100;
+}
+.tc-workspace-sp-v {
+    height: 10px;
+    width: 100%;
+    cursor: ns-resize;
+}
+.tc-workspace-sp-h {
+    flex-direction: 1 0 auto;;
+    width: 10px;
+    margin: 0;
+    cursor: ew-resize;
+}
+.tc-workspace .tbs-pc {
+    display: flex;
+    flex-direction: column;
+}
+.tbs-pc-h {
+    flex: 1 0 auto;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.tbs-pc-h::-webkit-scrollbar {
+    display: none;
+}
+.tbs-pc-c {
+    z-index: 1;
+}
+.tc-workspace .tbs-pc .tbs-pc-c {
+    flex: 1 1 auto;
+}
+.tbs-pc-nv {
+    width: max-content;
+}
+.tbs-pc-nv-it .tf-topactive {
+    font-weight: bold;
+}
+.tbs-pc-nv-it {
+    margin-bottom: 0px !important;
+}
+
+
+.tc-workspace {
+    .dragging {
+        box-shadow: none !important;
+        z-index: 1002;
+        background-color: #e1e1e1 !important;
+        a {
+            background-color: #e1e1e1 !important;
+            //color: white !important;
+        }
+    }
+    li.tf-active.dragging{
+        background-color: #e1e1e1 !important;
+        > a {
+            //background-color: #007bff !important;
+            background-color: #e1e1e1 !important;
+            //color: white !important;
+        }
+    }
+    .dragging-over,
+    .tf-active.dragging-over{
+        a{
+            //background-color: #cae3ff !important;
+        }
+    }
+    & > .tc-tabs{
+        margin: -13px -17px;
+        height: calc(100% + 23px)!important;
+    }
+    section > .tc-tabs.tf-noborder{
+        margin-top: -12px;
+        margin-left: -12px;
+        margin-right: -12px;
+        margin-bottom: -16px;
+    }
+}

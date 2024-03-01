@@ -1,0 +1,44 @@
+.tl-split {
+    @extend .row;
+}
+.tl-split {
+    position: relative;
+    height: calc(100% + 24px);
+    margin: -12px;
+    > div {
+        position: relative;
+        height: 100%;
+        padding: 12px;
+        overflow-y: auto;
+        //height: calc(100% - 12px);
+    }
+}
+
+.tl-split-panel {
+    flex: 1 0 0%;
+}
+.tl-split > div.tl-split-panel:not(:last-child) {
+    max-width: 300px;
+    flex: 0 0 auto;
+    width: 33.33333333%;
+}
+.tl-split-splitter {
+    width: 1px;
+    border-left: 1px solid var(--t-border-color);
+    padding: 0 !important;
+    margin-top: 12px;
+    height: calc(100% - 12px)!important;
+}
+
+
+.tw-split {  
+    display: flex;  
+    background-color: white;  
+}  
+.tw-split > div:not(:first-child) {  
+    border-left: 1px solid var(--t-border-color);  
+    margin-left: 5px  
+}  
+.tw-split > div:not(:last-child) {  
+    border-right: 1px solid var(--t-border-color);  
+}  

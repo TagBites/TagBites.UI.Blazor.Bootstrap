@@ -1,0 +1,38 @@
+.tn-menu {
+    @extend .dropdown-menu;
+    position: relative;
+    display: block;
+    li {
+        @extend .dropdown-item;
+        display: flex;
+        align-items: center;
+        &:focus {
+            text-decoration: none;
+            color: var(--t-font-color);
+            //background-color: var(--bs-dropdown-link-active-bg);
+            background-color: #e6f2fa!important;
+        }
+        &:has(hr):focus,
+        &:has(hr):hover{
+            background-color: #ffffff!important;
+        }
+        span {
+            margin-left: 30px;
+            + *{
+                flex: 1 0 auto;
+                text-align: end;
+            }
+        }
+        * {
+            width: 20px;
+            + span {
+                margin-left: 10px;
+            }
+        }
+        hr{
+            margin: 0.3rem 0!important;
+            padding: 0!important;
+
+        }
+    }
+}

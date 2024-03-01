@@ -1,0 +1,315 @@
+.td-datagrid {
+    overflow-x: auto;
+    flex: 1 0 auto;
+    margin-bottom: 1em;
+    &:focus{
+        outline: 1px solid rgba(10,110,253,0.25);
+        box-shadow: 0 0 0 0.05rem rgba(13, 110, 253, 0.25);
+    }
+    &:last-child {
+        //margin-bottom: 0px;
+    }
+    > section {
+        > table {
+            background-color: var(--t-background-color);
+            @extend .table-bordered;
+            margin-bottom: 0px;
+            color: var(--t-font-color);
+            & i {
+                color: rgb(70, 70, 70);
+            }
+            > tbody {
+                /*&:nth-child(2n) {
+                    tr,
+                    td {
+                        background-color: rgb(243, 243, 243) !important;
+                    }
+                }*/
+                /*&:hover {
+                tr,
+                td {
+                    background-color: rgb(209 209 209 / 15%) !important;
+                }
+                }*/ 
+                tr {
+                    background-color: #fff;
+                }
+                + tbody::before {
+                    display: block;
+                    height: 1rem;
+                    position: relative;
+                    content: "";
+                }
+            }
+            .tf-editor {
+                //border: 1px solid red;
+                padding: 0 !important;
+                input,
+                select,
+                button {
+                    border-radius: 0 !important;
+                }
+                button {
+                    background-color: var(--bs-white) !important;
+                    height: 100%;
+                    margin: 0;
+                }
+                > * {
+                    border: none;
+                }
+                .tc-input-group {
+                    margin-bottom: 0px;
+                    > * {
+                        border-top: none;
+                        border-bottom: none;
+                    }
+                }
+                *:focus {
+                    box-shadow: none;
+                    border-color: var(--t-border-color);
+                }
+                .tl-stack {
+                    padding: 0px 4px;
+                }
+            }
+        }
+    }
+    > footer{
+        border-top:none;
+    }
+    .tb-table-searchbar {
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        .tc-input-group {
+            input:focus {
+                outline: none;
+                box-shadow: none;
+                border-color: var(--t-border-color);
+            }
+            button {
+                background-color: #f8f8f8;
+                &:hover {
+                    background-color: #e0e0e0;
+                    border-color: var(--t-border-color);
+                }
+            }
+
+            * {
+                border-bottom: 0px;
+            }
+        }
+    }
+}
+.tb-fill {
+    max-height: 100%;
+    overflow: auto;
+    flex: 1 1 auto;
+    /*border-top: 1px solid var(--t-border-color) !important;
+    border-bottom: 1px solid var(--t-border-color) !important;*/
+    table {
+        border-collapse: separate;
+        border-spacing: 0px;
+        table-layout: fixed;
+        border-left: 1px solid var(--t-border-color) !important;
+
+        thead {
+            position: sticky;
+            top: 0px;
+        }
+        tr {
+            border: none;
+            border-left: 1px solid var(--t-border-color) !important;
+            border-right: 1px solid var(--t-border-color) !important;
+        }
+        td,
+        th {
+            border: none;
+            border-right: 1px solid var(--t-border-color) !important;
+            border-bottom: 1px solid var(--t-border-color) !important;
+        }
+        tr:last-child {
+            td {
+                border-bottom: none !important;
+            }
+        }
+    }
+    .tb-table-searchbar {
+        + .tb-table {
+            thead {
+                top: 37px;
+            }
+        }
+        .tc-input-group {
+            * {
+                border-top: 0px;
+                border-bottom: 1px solid var(--t-border-color);
+            }
+            .tb-input-group-append {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.td-datagrid table {
+    vertical-align: middle;
+    table-layout: fixed;
+    @extend .table;
+    font-size: var(--t-font-size);
+    thead {
+        background-color: #f7f7f7;
+    }
+    .td-datagrid-group {
+        font-weight: bold;
+    }
+    th,
+    .td-datagrid-group {
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    tbody {
+        tr {
+            /*&:not(.tb-table-edit):hover {
+                background-color: rgb(248, 248, 248) !important;
+                td {
+                    background-color: rgb(241, 241, 241) !important;
+                    //background-blend-mode: multiply;
+                }
+            }*/
+            td{
+                i + span{
+                    margin-left: 6px;
+                }  
+            }
+            &.tb-table-empty {
+                text-align: center;
+                color: #7e7e7e;
+                font-size: 14px;
+                &:hover {
+                    background-color: #fff !important;
+                    td {
+                        background-color: #fff !important;
+                    }
+                }
+            }
+        }
+        .tb-table-edit {
+            background-color: #f8f8f8;
+            select {
+                padding: 0px 36px 0px 12px;
+                font-size: 14px;
+            }
+            input,
+            select {
+                border: none;
+                border-bottom: 2px solid #dedede;
+            }
+            input:focus,
+            input:hover,
+            select:focus,
+            select:hover {
+                border-bottom: 2px solid #307227;
+                outline: none;
+                box-shadow: none;
+            }
+            .tb-btn {
+                padding: 0px 6px;
+                border: none;
+                i {
+                    margin: 0px;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+                &:hover {
+                    background-color: #307227;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    td,
+    th {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .tbs-cell-icon {
+        text-align: center;
+    }
+}
+
+.tb-card-body {
+    > .td-datagrid {
+        margin: -12px;
+        border: none;
+        > table {
+            margin-bottom: 0px;
+        }
+    }
+}
+.td-datagrid table > tbody.tf-active > tr > td,
+table > tbody.tf-active > *,
+table > tbody.tf-active > tr > td,
+tbody > tr.tf-active,
+.td-datagrid > section > table > tbody > tr.tf-active > td {
+    background-color: #e6f2fa;
+    table,
+    table tr,
+    table tr td {
+        background-color: #e6f2fa;
+    }
+}
+
+/* Editable */
+.tb-inline-edit {
+    border: none;
+    padding: 0px 2px;
+    font-size: 14px;
+}
+
+.td-datagrid-details {
+    padding: 0px !important;
+
+    table {
+        margin-bottom: 0px;
+        tbody {
+            &::after,
+            &::before {
+                height: 0;
+            }
+        }
+        tr {
+            background-color: transparent !important;
+            &:last-child {
+                td {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+td.text-center a,
+th.text-center a {
+    display: flex;
+    justify-content: center;
+}
+td.td-datagrid-expand,
+th.td-datagrid-expand {
+    /*border-left: 1px solid #7e7e7e;
+    border-bottom: 1px solid #7e7e7e;
+    padding: 0px 2px;*/
+    span {
+        //border-left: 1px solid var(--t-border-color);
+        font-size: var(--t-font-size);;
+        font-weight: bold;
+        line-height: 1;
+        margin-left: calc(14px * (1 + var(--data-level)) - 8px);
+    }
+}
+
+.td-datagrid table > :not(caption) > * > *{
+    padding-top: 0.38rem!important;
+    padding-bottom: 0.38rem!important;
+}

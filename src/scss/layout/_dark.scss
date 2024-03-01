@@ -1,0 +1,23 @@
+.tb-dark-mode { /*TEST*/
+    * {
+        background-color: rgb(41, 41, 41) !important;
+        color: rgb(182, 182, 182)!important;
+        border-color:rgb(131, 131, 131)!important;
+    }
+    .tb-card{
+        background-color: rgb(50, 50, 50)!important;
+    }
+    .tb-navbar, .tb-navbar *{
+       background-color: rgb(61, 61, 61)!important;
+        img{
+            //filter: grayscale(1);
+        }
+    }
+    .tb-btn{
+        /*background-color: red!important;*/
+    }
+    input,select{
+        background-color: rgb(90, 90, 90)!important;
+        color:rgb(201, 201, 201)!important;
+    }
+}
