@@ -14277,6 +14277,7 @@ input, button, select, optgroup, textarea {
   color: rgb(70, 70, 70);
 }
 .td-datagrid > section > table > tbody {
+  box-shadow: 0px 10px 20px #d1d1d1;
   /*&:nth-child(2n) {
       tr,
       td {
