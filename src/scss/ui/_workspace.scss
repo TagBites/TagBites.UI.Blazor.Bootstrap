@@ -71,24 +71,24 @@
     .dragging {
         box-shadow: none !important;
         z-index: 1002;
-        background-color: #e1e1e1 !important;
-        a {
-            background-color: #e1e1e1 !important;
-            //color: white !important;
-        }
+        background-color: #007bff !important;
+        color: white !important;
     }
     li.tf-active.dragging{
-        background-color: #e1e1e1 !important;
-        > a {
-            //background-color: #007bff !important;
-            background-color: #e1e1e1 !important;
-            //color: white !important;
+        background-color: #007bff !important;
+        color: white !important;
+        a{
+            color: rgb(255, 255, 255) !important;
+            background-color: inherit!important;
         }
     }
     .dragging-over,
-    .tf-active.dragging-over{
+    li.tf-active.dragging-over{
+        background-color: #73b7ff !important;
         a{
-            //background-color: #cae3ff !important;
+            color: white !important;
+            background-color: #73b7ff!important;
+            background: #73b7ff!important;
         }
     }
     & > .tc-tabs{
