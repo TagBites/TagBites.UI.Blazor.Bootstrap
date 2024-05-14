@@ -9,11 +9,14 @@
     display: flex;
     --bs-modal-margin: 1.75rem;
     > .tw-modal,
+    .tw-popup{
+        max-width: 60%;
+        min-width: 60%;
+    }
+    > .tw-modal,
     .tw-popup,
     .tw-menu {
         @extend .modal-dialog;
-        max-width: 60%;
-        min-width: 60%;
         margin-right: auto;
         margin-left: auto;
         height: min-content;
@@ -96,7 +99,7 @@
     nav {
         overflow-x: auto;
     }
-    min-width: 250px!important;
+    //min-width: 250px!important;
     .tn-menu{
         li{
             display: block;
@@ -121,8 +124,12 @@
     }
     
 }
-.b2b-add-to-basket-popup-modal{
+.b2b-add-to-basket-popup-modal,
+.b2b-auto-width-popup-modal{
     min-width: 5%!important;
     max-width: none!important;
     width: auto!important;
+    .tl-stack{
+        flex-direction: column;
+    }
 }

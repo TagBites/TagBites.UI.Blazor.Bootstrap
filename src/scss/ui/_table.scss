@@ -1,5 +1,5 @@
 .td-datagrid {
-    overflow-x: auto;
+    overflow-x: hidden;
     flex: 1 0 auto;
     margin-bottom: 1em;
     &:focus{
@@ -10,6 +10,7 @@
         //margin-bottom: 0px;
     }
     > section {
+        overflow: auto;
         > table {
             background-color: var(--t-background-color);
             @extend .table-bordered;
@@ -36,10 +37,20 @@
                     background-color: #fff;
                 }
                 + tbody::before {
-                    display: block;
-                    height: 1rem;
-                    position: relative;
-                    content: "";
+                    // display: block;
+                    // height: 1rem;
+                    // position: relative;
+                    // content: "";
+                }
+                .td-datagrid-sr{
+                    background-color: #f7f7f7 !important;
+                }
+                &.td-datagrid-rs{
+                    height: 8px;
+                    td{
+                        padding: 0;
+                        background-color: var(--t-table-accent-background-color);
+                    }
                 }
             }
             .tf-editor {
@@ -54,6 +65,9 @@
                     background-color: var(--bs-white) !important;
                     height: 100%;
                     margin: 0;
+                    &:last-of-type{
+                        border-right: none;
+                    }
                 }
                 > * {
                     border: none;
@@ -72,11 +86,20 @@
                 .tl-stack {
                     padding: 0px 4px;
                 }
+                .te-combo{
+                    font-size: var(--t-font-size) !important;
+                    border: none!important;
+                    border-radius: 0!important;
+                    height: 33px!important;
+                }
+
             }
         }
     }
     > footer{
+        border: 1px solid var(--footer-border-color);
         border-top:none;
+        background-color: #f7f7f7 !important;
     }
     .tb-table-searchbar {
         position: sticky;
@@ -159,7 +182,12 @@
     @extend .table;
     font-size: var(--t-font-size);
     thead {
-        background-color: #f7f7f7;
+        background-color: var(--t-table-accent-background-color);
+        th{
+            i{
+                margin-top: 10px!important;
+            }
+        }
     }
     .td-datagrid-group {
         font-weight: bold;
@@ -168,7 +196,9 @@
     .td-datagrid-group {
         font-weight: 500;
         letter-spacing: 0.5px;
+        background-color: var(--t-table-accent-background-color);
     }
+
     tbody {
         tr {
             /*&:not(.tb-table-edit):hover {
@@ -271,14 +301,23 @@ tbody > tr.tf-active,
 }
 
 .td-datagrid-details {
-    padding: 0px !important;
-
     table {
         margin-bottom: 0px;
         tbody {
             &::after,
             &::before {
                 height: 0;
+            }
+            tr{
+                td{
+                    &:first-of-type{
+                        background: #fcfcfd;
+                        font-size: var(--t-font-size);
+                        color: #7d7d7d;
+                        white-space: break-spaces;
+                        line-height: 1.2;
+                    }
+                }
             }
         }
         tr {
@@ -301,6 +340,7 @@ th.td-datagrid-expand {
     /*border-left: 1px solid #7e7e7e;
     border-bottom: 1px solid #7e7e7e;
     padding: 0px 2px;*/
+    background-color: var(--t-table-accent-background-color)!important;
     span {
         //border-left: 1px solid var(--t-border-color);
         font-size: var(--t-font-size);;
@@ -310,7 +350,55 @@ th.td-datagrid-expand {
     }
 }
 
-.td-datagrid table > :not(caption) > * > *{
-    padding-top: 0.38rem!important;
-    padding-bottom: 0.38rem!important;
+.td-datagrid{
+    header{
+        border: 1px solid var(--t-border-color);
+        border-bottom: 0px;
+        background: var(--t-table-accent-background-color);
+        padding: 10px;
+        ul.td-datagrid-gbp{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: 12px;
+            row-gap: 6px;
+            li{
+                display: flex;
+                align-items: center;
+                padding: 2px 8px;
+                border: 1px solid #d1d1d1;
+                background: #e7e7e7;
+                flex-direction: row;
+                font-weight: 500;
+                &:first-child{
+                    margin-left: 0px;
+                }
+                i{
+                    float: none !important;
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+}
+
+.td-datagrid-group-s {  
+    margin-left: 1rem !important;  
+    font-weight: normal !important;  
+    color: var(--bs-secondary);  
+    font-size: small !important;  
+}  
+
+td > i{
+    vertical-align: middle;
+    font-size: var(--t-font-size) !important;
+}
+
+.td-datagrid-details {
+    padding: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
 }

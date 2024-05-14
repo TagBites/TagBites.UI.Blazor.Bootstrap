@@ -108,3 +108,21 @@ aside.tf-asview{
         height: 95%!important;
     }
 }
+
+
+.tc-group:has(>header.tf-headeronly){
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.tf-headeronly{
+    display: flex;
+    border-bottom-width: 0!important;
+    button{
+        padding-top: 0;
+        padding-bottom: 0;
+        border: none;
+    }
+}
+.tc-group-header.tf-headeronly{
+    border-bottom-width: 1px!important;
+}

@@ -13505,6 +13505,25 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
   height: 95% !important;
 }
 
+.tc-group:has(> header.tf-headeronly) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.tf-headeronly {
+  display: flex;
+  border-bottom-width: 0 !important;
+}
+.tf-headeronly button {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+}
+
+.tc-group-header.tf-headeronly {
+  border-bottom-width: 1px !important;
+}
+
 .tb-dark-mode { /*TEST*/ }
 .tb-dark-mode * {
   background-color: rgb(41, 41, 41) !important;
@@ -14248,6 +14267,17 @@ label + .form-control-plaintext,
 .te-combo {
   border-radius: var(--button-border-radius);
   border-color: var(--t-border-color);
+  display: flex !important;
+  height: 35px;
+  align-items: center;
+  padding-right: 22px !important;
+  background-position: right 0.3rem center;
+}
+.te-combo span {
+  overflow: hidden;
+}
+.te-combo i {
+  font-size: var(--t-font-size) !important;
 }
 
 .te:not([type=checkbox]):focus,
@@ -14270,14 +14300,21 @@ input, button, select, optgroup, textarea {
   font-size: var(--t-font-size) !important;
 }
 
+.tl-grid > div .tl-grid > div {
+  margin-bottom: 6px;
+}
+
 .td-datagrid {
-  overflow-x: auto;
+  overflow-x: hidden;
   flex: 1 0 auto;
   margin-bottom: 1em;
 }
 .td-datagrid:focus {
   outline: 1px solid rgba(10, 110, 253, 0.25);
   box-shadow: 0 0 0 0.05rem rgba(13, 110, 253, 0.25);
+}
+.td-datagrid > section {
+  overflow: auto;
 }
 .td-datagrid > section > table {
   background-color: var(--t-background-color);
@@ -14305,11 +14342,15 @@ input, button, select, optgroup, textarea {
 .td-datagrid > section > table > tbody tr {
   background-color: #fff;
 }
-.td-datagrid > section > table > tbody + tbody::before {
-  display: block;
-  height: 1rem;
-  position: relative;
-  content: "";
+.td-datagrid > section > table > tbody .td-datagrid-sr {
+  background-color: #f7f7f7 !important;
+}
+.td-datagrid > section > table > tbody.td-datagrid-rs {
+  height: 8px;
+}
+.td-datagrid > section > table > tbody.td-datagrid-rs td {
+  padding: 0;
+  background-color: var(--t-table-accent-background-color);
 }
 .td-datagrid > section > table .tf-editor {
   padding: 0 !important;
@@ -14323,6 +14364,9 @@ input, button, select, optgroup, textarea {
   background-color: var(--bs-white) !important;
   height: 100%;
   margin: 0;
+}
+.td-datagrid > section > table .tf-editor button:last-of-type {
+  border-right: none;
 }
 .td-datagrid > section > table .tf-editor > * {
   border: none;
@@ -14341,8 +14385,16 @@ input, button, select, optgroup, textarea {
 .td-datagrid > section > table .tf-editor .tl-stack {
   padding: 0px 4px;
 }
+.td-datagrid > section > table .tf-editor .te-combo {
+  font-size: var(--t-font-size) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  height: 33px !important;
+}
 .td-datagrid > footer {
+  border: 1px solid var(--footer-border-color);
   border-top: none;
+  background-color: #f7f7f7 !important;
 }
 .td-datagrid .tb-table-searchbar {
   position: sticky;
@@ -14413,7 +14465,10 @@ input, button, select, optgroup, textarea {
   font-size: var(--t-font-size);
 }
 .td-datagrid table thead {
-  background-color: #f7f7f7;
+  background-color: var(--t-table-accent-background-color);
+}
+.td-datagrid table thead th i {
+  margin-top: 10px !important;
 }
 .td-datagrid table .td-datagrid-group {
   font-weight: bold;
@@ -14422,6 +14477,7 @@ input, button, select, optgroup, textarea {
 .td-datagrid table .td-datagrid-group {
   font-weight: 500;
   letter-spacing: 0.5px;
+  background-color: var(--t-table-accent-background-color);
 }
 .td-datagrid table tbody tr {
   /*&:not(.tb-table-edit):hover {
@@ -14530,14 +14586,18 @@ tbody > tr.tf-active table tr td,
   font-size: 14px;
 }
 
-.td-datagrid-details {
-  padding: 0px !important;
-}
 .td-datagrid-details table {
   margin-bottom: 0px;
 }
 .td-datagrid-details table tbody::after, .td-datagrid-details table tbody::before {
   height: 0;
+}
+.td-datagrid-details table tbody tr td:first-of-type {
+  background: #fcfcfd;
+  font-size: var(--t-font-size);
+  color: #7d7d7d;
+  white-space: break-spaces;
+  line-height: 1.2;
 }
 .td-datagrid-details table tr {
   background-color: transparent !important;
@@ -14557,6 +14617,7 @@ th.td-datagrid-expand {
   /*border-left: 1px solid #7e7e7e;
   border-bottom: 1px solid #7e7e7e;
   padding: 0px 2px;*/
+  background-color: var(--t-table-accent-background-color) !important;
 }
 td.td-datagrid-expand span,
 th.td-datagrid-expand span {
@@ -14566,9 +14627,55 @@ th.td-datagrid-expand span {
   margin-left: calc(14px * (1 + var(--data-level)) - 8px);
 }
 
-.td-datagrid table > :not(caption) > * > * {
-  padding-top: 0.38rem !important;
-  padding-bottom: 0.38rem !important;
+.td-datagrid header {
+  border: 1px solid var(--t-border-color);
+  border-bottom: 0px;
+  background: var(--t-table-accent-background-color);
+  padding: 10px;
+}
+.td-datagrid header ul.td-datagrid-gbp {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 6px;
+}
+.td-datagrid header ul.td-datagrid-gbp li {
+  display: flex;
+  align-items: center;
+  padding: 2px 8px;
+  border: 1px solid #d1d1d1;
+  background: #e7e7e7;
+  flex-direction: row;
+  font-weight: 500;
+}
+.td-datagrid header ul.td-datagrid-gbp li:first-child {
+  margin-left: 0px;
+}
+.td-datagrid header ul.td-datagrid-gbp li i {
+  float: none !important;
+  margin-left: 6px;
+}
+
+.td-datagrid-group-s {
+  margin-left: 1rem !important;
+  font-weight: normal !important;
+  color: var(--bs-secondary);
+  font-size: small !important;
+}
+
+td > i {
+  vertical-align: middle;
+  font-size: var(--t-font-size) !important;
+}
+
+.td-datagrid-details {
+  padding: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 /* scheduler */
@@ -14828,6 +14935,15 @@ th.td-datagrid-expand span {
 }
 .ts-modal > .tw-modal,
 .ts-modal .tw-popup,
+.ts-popup > .tw-modal,
+.ts-popup .tw-popup,
+.ts-wait > .tw-modal,
+.ts-wait .tw-popup {
+  max-width: 60%;
+  min-width: 60%;
+}
+.ts-modal > .tw-modal,
+.ts-modal .tw-popup,
 .ts-modal .tw-menu,
 .ts-popup > .tw-modal,
 .ts-popup .tw-popup,
@@ -14835,8 +14951,6 @@ th.td-datagrid-expand span {
 .ts-wait > .tw-modal,
 .ts-wait .tw-popup,
 .ts-wait .tw-menu {
-  max-width: 60%;
-  min-width: 60%;
   margin-right: auto;
   margin-left: auto;
   height: min-content;
@@ -15049,9 +15163,6 @@ th.td-datagrid-expand span {
   height: 100%;
 }
 
-.tw-menu {
-  min-width: 250px !important;
-}
 .tw-menu nav {
   overflow-x: auto;
 }
@@ -15076,10 +15187,15 @@ th.td-datagrid-expand span {
     opacity: 1;
   }
 }
-.b2b-add-to-basket-popup-modal {
+.b2b-add-to-basket-popup-modal,
+.b2b-auto-width-popup-modal {
   min-width: 5% !important;
   max-width: none !important;
   width: auto !important;
+}
+.b2b-add-to-basket-popup-modal .tl-stack,
+.b2b-auto-width-popup-modal .tl-stack {
+  flex-direction: column;
 }
 
 .tb-nav-link {
@@ -15117,6 +15233,9 @@ th.td-datagrid-expand span {
 .tc-tabs > header > ul li:hover {
   cursor: pointer;
 }
+.tc-tabs > header > ul li:hover > button {
+  visibility: visible !important;
+}
 .tc-tabs > header > ul li i {
   margin-right: 6px;
 }
@@ -15129,6 +15248,7 @@ th.td-datagrid-expand span {
 }
 .tc-tabs > header > ul li.tf-active {
   background: #ffffff;
+  font-weight: bold;
   color: var(--tabs-nav-link-active-color);
 }
 .tc-tabs > header > ul li.tf-active a {
@@ -15276,6 +15396,9 @@ th.td-datagrid-expand span {
   border-top: none;
 }
 
+.tn-pagination ul {
+  margin-bottom: 0;
+}
 .tn-pagination ul li {
   border: none;
 }
@@ -15847,6 +15970,13 @@ iframe {
   margin-bottom: -16px;
 }
 
+.tl-stack .tc-workspace .tc-tabs {
+  margin: 0;
+}
+.tl-stack .tc-workspace .tc-tabs li {
+  border-top: 1px solid var(--t-border-color);
+}
+
 .tl-filedropwrapper.hover {
   position: relative;
 }
@@ -15928,6 +16058,7 @@ iframe {
   --t-content-padding: 12px 16px;
   --t-background-color: var(--bs-gray-100);
   --t-background-color: white;
+  --t-table-accent-background-color: #f7f7f7;
   --t-font-size: 14px;
   --t-font-size-small: 12px;
   --t-font-color: #161616;

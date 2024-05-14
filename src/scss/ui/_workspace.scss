@@ -102,3 +102,11 @@
         margin-bottom: -16px;
     }
 }
+
+
+.tl-stack .tc-workspace .tc-tabs{
+    margin:0;
+    li{
+        border-top:1px solid var(--t-border-color);
+    }
+}

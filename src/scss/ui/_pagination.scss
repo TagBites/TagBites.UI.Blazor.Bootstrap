@@ -1,6 +1,7 @@
 .tn-pagination{
     ul{
         @extend .pagination;
+        margin-bottom: 0;
         li{
             //@extend .page-item;
             border:none;

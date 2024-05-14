@@ -46,6 +46,9 @@
             }
             &:hover{
                 cursor: pointer;
+                > button{
+                    visibility: visible!important;
+                }
             }
             i{
                 margin-right: 6px;
@@ -63,6 +66,7 @@
 
             &.tf-active {
                 background: #ffffff;
+                font-weight: bold;
                 color: var(--tabs-nav-link-active-color);
                 a{
                     background-color: #ffffff!important;

@@ -112,6 +112,17 @@ $columns: 12;
 	@extend .form-select;
 	border-radius: var(--button-border-radius);
 	border-color: var(--t-border-color);
+	display: flex!important;
+	height: 35px;
+	align-items: center;
+	padding-right: 22px!important;
+	background-position: right 0.3rem center;
+	span{
+		overflow:hidden;
+	}
+	i{
+		font-size: var(--t-font-size) !important;
+	}
 }
 input[type="checkbox"]{
 	@extend .form-check-input;
@@ -149,3 +160,7 @@ button:focus,
 input, button, select, optgroup, textarea {
 	font-size: var(--t-font-size)!important;
 }
+
+.tl-grid > div .tl-grid > div{
+	margin-bottom:6px;
+  }
