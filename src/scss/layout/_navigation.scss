@@ -89,7 +89,7 @@
     min-width: var(--nav-width);
     flex: 0;
     padding: 0;
-    background-color: var(--nav-background-color);
+    //background-color: var(--nav-background-color);
     z-index: 1002;
     font-size: var(--nav-font-size);
     overflow: hidden;
@@ -102,21 +102,24 @@
     ul {
         > li {
             > span {
-                color: rgb(211, 211, 211) !important;
+                //color: rgb(211, 211, 211) !important;
+                i{
+                    width: 12px;
+                }
             }
             > ul {
                 > li {
                     &.active,
                     &:hover {
-                        color: var(--bs-body-color);
-                        transition: 0s;
-                        background-color: #475671;
-                        border-radius: calc(var(--t-border-radius) * 2);
+                        //color: var(--bs-body-color);
+                        //transition: 0s;
+                        //background-color: #475671;
+                        //border-radius: calc(var(--t-border-radius) * 2);
                     }
                     a {
-                        color: var(--nav-item-color) !important;
+                        //color: var(--nav-item-color) !important;
                         &:hover {
-                            color: var(--nav-item-color-hover);
+                            //color: var(--nav-item-color-hover);
                         }
                     }
                 }
@@ -206,4 +209,72 @@
     .tp-button + .tp-button {
         margin-left: 6px;
     }
+}
+
+
+
+
+
+
+
+
+
+:root{
+    --color-back: #fafafa;
+    //--color-back: #fefefe;
+    //--color-back: #f6f8fa;
+    //--color-back: #f6f6f6;
+  }
+  aside{
+    background-color: var(--color-back)!important;
+    color: #595959!important;
+    font-weight: 400;
+    border-right: 1px solid #dedede;
+    *{
+        background-color:transparent!important;
+    }
+  }
+  
+  .tw > aside::-webkit-scrollbar-track{
+    background: transparent;
+  
+  }
+  .tw > aside::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  .tw > aside:hover::-webkit-scrollbar-thumb{
+    background: #ddd!important;
+  }
+  .tw >aside::-webkit-scrollbar-thumb:hover {
+    background: #d0d0d0!important;
+  }
+  
+  .tn-navbar{
+    padding:12px;
+  
+  }
+  .tn-navbar > li {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .tn-navbar > li > span i {
+  width:12px;
+  }
+  .tn-navbar > li > span {
+  font-weight: 500;
+  }
+  .tn-navbar li ul li:hover{
+    color: #0f0f0f;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+
+  @supports (-moz-appearance:none) {
+    .tw {
+        aside{
+            scrollbar-width: thin;
+        }
+    } 
 }

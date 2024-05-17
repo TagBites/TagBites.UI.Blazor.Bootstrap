@@ -402,3 +402,16 @@ td > i{
     padding-top: 0px !important;
     padding-bottom: 0px !important;
 }
+
+.td-datagrid-toolbox{
+    @extend .text-center;
+    padding: 0!important;
+    button{
+        padding:0px 0px!important;
+        display: contents;
+    }
+}
+
+.table > :not(caption) > * > *, .td-datagrid table > :not(caption) > * > * {
+    padding: 0.38rem!important;
+}

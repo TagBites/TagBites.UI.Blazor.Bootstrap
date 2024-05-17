@@ -9380,7 +9380,7 @@ textarea.form-control-lg {
   text-align: right !important;
 }
 
-.text-center, div.page > header span,
+.text-center, .td-datagrid-toolbox, div.page > header span,
 div.page > header div {
   text-align: center !important;
 }
@@ -13169,7 +13169,6 @@ tr.drop-child {
   min-width: var(--nav-width);
   flex: 0;
   padding: 0;
-  background-color: var(--nav-background-color);
   z-index: 1002;
   font-size: var(--nav-font-size);
   overflow: hidden;
@@ -13180,20 +13179,8 @@ tr.drop-child {
   flex-direction: column;
   flex: 1 1 auto;
 }
-.tw > aside ul > li > span {
-  color: rgb(211, 211, 211) !important;
-}
-.tw > aside ul > li > ul > li.active, .tw > aside .tl-buttons ul > li > ul > li.tf-checked, .tl-buttons .tw > aside ul > li > ul > li.tf-checked, .tw > aside ul > li > ul > li.tf-active, .tw > aside ul > li > ul > li:hover {
-  color: var(--bs-body-color);
-  transition: 0s;
-  background-color: #475671;
-  border-radius: calc(var(--t-border-radius) * 2);
-}
-.tw > aside ul > li > ul > li a {
-  color: var(--nav-item-color) !important;
-}
-.tw > aside ul > li > ul > li a:hover {
-  color: var(--nav-item-color-hover);
+.tw > aside ul > li > span i {
+  width: 12px;
 }
 .tw > aside .row, .tw > aside .tl-split, .tw > aside .tl-stack {
   margin-left: 6px;
@@ -13276,6 +13263,64 @@ tr.drop-child {
   margin-left: 6px;
 }
 
+:root {
+  --color-back: #fafafa;
+}
+
+aside {
+  background-color: var(--color-back) !important;
+  color: #595959 !important;
+  font-weight: 400;
+  border-right: 1px solid #dedede;
+}
+aside * {
+  background-color: transparent !important;
+}
+
+.tw > aside::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tw > aside::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.tw > aside:hover::-webkit-scrollbar-thumb {
+  background: #ddd !important;
+}
+
+.tw > aside::-webkit-scrollbar-thumb:hover {
+  background: #d0d0d0 !important;
+}
+
+.tn-navbar {
+  padding: 12px;
+}
+
+.tn-navbar > li {
+  display: flex;
+  flex-direction: column;
+}
+
+.tn-navbar > li > span i {
+  width: 12px;
+}
+
+.tn-navbar > li > span {
+  font-weight: 500;
+}
+
+.tn-navbar li ul li:hover {
+  color: #0f0f0f;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@supports (-moz-appearance: none) {
+  .tw aside {
+    scrollbar-width: thin;
+  }
+}
 ::-webkit-scrollbar {
   width: 8px;
   height: 4px;
@@ -13294,18 +13339,6 @@ tr.drop-child {
 }
 
 /* aside scroll fix*/
-.tw > aside::-webkit-scrollbar-track {
-  background: var(--nav-background-color) !important;
-}
-
-.tw > aside::-webkit-scrollbar-thumb {
-  background-color: #525a7c !important;
-}
-
-.tw > aside::-webkit-scrollbar-thumb:hover {
-  background: #5c658b !important;
-}
-
 footer {
   padding: 5px;
   border-top: 1px solid var(--footer-border-color);
@@ -14606,8 +14639,9 @@ tbody > tr.tf-active table tr td,
   border-bottom: none;
 }
 
-td.text-center a,
-th.text-center a {
+td.text-center a, td.td-datagrid-toolbox a,
+th.text-center a,
+th.td-datagrid-toolbox a {
   display: flex;
   justify-content: center;
 }
@@ -14676,6 +14710,18 @@ td > i {
   padding: 0px !important;
   padding-top: 0px !important;
   padding-bottom: 0px !important;
+}
+
+.td-datagrid-toolbox {
+  padding: 0 !important;
+}
+.td-datagrid-toolbox button {
+  padding: 0px 0px !important;
+  display: contents;
+}
+
+.table > :not(caption) > * > *, .td-datagrid table > :not(caption) > * > * {
+  padding: 0.38rem !important;
 }
 
 /* scheduler */
