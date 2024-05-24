@@ -15278,6 +15278,7 @@ td > i {
 
 .tc-tabs .tc-tabs.tf-noborder::after {
   border-bottom: none !important;
+  display: none;
 }
 
 .tc-tabs.tf-noborder[id^="CurrentPage.View.DetailsObjectVM"],
