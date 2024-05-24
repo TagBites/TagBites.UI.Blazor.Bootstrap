@@ -15903,6 +15903,29 @@ section:has(> .tc-workspace) {
   margin-top: 12px;
 }
 
+@media only screen and (max-width: 1360px) {
+  .tc-workspace {
+    padding: 0px !important;
+  }
+  .tc-workspace > .tc-tabs::after {
+    height: 0;
+    border-radius: 0;
+    border-bottom: none;
+  }
+  .tc-workspace > .tc-tabs > header {
+    border-radius: 0;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+  }
+  .tc-workspace > .tc-tabs > section {
+    border-left: none;
+    border-right: none;
+  }
+  .tc-workspace > .tc-tabs .tc-tabs {
+    margin-top: 12px;
+  }
+}
 .tl-filedropwrapper.hover {
   position: relative;
 }

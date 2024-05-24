@@ -132,6 +132,10 @@ section:has(>.tc-workspace){
         }
     }
 }
+
+
+
+
 .tc-workspace{
     .tc-workspace-it{
         .tc-tabs{
@@ -141,3 +145,33 @@ section:has(>.tc-workspace){
         }
     }
 }
+
+
+@media only screen and (max-width: 1360px) {
+    .tc-workspace{
+        padding: 0px!important;
+        > .tc-tabs{
+            &::after{
+                height: 0;
+                border-radius: 0;
+                border-bottom: none;
+            }
+            >header{
+                border-radius: 0;
+                border-left: none;
+                border-top: none;
+                border-right: none;
+            }
+            >section{
+                border-left: none;
+                border-right: none;
+            }
+            .tc-tabs{
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+
+
