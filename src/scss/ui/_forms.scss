@@ -107,7 +107,11 @@ $columns: 12;
 	border-radius: var(--button-border-radius);
 	border-color: var(--t-border-color);
 }
-
+.te{
+	> span{
+		font-size: var(--t-font-size);
+	}
+}
 .te-combo{
 	@extend .form-select;
 	border-radius: var(--button-border-radius);
@@ -119,6 +123,7 @@ $columns: 12;
 	background-position: right 0.3rem center;
 	span{
 		overflow:hidden;
+		font-size: var(--t-font-size);
 	}
 	i{
 		font-size: var(--t-font-size) !important;

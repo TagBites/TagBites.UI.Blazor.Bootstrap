@@ -3895,7 +3895,7 @@ textarea.form-control-lg {
   border-top-right-radius: 0;
 }
 
-.nav, .tc-tabs.tf-noborder > header > ul, .tc-tabs > header > ul, .tb-nav, .tn-ribbon > header,
+.nav, .tn-ribbon > header,
 .tn-ribbon > footer {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
@@ -3910,7 +3910,7 @@ textarea.form-control-lg {
   list-style: none;
 }
 
-.nav-link, .tb-nav-link, .tn-ribbon > header > a,
+.nav-link, .tn-ribbon > header > a,
 .tn-ribbon > footer > a {
   display: block;
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
@@ -3923,29 +3923,29 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .nav-link, .tb-nav-link, .tn-ribbon > header > a,
+  .nav-link, .tn-ribbon > header > a,
   .tn-ribbon > footer > a {
     transition: none;
   }
 }
-.nav-link:hover, .tb-nav-link:hover, .tn-ribbon > header > a:hover,
-.tn-ribbon > footer > a:hover, .nav-link:focus, .tb-nav-link:focus, .tn-ribbon > header > a:focus,
+.nav-link:hover, .tn-ribbon > header > a:hover,
+.tn-ribbon > footer > a:hover, .nav-link:focus, .tn-ribbon > header > a:focus,
 .tn-ribbon > footer > a:focus {
   color: var(--bs-nav-link-hover-color);
 }
-.nav-link:focus-visible, .tb-nav-link:focus-visible, .tn-ribbon > header > a:focus-visible,
+.nav-link:focus-visible, .tn-ribbon > header > a:focus-visible,
 .tn-ribbon > footer > a:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(59, 113, 202, 0.25);
 }
-.nav-link.disabled, .disabled.tb-nav-link, .tn-ribbon > header > a.disabled,
+.nav-link.disabled, .tn-ribbon > header > a.disabled,
 .tn-ribbon > footer > a.disabled {
   color: var(--bs-nav-link-disabled-color);
   pointer-events: none;
   cursor: default;
 }
 
-.nav-tabs, .tc-tabs.tf-noborder > header > ul, .tc-tabs > header > ul, .tb-nav-tabs, .tn-ribbon > header,
+.nav-tabs, .tn-ribbon > header,
 .tn-ribbon > footer {
   --bs-nav-tabs-border-width: var(--bs-border-width);
   --bs-nav-tabs-border-color: var(--t-border-color);
@@ -3956,10 +3956,9 @@ textarea.form-control-lg {
   --bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-border-color) var(--bs-body-bg);
   border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
 }
-.nav-tabs .nav-link, .tc-tabs > header > ul .nav-link, .nav-tabs .tb-nav-link, .tc-tabs > header > ul .tb-nav-link, .tb-nav-tabs .nav-link, .tb-nav-tabs .tb-nav-link, .tn-ribbon > header .nav-link, .tn-ribbon > header .tb-nav-link, .tn-ribbon > header > a,
+.nav-tabs .nav-link, .tn-ribbon > header .nav-link, .tn-ribbon > header > a,
 .tn-ribbon > header .tn-ribbon > footer > a,
 .tn-ribbon > footer .nav-link,
-.tn-ribbon > footer .tb-nav-link,
 .tn-ribbon > footer .tn-ribbon > header > a,
 .tn-ribbon > footer > a {
   margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
@@ -3967,208 +3966,71 @@ textarea.form-control-lg {
   border-top-left-radius: var(--bs-nav-tabs-border-radius);
   border-top-right-radius: var(--bs-nav-tabs-border-radius);
 }
-.nav-tabs .nav-link:hover, .tc-tabs > header > ul .nav-link:hover, .nav-tabs .tb-nav-link:hover, .tc-tabs > header > ul .tb-nav-link:hover, .tb-nav-tabs .nav-link:hover, .tb-nav-tabs .tb-nav-link:hover, .tn-ribbon > header .nav-link:hover, .tn-ribbon > header .tb-nav-link:hover, .tn-ribbon > header > a:hover,
+.nav-tabs .nav-link:hover, .tn-ribbon > header .nav-link:hover, .tn-ribbon > header > a:hover,
 .tn-ribbon > header .tn-ribbon > footer > a:hover,
 .tn-ribbon > footer .nav-link:hover,
-.tn-ribbon > footer .tb-nav-link:hover,
 .tn-ribbon > footer .tn-ribbon > header > a:hover,
-.tn-ribbon > footer > a:hover, .nav-tabs .nav-link:focus, .tc-tabs > header > ul .nav-link:focus, .nav-tabs .tb-nav-link:focus, .tc-tabs > header > ul .tb-nav-link:focus, .tb-nav-tabs .nav-link:focus, .tb-nav-tabs .tb-nav-link:focus, .tn-ribbon > header .nav-link:focus, .tn-ribbon > header .tb-nav-link:focus, .tn-ribbon > header > a:focus,
+.tn-ribbon > footer > a:hover, .nav-tabs .nav-link:focus, .tn-ribbon > header .nav-link:focus, .tn-ribbon > header > a:focus,
 .tn-ribbon > header .tn-ribbon > footer > a:focus,
 .tn-ribbon > footer .nav-link:focus,
-.tn-ribbon > footer .tb-nav-link:focus,
 .tn-ribbon > footer .tn-ribbon > header > a:focus,
 .tn-ribbon > footer > a:focus {
   isolation: isolate;
   border-color: var(--bs-nav-tabs-link-hover-border-color);
 }
-.nav-tabs .nav-link.disabled, .tc-tabs > header > ul .nav-link.disabled, .nav-tabs .disabled.tb-nav-link, .tc-tabs > header > ul .disabled.tb-nav-link, .tb-nav-tabs .nav-link.disabled, .tb-nav-tabs .disabled.tb-nav-link, .tn-ribbon > header .nav-link.disabled, .tn-ribbon > header .disabled.tb-nav-link, .tn-ribbon > header > a.disabled,
+.nav-tabs .nav-link.disabled, .tn-ribbon > header .nav-link.disabled, .tn-ribbon > header > a.disabled,
 .tn-ribbon > header .tn-ribbon > footer > a.disabled,
 .tn-ribbon > footer .nav-link.disabled,
-.tn-ribbon > footer .disabled.tb-nav-link,
 .tn-ribbon > footer .tn-ribbon > header > a.disabled,
-.tn-ribbon > footer > a.disabled, .nav-tabs .nav-link:disabled, .tc-tabs > header > ul .nav-link:disabled, .nav-tabs .tb-nav-link:disabled, .tc-tabs > header > ul .tb-nav-link:disabled, .tb-nav-tabs .nav-link:disabled, .tb-nav-tabs .tb-nav-link:disabled, .tn-ribbon > header .nav-link:disabled, .tn-ribbon > header .tb-nav-link:disabled, .tn-ribbon > header > a:disabled,
+.tn-ribbon > footer > a.disabled, .nav-tabs .nav-link:disabled, .tn-ribbon > header .nav-link:disabled, .tn-ribbon > header > a:disabled,
 .tn-ribbon > header .tn-ribbon > footer > a:disabled,
 .tn-ribbon > footer .nav-link:disabled,
-.tn-ribbon > footer .tb-nav-link:disabled,
 .tn-ribbon > footer .tn-ribbon > header > a:disabled,
 .tn-ribbon > footer > a:disabled {
   color: var(--bs-nav-link-disabled-color);
   background-color: transparent;
   border-color: transparent;
 }
-.nav-tabs .nav-link.active, .nav-tabs .tl-buttons .nav-link.tf-checked, .tl-buttons .nav-tabs .nav-link.tf-checked, .tc-tabs.tf-noborder > header > ul .nav-link.active, .tc-tabs.tf-noborder > header > ul .tl-buttons .nav-link.tf-checked, .tl-buttons .tc-tabs.tf-noborder > header > ul .nav-link.tf-checked, .tc-tabs > header > ul .nav-link.active, .tc-tabs > header > ul .tl-buttons .nav-link.tf-checked, .tl-buttons .tc-tabs > header > ul .nav-link.tf-checked, .nav-tabs .active.tb-nav-link, .nav-tabs .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .nav-tabs .tb-nav-link.tf-checked, .tc-tabs.tf-noborder > header > ul .active.tb-nav-link, .tc-tabs.tf-noborder > header > ul .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .tc-tabs.tf-noborder > header > ul .tb-nav-link.tf-checked, .tc-tabs > header > ul .active.tb-nav-link, .tc-tabs > header > ul .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .tc-tabs > header > ul .tb-nav-link.tf-checked, .tb-nav-tabs .nav-link.active, .tb-nav-tabs .tl-buttons .nav-link.tf-checked, .tl-buttons .tb-nav-tabs .nav-link.tf-checked, .tb-nav-tabs .active.tb-nav-link, .tb-nav-tabs .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .tb-nav-tabs .tb-nav-link.tf-checked, .tn-ribbon > header .nav-link.active, .tn-ribbon > header .tl-buttons .nav-link.tf-checked, .tl-buttons .tn-ribbon > header .nav-link.tf-checked, .tn-ribbon > header .active.tb-nav-link, .tn-ribbon > header .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .tn-ribbon > header .tb-nav-link.tf-checked, .tn-ribbon > header > a.active, .tl-buttons .tn-ribbon > header > a.tf-checked,
+.nav-tabs .nav-link.active, .nav-tabs .tl-buttons .nav-link.tf-checked, .tl-buttons .nav-tabs .nav-link.tf-checked, .tn-ribbon > header .nav-link.active, .tn-ribbon > header .tl-buttons .nav-link.tf-checked, .tl-buttons .tn-ribbon > header .nav-link.tf-checked, .tn-ribbon > header > a.active, .tl-buttons .tn-ribbon > header > a.tf-checked,
 .tn-ribbon > header .tn-ribbon > footer > a.active,
-.tn-ribbon > header .tl-buttons .tn-ribbon > footer > a.tf-checked,
 .tl-buttons .tn-ribbon > header .tn-ribbon > footer > a.tf-checked,
 .tn-ribbon > footer .nav-link.active,
 .tn-ribbon > footer .tl-buttons .nav-link.tf-checked,
 .tl-buttons .tn-ribbon > footer .nav-link.tf-checked,
-.tn-ribbon > footer .active.tb-nav-link,
-.tn-ribbon > footer .tl-buttons .tb-nav-link.tf-checked,
-.tl-buttons .tn-ribbon > footer .tb-nav-link.tf-checked,
 .tn-ribbon > footer .tn-ribbon > header > a.active,
-.tn-ribbon > footer .tl-buttons .tn-ribbon > header > a.tf-checked,
 .tl-buttons .tn-ribbon > footer .tn-ribbon > header > a.tf-checked,
 .tn-ribbon > footer > a.active,
-.tl-buttons .tn-ribbon > footer > a.tf-checked, .nav-tabs .nav-link.tf-active, .tc-tabs.tf-noborder > header > ul .nav-link.tf-active, .tc-tabs > header > ul .nav-link.tf-active, .nav-tabs .tf-active.tb-nav-link, .tc-tabs.tf-noborder > header > ul .tf-active.tb-nav-link, .tc-tabs > header > ul .tf-active.tb-nav-link, .tb-nav-tabs .nav-link.tf-active, .tb-nav-tabs .tf-active.tb-nav-link, .tn-ribbon > header .nav-link.tf-active, .tn-ribbon > header .tf-active.tb-nav-link, .tn-ribbon > header > a.tf-active,
+.tl-buttons .tn-ribbon > footer > a.tf-checked, .nav-tabs .nav-link.tf-active, .tn-ribbon > header .nav-link.tf-active, .tn-ribbon > header > a.tf-active,
 .tn-ribbon > header .tn-ribbon > footer > a.tf-active,
 .tn-ribbon > footer .nav-link.tf-active,
-.tn-ribbon > footer .tf-active.tb-nav-link,
 .tn-ribbon > footer .tn-ribbon > header > a.tf-active,
 .tn-ribbon > footer > a.tf-active,
 .nav-tabs .nav-item.show .nav-link,
-.nav-tabs .tc-tabs.tf-noborder > header > ul li.show .nav-link,
-.tc-tabs.tf-noborder > header > ul .nav-tabs li.show .nav-link,
-.tc-tabs.tf-noborder > header > ul .nav-item.show .nav-link,
-.tc-tabs.tf-noborder > header > ul li.show .nav-link,
-.nav-tabs .tc-tabs > header > ul li.show .nav-link,
-.tc-tabs.tf-noborder > header > ul .tc-tabs > header > ul li.show .nav-link,
-.tc-tabs > header > ul .nav-tabs li.show .nav-link,
-.tc-tabs > header > ul .tc-tabs.tf-noborder > header > ul li.show .nav-link,
-.tc-tabs > header > ul .nav-item.show .nav-link,
-.tc-tabs.tf-noborder > header > ul li.show .nav-link,
-.tc-tabs > header > ul li.show .nav-link,
-.nav-tabs .nav-item.show .tb-nav-link,
-.nav-tabs .tc-tabs.tf-noborder > header > ul li.show .tb-nav-link,
-.tc-tabs.tf-noborder > header > ul .nav-tabs li.show .tb-nav-link,
-.tc-tabs.tf-noborder > header > ul .nav-item.show .tb-nav-link,
-.tc-tabs.tf-noborder > header > ul li.show .tb-nav-link,
-.nav-tabs .tc-tabs > header > ul li.show .tb-nav-link,
-.tc-tabs.tf-noborder > header > ul .tc-tabs > header > ul li.show .tb-nav-link,
-.tc-tabs > header > ul .nav-tabs li.show .tb-nav-link,
-.tc-tabs > header > ul .tc-tabs.tf-noborder > header > ul li.show .tb-nav-link,
-.tc-tabs > header > ul .nav-item.show .tb-nav-link,
-.tc-tabs.tf-noborder > header > ul li.show .tb-nav-link,
-.tc-tabs > header > ul li.show .tb-nav-link,
-.nav-tabs .show.tb-nav-item .nav-link,
-.tc-tabs.tf-noborder > header > ul .show.tb-nav-item .nav-link,
-.tc-tabs > header > ul .show.tb-nav-item .nav-link,
-.nav-tabs .show.tb-nav-item .tb-nav-link,
-.tc-tabs.tf-noborder > header > ul .show.tb-nav-item .tb-nav-link,
-.tc-tabs > header > ul .show.tb-nav-item .tb-nav-link,
-.tb-nav-tabs .nav-item.show .nav-link,
-.tb-nav-tabs .tc-tabs.tf-noborder > header > ul li.show .nav-link,
-.tc-tabs.tf-noborder > header > ul .tb-nav-tabs li.show .nav-link,
-.tb-nav-tabs .tc-tabs > header > ul li.show .nav-link,
-.tc-tabs > header > ul .tb-nav-tabs li.show .nav-link,
-.tb-nav-tabs .nav-item.show .tb-nav-link,
-.tb-nav-tabs .tc-tabs.tf-noborder > header > ul li.show .tb-nav-link,
-.tc-tabs.tf-noborder > header > ul .tb-nav-tabs li.show .tb-nav-link,
-.tb-nav-tabs .tc-tabs > header > ul li.show .tb-nav-link,
-.tc-tabs > header > ul .tb-nav-tabs li.show .tb-nav-link,
-.tb-nav-tabs .show.tb-nav-item .nav-link,
-.tb-nav-tabs .show.tb-nav-item .tb-nav-link,
 .nav-tabs .nav-item.show .tn-ribbon > header > a,
-.nav-tabs .tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > header > a,
-.tc-tabs.tf-noborder > header > ul .nav-tabs li.show .tn-ribbon > header > a,
-.tc-tabs.tf-noborder > header > ul .nav-item.show .tn-ribbon > header > a,
-.tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > header > a,
-.nav-tabs .tc-tabs > header > ul li.show .tn-ribbon > header > a,
-.tc-tabs.tf-noborder > header > ul .tc-tabs > header > ul li.show .tn-ribbon > header > a,
-.tc-tabs > header > ul .nav-tabs li.show .tn-ribbon > header > a,
-.tc-tabs > header > ul .tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > header > a,
-.tc-tabs > header > ul .nav-item.show .tn-ribbon > header > a,
-.tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > header > a,
-.tc-tabs > header > ul li.show .tn-ribbon > header > a,
-.nav-tabs .show.tb-nav-item .tn-ribbon > header > a,
-.tc-tabs.tf-noborder > header > ul .show.tb-nav-item .tn-ribbon > header > a,
-.tc-tabs > header > ul .show.tb-nav-item .tn-ribbon > header > a,
-.tb-nav-tabs .nav-item.show .tn-ribbon > header > a,
-.tb-nav-tabs .tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > header > a,
-.tc-tabs.tf-noborder > header > ul .tb-nav-tabs li.show .tn-ribbon > header > a,
-.tb-nav-tabs .tc-tabs > header > ul li.show .tn-ribbon > header > a,
-.tc-tabs > header > ul .tb-nav-tabs li.show .tn-ribbon > header > a,
-.tb-nav-tabs .show.tb-nav-item .tn-ribbon > header > a,
 .nav-tabs .nav-item.show .tn-ribbon > footer > a,
-.nav-tabs .tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > footer > a,
-.tc-tabs.tf-noborder > header > ul .nav-tabs li.show .tn-ribbon > footer > a,
-.tc-tabs.tf-noborder > header > ul .nav-item.show .tn-ribbon > footer > a,
-.tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > footer > a,
-.nav-tabs .tc-tabs > header > ul li.show .tn-ribbon > footer > a,
-.tc-tabs.tf-noborder > header > ul .tc-tabs > header > ul li.show .tn-ribbon > footer > a,
-.tc-tabs > header > ul .nav-tabs li.show .tn-ribbon > footer > a,
-.tc-tabs > header > ul .tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > footer > a,
-.tc-tabs > header > ul .nav-item.show .tn-ribbon > footer > a,
-.tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > footer > a,
-.tc-tabs > header > ul li.show .tn-ribbon > footer > a,
-.nav-tabs .show.tb-nav-item .tn-ribbon > footer > a,
-.tc-tabs.tf-noborder > header > ul .show.tb-nav-item .tn-ribbon > footer > a,
-.tc-tabs > header > ul .show.tb-nav-item .tn-ribbon > footer > a,
-.tb-nav-tabs .nav-item.show .tn-ribbon > footer > a,
-.tb-nav-tabs .tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > footer > a,
-.tc-tabs.tf-noborder > header > ul .tb-nav-tabs li.show .tn-ribbon > footer > a,
-.tb-nav-tabs .tc-tabs > header > ul li.show .tn-ribbon > footer > a,
-.tc-tabs > header > ul .tb-nav-tabs li.show .tn-ribbon > footer > a,
-.tb-nav-tabs .show.tb-nav-item .tn-ribbon > footer > a,
 .tn-ribbon > header .nav-item.show .nav-link,
-.tn-ribbon > header .tc-tabs.tf-noborder > header > ul li.show .nav-link,
-.tc-tabs.tf-noborder > header > ul .tn-ribbon > header li.show .nav-link,
-.tn-ribbon > header .tc-tabs > header > ul li.show .nav-link,
-.tc-tabs > header > ul .tn-ribbon > header li.show .nav-link,
-.tn-ribbon > header .nav-item.show .tb-nav-link,
-.tn-ribbon > header .tc-tabs.tf-noborder > header > ul li.show .tb-nav-link,
-.tc-tabs.tf-noborder > header > ul .tn-ribbon > header li.show .tb-nav-link,
-.tn-ribbon > header .tc-tabs > header > ul li.show .tb-nav-link,
-.tc-tabs > header > ul .tn-ribbon > header li.show .tb-nav-link,
-.tn-ribbon > header .show.tb-nav-item .nav-link,
-.tn-ribbon > header .show.tb-nav-item .tb-nav-link,
 .tn-ribbon > header .nav-item.show .tn-ribbon > header > a,
-.tn-ribbon > header .tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > header > a,
-.tc-tabs.tf-noborder > header > ul .tn-ribbon > header li.show .tn-ribbon > header > a,
-.tn-ribbon > header .tc-tabs > header > ul li.show .tn-ribbon > header > a,
-.tc-tabs > header > ul .tn-ribbon > header li.show .tn-ribbon > header > a,
-.tn-ribbon > header .show.tb-nav-item .tn-ribbon > header > a,
 .tn-ribbon > header .nav-item.show .tn-ribbon > footer > a,
-.tn-ribbon > header .tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > footer > a,
-.tc-tabs.tf-noborder > header > ul .tn-ribbon > header li.show .tn-ribbon > footer > a,
-.tn-ribbon > header .tc-tabs > header > ul li.show .tn-ribbon > footer > a,
-.tc-tabs > header > ul .tn-ribbon > header li.show .tn-ribbon > footer > a,
-.tn-ribbon > header .show.tb-nav-item .tn-ribbon > footer > a,
 .tn-ribbon > header > a.show .nav-link,
-.tn-ribbon > header > a.show .tb-nav-link,
 .tn-ribbon > header > a.show .tn-ribbon > header > a,
 .tn-ribbon > header > a.show .tn-ribbon > footer > a,
 .tn-ribbon > header .tn-ribbon > footer > a.show .nav-link,
-.tn-ribbon > header .tn-ribbon > footer > a.show .tb-nav-link,
 .tn-ribbon > header .tn-ribbon > footer > a.show .tn-ribbon > header > a,
 .tn-ribbon > header .tn-ribbon > footer > a.show .tn-ribbon > footer > a,
 .tn-ribbon > footer .nav-item.show .nav-link,
-.tn-ribbon > footer .tc-tabs.tf-noborder > header > ul li.show .nav-link,
-.tc-tabs.tf-noborder > header > ul .tn-ribbon > footer li.show .nav-link,
-.tn-ribbon > footer .tc-tabs > header > ul li.show .nav-link,
-.tc-tabs > header > ul .tn-ribbon > footer li.show .nav-link,
-.tn-ribbon > footer .nav-item.show .tb-nav-link,
-.tn-ribbon > footer .tc-tabs.tf-noborder > header > ul li.show .tb-nav-link,
-.tc-tabs.tf-noborder > header > ul .tn-ribbon > footer li.show .tb-nav-link,
-.tn-ribbon > footer .tc-tabs > header > ul li.show .tb-nav-link,
-.tc-tabs > header > ul .tn-ribbon > footer li.show .tb-nav-link,
-.tn-ribbon > footer .show.tb-nav-item .nav-link,
-.tn-ribbon > footer .show.tb-nav-item .tb-nav-link,
 .tn-ribbon > footer .nav-item.show .tn-ribbon > header > a,
-.tn-ribbon > footer .tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > header > a,
-.tc-tabs.tf-noborder > header > ul .tn-ribbon > footer li.show .tn-ribbon > header > a,
-.tn-ribbon > footer .tc-tabs > header > ul li.show .tn-ribbon > header > a,
-.tc-tabs > header > ul .tn-ribbon > footer li.show .tn-ribbon > header > a,
-.tn-ribbon > footer .show.tb-nav-item .tn-ribbon > header > a,
 .tn-ribbon > footer .nav-item.show .tn-ribbon > footer > a,
-.tn-ribbon > footer .tc-tabs.tf-noborder > header > ul li.show .tn-ribbon > footer > a,
-.tc-tabs.tf-noborder > header > ul .tn-ribbon > footer li.show .tn-ribbon > footer > a,
-.tn-ribbon > footer .tc-tabs > header > ul li.show .tn-ribbon > footer > a,
-.tc-tabs > header > ul .tn-ribbon > footer li.show .tn-ribbon > footer > a,
-.tn-ribbon > footer .show.tb-nav-item .tn-ribbon > footer > a,
 .tn-ribbon > footer .tn-ribbon > header > a.show .nav-link,
-.tn-ribbon > footer .tn-ribbon > header > a.show .tb-nav-link,
 .tn-ribbon > footer .tn-ribbon > header > a.show .tn-ribbon > header > a,
 .tn-ribbon > footer .tn-ribbon > header > a.show .tn-ribbon > footer > a,
 .tn-ribbon > footer > a.show .nav-link,
-.tn-ribbon > footer > a.show .tb-nav-link,
 .tn-ribbon > footer > a.show .tn-ribbon > header > a,
 .tn-ribbon > footer > a.show .tn-ribbon > footer > a {
   color: var(--bs-nav-tabs-link-active-color);
   background-color: var(--bs-nav-tabs-link-active-bg);
   border-color: var(--bs-nav-tabs-link-active-border-color);
 }
-.nav-tabs .dropdown-menu, .nav-tabs .tn-menu, .tc-tabs > header > ul .dropdown-menu, .tc-tabs > header > ul .tn-menu, .tb-nav-tabs .dropdown-menu, .tb-nav-tabs .tn-menu, .tn-ribbon > header .dropdown-menu, .tn-ribbon > header .tn-menu,
+.nav-tabs .dropdown-menu, .nav-tabs .tn-menu, .tn-ribbon > header .dropdown-menu, .tn-ribbon > header .tn-menu,
 .tn-ribbon > footer .dropdown-menu,
 .tn-ribbon > footer .tn-menu {
   margin-top: calc(-1 * var(--bs-nav-tabs-border-width));
@@ -4181,23 +4043,22 @@ textarea.form-control-lg {
   --bs-nav-pills-link-active-color: #fff;
   --bs-nav-pills-link-active-bg: #3b71ca;
 }
-.nav-pills .nav-link, .nav-pills .tb-nav-link, .nav-pills .tn-ribbon > header > a,
+.nav-pills .nav-link, .nav-pills .tn-ribbon > header > a,
 .nav-pills .tn-ribbon > footer > a {
   border-radius: var(--bs-nav-pills-border-radius);
 }
-.nav-pills .nav-link:disabled, .nav-pills .tb-nav-link:disabled, .nav-pills .tn-ribbon > header > a:disabled,
+.nav-pills .nav-link:disabled, .nav-pills .tn-ribbon > header > a:disabled,
 .nav-pills .tn-ribbon > footer > a:disabled {
   color: var(--bs-nav-link-disabled-color);
   background-color: transparent;
   border-color: transparent;
 }
-.nav-pills .nav-link.active, .nav-pills .tl-buttons .nav-link.tf-checked, .tl-buttons .nav-pills .nav-link.tf-checked, .nav-pills .active.tb-nav-link, .nav-pills .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .nav-pills .tb-nav-link.tf-checked, .nav-pills .tn-ribbon > header > a.active, .nav-pills .tl-buttons .tn-ribbon > header > a.tf-checked, .tl-buttons .nav-pills .tn-ribbon > header > a.tf-checked,
+.nav-pills .nav-link.active, .nav-pills .tl-buttons .nav-link.tf-checked, .tl-buttons .nav-pills .nav-link.tf-checked, .nav-pills .tn-ribbon > header > a.active, .nav-pills .tl-buttons .tn-ribbon > header > a.tf-checked, .tl-buttons .nav-pills .tn-ribbon > header > a.tf-checked,
 .nav-pills .tn-ribbon > footer > a.active,
 .nav-pills .tl-buttons .tn-ribbon > footer > a.tf-checked,
-.tl-buttons .nav-pills .tn-ribbon > footer > a.tf-checked, .nav-pills .nav-link.tf-active, .nav-pills .tf-active.tb-nav-link, .nav-pills .tn-ribbon > header > a.tf-active,
+.tl-buttons .nav-pills .tn-ribbon > footer > a.tf-checked, .nav-pills .nav-link.tf-active, .nav-pills .tn-ribbon > header > a.tf-active,
 .nav-pills .tn-ribbon > footer > a.tf-active,
 .nav-pills .show > .nav-link,
-.nav-pills .show > .tb-nav-link,
 .nav-pills .tn-ribbon > header.show > a,
 .nav-pills .tn-ribbon > footer.show > a {
   color: var(--bs-nav-pills-link-active-color);
@@ -4210,24 +4071,23 @@ textarea.form-control-lg {
   --bs-nav-underline-link-active-color: var(--bs-emphasis-color);
   gap: var(--bs-nav-underline-gap);
 }
-.nav-underline .nav-link, .nav-underline .tb-nav-link, .nav-underline .tn-ribbon > header > a,
+.nav-underline .nav-link, .nav-underline .tn-ribbon > header > a,
 .nav-underline .tn-ribbon > footer > a {
   padding-right: 0;
   padding-left: 0;
   border-bottom: var(--bs-nav-underline-border-width) solid transparent;
 }
-.nav-underline .nav-link:hover, .nav-underline .tb-nav-link:hover, .nav-underline .tn-ribbon > header > a:hover,
-.nav-underline .tn-ribbon > footer > a:hover, .nav-underline .nav-link:focus, .nav-underline .tb-nav-link:focus, .nav-underline .tn-ribbon > header > a:focus,
+.nav-underline .nav-link:hover, .nav-underline .tn-ribbon > header > a:hover,
+.nav-underline .tn-ribbon > footer > a:hover, .nav-underline .nav-link:focus, .nav-underline .tn-ribbon > header > a:focus,
 .nav-underline .tn-ribbon > footer > a:focus {
   border-bottom-color: currentcolor;
 }
-.nav-underline .nav-link.active, .nav-underline .tl-buttons .nav-link.tf-checked, .tl-buttons .nav-underline .nav-link.tf-checked, .nav-underline .active.tb-nav-link, .nav-underline .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .nav-underline .tb-nav-link.tf-checked, .nav-underline .tn-ribbon > header > a.active, .nav-underline .tl-buttons .tn-ribbon > header > a.tf-checked, .tl-buttons .nav-underline .tn-ribbon > header > a.tf-checked,
+.nav-underline .nav-link.active, .nav-underline .tl-buttons .nav-link.tf-checked, .tl-buttons .nav-underline .nav-link.tf-checked, .nav-underline .tn-ribbon > header > a.active, .nav-underline .tl-buttons .tn-ribbon > header > a.tf-checked, .tl-buttons .nav-underline .tn-ribbon > header > a.tf-checked,
 .nav-underline .tn-ribbon > footer > a.active,
 .nav-underline .tl-buttons .tn-ribbon > footer > a.tf-checked,
-.tl-buttons .nav-underline .tn-ribbon > footer > a.tf-checked, .nav-underline .nav-link.tf-active, .nav-underline .tf-active.tb-nav-link, .nav-underline .tn-ribbon > header > a.tf-active,
+.tl-buttons .nav-underline .tn-ribbon > footer > a.tf-checked, .nav-underline .nav-link.tf-active, .nav-underline .tn-ribbon > header > a.tf-active,
 .nav-underline .tn-ribbon > footer > a.tf-active,
 .nav-underline .show > .nav-link,
-.nav-underline .show > .tb-nav-link,
 .nav-underline .tn-ribbon > header.show > a,
 .nav-underline .tn-ribbon > footer.show > a {
   font-weight: 700;
@@ -4235,24 +4095,18 @@ textarea.form-control-lg {
   border-bottom-color: currentcolor;
 }
 
-.nav-fill > .nav-link, .nav-fill > .tb-nav-link, .tn-ribbon > header.nav-fill > a,
+.nav-fill > .nav-link, .tn-ribbon > header.nav-fill > a,
 .tn-ribbon > footer.nav-fill > a,
 .nav-fill .nav-item,
-.nav-fill .tc-tabs > header > ul li,
-.tc-tabs > header > ul .nav-fill li,
-.nav-fill .tb-nav-item,
 .nav-fill .tn-ribbon > header > a,
 .nav-fill .tn-ribbon > footer > a {
   flex: 1 1 auto;
   text-align: center;
 }
 
-.nav-justified > .nav-link, .nav-justified > .tb-nav-link, .tn-ribbon > header.nav-justified > a,
+.nav-justified > .nav-link, .tn-ribbon > header.nav-justified > a,
 .tn-ribbon > footer.nav-justified > a,
 .nav-justified .nav-item,
-.nav-justified .tc-tabs > header > ul li,
-.tc-tabs > header > ul .nav-justified li,
-.nav-justified .tb-nav-item,
 .nav-justified .tn-ribbon > header > a,
 .nav-justified .tn-ribbon > footer > a {
   flex-basis: 0;
@@ -4260,38 +4114,19 @@ textarea.form-control-lg {
   text-align: center;
 }
 
-.nav-fill .nav-item .nav-link, .nav-fill .tc-tabs > header > ul li .nav-link, .tc-tabs > header > ul .nav-fill li .nav-link, .nav-fill .nav-item .tb-nav-link, .nav-fill .tc-tabs > header > ul li .tb-nav-link, .tc-tabs > header > ul .nav-fill li .tb-nav-link, .nav-fill .tb-nav-item .nav-link, .nav-fill .tb-nav-item .tb-nav-link, .nav-fill .nav-item .tn-ribbon > header > a, .nav-fill .tc-tabs > header > ul li .tn-ribbon > header > a, .tc-tabs > header > ul .nav-fill li .tn-ribbon > header > a, .nav-fill .tb-nav-item .tn-ribbon > header > a,
-.nav-fill .nav-item .tn-ribbon > footer > a,
-.nav-fill .tc-tabs > header > ul li .tn-ribbon > footer > a,
-.tc-tabs > header > ul .nav-fill li .tn-ribbon > footer > a,
-.nav-fill .tb-nav-item .tn-ribbon > footer > a, .nav-fill .tn-ribbon > header > a .nav-link, .nav-fill .tn-ribbon > header > a .tb-nav-link, .nav-fill .tn-ribbon > header > a .tn-ribbon > header > a,
+.nav-fill .nav-item .nav-link, .nav-fill .nav-item .tn-ribbon > header > a,
+.nav-fill .nav-item .tn-ribbon > footer > a, .nav-fill .tn-ribbon > header > a .nav-link, .nav-fill .tn-ribbon > header > a .tn-ribbon > header > a,
 .nav-fill .tn-ribbon > header > a .tn-ribbon > footer > a,
 .nav-fill .tn-ribbon > footer > a .nav-link,
-.nav-fill .tn-ribbon > footer > a .tb-nav-link,
 .nav-fill .tn-ribbon > footer > a .tn-ribbon > header > a,
 .nav-fill .tn-ribbon > footer > a .tn-ribbon > footer > a,
 .nav-justified .nav-item .nav-link,
-.nav-justified .tc-tabs > header > ul li .nav-link,
-.tc-tabs > header > ul .nav-justified li .nav-link,
-.nav-justified .nav-item .tb-nav-link,
-.nav-justified .tc-tabs > header > ul li .tb-nav-link,
-.tc-tabs > header > ul .nav-justified li .tb-nav-link,
-.nav-justified .tb-nav-item .nav-link,
-.nav-justified .tb-nav-item .tb-nav-link,
 .nav-justified .nav-item .tn-ribbon > header > a,
-.nav-justified .tc-tabs > header > ul li .tn-ribbon > header > a,
-.tc-tabs > header > ul .nav-justified li .tn-ribbon > header > a,
-.nav-justified .tb-nav-item .tn-ribbon > header > a,
 .nav-justified .nav-item .tn-ribbon > footer > a,
-.nav-justified .tc-tabs > header > ul li .tn-ribbon > footer > a,
-.tc-tabs > header > ul .nav-justified li .tn-ribbon > footer > a,
-.nav-justified .tb-nav-item .tn-ribbon > footer > a,
 .nav-justified .tn-ribbon > header > a .nav-link,
-.nav-justified .tn-ribbon > header > a .tb-nav-link,
 .nav-justified .tn-ribbon > header > a .tn-ribbon > header > a,
 .nav-justified .tn-ribbon > header > a .tn-ribbon > footer > a,
 .nav-justified .tn-ribbon > footer > a .nav-link,
-.nav-justified .tn-ribbon > footer > a .tb-nav-link,
 .nav-justified .tn-ribbon > footer > a .tn-ribbon > header > a,
 .nav-justified .tn-ribbon > footer > a .tn-ribbon > footer > a {
   width: 100%;
@@ -4378,11 +4213,11 @@ textarea.form-control-lg {
   margin-bottom: 0;
   list-style: none;
 }
-.navbar-nav .nav-link.active, .navbar-nav .tl-buttons .nav-link.tf-checked, .tl-buttons .navbar-nav .nav-link.tf-checked, .navbar-nav .active.tb-nav-link, .navbar-nav .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .navbar-nav .tb-nav-link.tf-checked, .navbar-nav .tn-ribbon > header > a.active, .navbar-nav .tl-buttons .tn-ribbon > header > a.tf-checked, .tl-buttons .navbar-nav .tn-ribbon > header > a.tf-checked,
+.navbar-nav .nav-link.active, .navbar-nav .tl-buttons .nav-link.tf-checked, .tl-buttons .navbar-nav .nav-link.tf-checked, .navbar-nav .tn-ribbon > header > a.active, .navbar-nav .tl-buttons .tn-ribbon > header > a.tf-checked, .tl-buttons .navbar-nav .tn-ribbon > header > a.tf-checked,
 .navbar-nav .tn-ribbon > footer > a.active,
 .navbar-nav .tl-buttons .tn-ribbon > footer > a.tf-checked,
-.tl-buttons .navbar-nav .tn-ribbon > footer > a.tf-checked, .navbar-nav .nav-link.tf-active, .navbar-nav .tf-active.tb-nav-link, .navbar-nav .tn-ribbon > header > a.tf-active,
-.navbar-nav .tn-ribbon > footer > a.tf-active, .navbar-nav .nav-link.show, .navbar-nav .show.tb-nav-link, .navbar-nav .tn-ribbon > header > a.show,
+.tl-buttons .navbar-nav .tn-ribbon > footer > a.tf-checked, .navbar-nav .nav-link.tf-active, .navbar-nav .tn-ribbon > header > a.tf-active,
+.navbar-nav .tn-ribbon > footer > a.tf-active, .navbar-nav .nav-link.show, .navbar-nav .tn-ribbon > header > a.show,
 .navbar-nav .tn-ribbon > footer > a.show {
   color: var(--bs-navbar-active-color);
 }
@@ -4458,7 +4293,7 @@ textarea.form-control-lg {
   .navbar-expand-sm .navbar-nav .dropdown-menu, .navbar-expand-sm .navbar-nav .tn-menu {
     position: absolute;
   }
-  .navbar-expand-sm .navbar-nav .nav-link, .navbar-expand-sm .navbar-nav .tb-nav-link, .navbar-expand-sm .navbar-nav .tn-ribbon > header > a,
+  .navbar-expand-sm .navbar-nav .nav-link, .navbar-expand-sm .navbar-nav .tn-ribbon > header > a,
   .navbar-expand-sm .navbar-nav .tn-ribbon > footer > a {
     padding-right: var(--bs-navbar-nav-link-padding-x);
     padding-left: var(--bs-navbar-nav-link-padding-x);
@@ -4506,7 +4341,7 @@ textarea.form-control-lg {
   .navbar-expand-md .navbar-nav .dropdown-menu, .navbar-expand-md .navbar-nav .tn-menu {
     position: absolute;
   }
-  .navbar-expand-md .navbar-nav .nav-link, .navbar-expand-md .navbar-nav .tb-nav-link, .navbar-expand-md .navbar-nav .tn-ribbon > header > a,
+  .navbar-expand-md .navbar-nav .nav-link, .navbar-expand-md .navbar-nav .tn-ribbon > header > a,
   .navbar-expand-md .navbar-nav .tn-ribbon > footer > a {
     padding-right: var(--bs-navbar-nav-link-padding-x);
     padding-left: var(--bs-navbar-nav-link-padding-x);
@@ -4554,7 +4389,7 @@ textarea.form-control-lg {
   .navbar-expand-lg .navbar-nav .dropdown-menu, .navbar-expand-lg .navbar-nav .tn-menu {
     position: absolute;
   }
-  .navbar-expand-lg .navbar-nav .nav-link, .navbar-expand-lg .navbar-nav .tb-nav-link, .navbar-expand-lg .navbar-nav .tn-ribbon > header > a,
+  .navbar-expand-lg .navbar-nav .nav-link, .navbar-expand-lg .navbar-nav .tn-ribbon > header > a,
   .navbar-expand-lg .navbar-nav .tn-ribbon > footer > a {
     padding-right: var(--bs-navbar-nav-link-padding-x);
     padding-left: var(--bs-navbar-nav-link-padding-x);
@@ -4602,7 +4437,7 @@ textarea.form-control-lg {
   .navbar-expand-xl .navbar-nav .dropdown-menu, .navbar-expand-xl .navbar-nav .tn-menu {
     position: absolute;
   }
-  .navbar-expand-xl .navbar-nav .nav-link, .navbar-expand-xl .navbar-nav .tb-nav-link, .navbar-expand-xl .navbar-nav .tn-ribbon > header > a,
+  .navbar-expand-xl .navbar-nav .nav-link, .navbar-expand-xl .navbar-nav .tn-ribbon > header > a,
   .navbar-expand-xl .navbar-nav .tn-ribbon > footer > a {
     padding-right: var(--bs-navbar-nav-link-padding-x);
     padding-left: var(--bs-navbar-nav-link-padding-x);
@@ -4650,7 +4485,7 @@ textarea.form-control-lg {
   .navbar-expand-xxl .navbar-nav .dropdown-menu, .navbar-expand-xxl .navbar-nav .tn-menu {
     position: absolute;
   }
-  .navbar-expand-xxl .navbar-nav .nav-link, .navbar-expand-xxl .navbar-nav .tb-nav-link, .navbar-expand-xxl .navbar-nav .tn-ribbon > header > a,
+  .navbar-expand-xxl .navbar-nav .nav-link, .navbar-expand-xxl .navbar-nav .tn-ribbon > header > a,
   .navbar-expand-xxl .navbar-nav .tn-ribbon > footer > a {
     padding-right: var(--bs-navbar-nav-link-padding-x);
     padding-left: var(--bs-navbar-nav-link-padding-x);
@@ -4697,7 +4532,7 @@ textarea.form-control-lg {
 .navbar-expand .navbar-nav .dropdown-menu, .navbar-expand .navbar-nav .tn-menu {
   position: absolute;
 }
-.navbar-expand .navbar-nav .nav-link, .navbar-expand .navbar-nav .tb-nav-link, .navbar-expand .navbar-nav .tn-ribbon > header > a,
+.navbar-expand .navbar-nav .nav-link, .navbar-expand .navbar-nav .tn-ribbon > header > a,
 .navbar-expand .navbar-nav .tn-ribbon > footer > a {
   padding-right: var(--bs-navbar-nav-link-padding-x);
   padding-left: var(--bs-navbar-nav-link-padding-x);
@@ -4858,10 +4693,10 @@ textarea.form-control-lg {
   margin-left: calc(-0.5 * var(--bs-card-cap-padding-x));
   border-bottom: 0;
 }
-.card-header-tabs .nav-link.active, .card-header-tabs .tl-buttons .nav-link.tf-checked, .tl-buttons .card-header-tabs .nav-link.tf-checked, .card-header-tabs .active.tb-nav-link, .card-header-tabs .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .card-header-tabs .tb-nav-link.tf-checked, .card-header-tabs .tn-ribbon > header > a.active, .card-header-tabs .tl-buttons .tn-ribbon > header > a.tf-checked, .tl-buttons .card-header-tabs .tn-ribbon > header > a.tf-checked,
+.card-header-tabs .nav-link.active, .card-header-tabs .tl-buttons .nav-link.tf-checked, .tl-buttons .card-header-tabs .nav-link.tf-checked, .card-header-tabs .tn-ribbon > header > a.active, .card-header-tabs .tl-buttons .tn-ribbon > header > a.tf-checked, .tl-buttons .card-header-tabs .tn-ribbon > header > a.tf-checked,
 .card-header-tabs .tn-ribbon > footer > a.active,
 .card-header-tabs .tl-buttons .tn-ribbon > footer > a.tf-checked,
-.tl-buttons .card-header-tabs .tn-ribbon > footer > a.tf-checked, .card-header-tabs .nav-link.tf-active, .card-header-tabs .tf-active.tb-nav-link, .card-header-tabs .tn-ribbon > header > a.tf-active,
+.tl-buttons .card-header-tabs .tn-ribbon > footer > a.tf-checked, .card-header-tabs .nav-link.tf-active, .card-header-tabs .tn-ribbon > header > a.tf-active,
 .card-header-tabs .tn-ribbon > footer > a.tf-active {
   background-color: var(--bs-card-bg);
   border-bottom-color: var(--bs-card-bg);
@@ -13070,9 +12905,11 @@ tr.drop-child {
   overflow-y: auto;
   max-width: 100%;
   overflow-x: hidden;
-  padding: var(--t-content-padding);
   display: flex;
   flex-direction: column;
+}
+.page > section > * {
+  padding: 12px;
 }
 
 .tl-responsive-panel {
@@ -13327,17 +13164,25 @@ aside * {
 }
 
 ::-webkit-scrollbar-track {
-  background: #b3b3b3;
+  background: transparent;
 }
 
+/*::-webkit-scrollbar-thumb {
+    background: transparent;
+  }*/
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #ddd !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #d0d0d0 !important;
 }
 
+@supports (-moz-appearance: none) {
+  .tw aside {
+    scrollbar-width: thin;
+  }
+}
 /* aside scroll fix*/
 footer {
   padding: 5px;
@@ -13657,17 +13502,14 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
   height: 26px;
   width: min-content;
 }
-.tn-ribbon .nav-tabs, .tn-ribbon .tc-tabs > header > ul, .tn-ribbon .tb-nav-tabs, .tn-ribbon > header,
+.tn-ribbon .nav-tabs, .tn-ribbon > header,
 .tn-ribbon > footer {
   font-size: var(--t-font-size);
 }
-.tn-ribbon .nav-tabs .nav-link, .tn-ribbon .tc-tabs > header > ul .nav-link, .tn-ribbon .nav-tabs .tb-nav-link, .tn-ribbon .tc-tabs > header > ul .tb-nav-link, .tn-ribbon .tb-nav-tabs .nav-link, .tn-ribbon .tb-nav-tabs .tb-nav-link, .tn-ribbon .nav-tabs .tn-ribbon > header > a, .tn-ribbon .tc-tabs > header > ul .tn-ribbon > header > a, .tn-ribbon .tb-nav-tabs .tn-ribbon > header > a,
-.tn-ribbon .nav-tabs .tn-ribbon > footer > a,
-.tn-ribbon .tc-tabs > header > ul .tn-ribbon > footer > a,
-.tn-ribbon .tb-nav-tabs .tn-ribbon > footer > a, .tn-ribbon > header .nav-link, .tn-ribbon > header .tb-nav-link, .tn-ribbon > header > a,
+.tn-ribbon .nav-tabs .nav-link, .tn-ribbon .nav-tabs .tn-ribbon > header > a,
+.tn-ribbon .nav-tabs .tn-ribbon > footer > a, .tn-ribbon > header .nav-link, .tn-ribbon > header > a,
 .tn-ribbon > header .tn-ribbon > footer > a,
 .tn-ribbon > footer .nav-link,
-.tn-ribbon > footer .tb-nav-link,
 .tn-ribbon > footer .tn-ribbon > header > a,
 .tn-ribbon > footer > a {
   color: #757575 !important;
@@ -13679,13 +13521,10 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
   transition: background-color 0.5s;
   border-bottom: 3px solid var(--t-border-color);
 }
-.tn-ribbon .nav-tabs .nav-link:hover, .tn-ribbon .tc-tabs > header > ul .nav-link:hover, .tn-ribbon .nav-tabs .tb-nav-link:hover, .tn-ribbon .tc-tabs > header > ul .tb-nav-link:hover, .tn-ribbon .tb-nav-tabs .nav-link:hover, .tn-ribbon .tb-nav-tabs .tb-nav-link:hover, .tn-ribbon .nav-tabs .tn-ribbon > header > a:hover, .tn-ribbon .tc-tabs > header > ul .tn-ribbon > header > a:hover, .tn-ribbon .tb-nav-tabs .tn-ribbon > header > a:hover,
-.tn-ribbon .nav-tabs .tn-ribbon > footer > a:hover,
-.tn-ribbon .tc-tabs > header > ul .tn-ribbon > footer > a:hover,
-.tn-ribbon .tb-nav-tabs .tn-ribbon > footer > a:hover, .tn-ribbon > header .nav-link:hover, .tn-ribbon > header .tb-nav-link:hover, .tn-ribbon > header > a:hover,
+.tn-ribbon .nav-tabs .nav-link:hover, .tn-ribbon .nav-tabs .tn-ribbon > header > a:hover,
+.tn-ribbon .nav-tabs .tn-ribbon > footer > a:hover, .tn-ribbon > header .nav-link:hover, .tn-ribbon > header > a:hover,
 .tn-ribbon > header .tn-ribbon > footer > a:hover,
 .tn-ribbon > footer .nav-link:hover,
-.tn-ribbon > footer .tb-nav-link:hover,
 .tn-ribbon > footer .tn-ribbon > header > a:hover,
 .tn-ribbon > footer > a:hover {
   transition: border-bottom 0.5s;
@@ -13693,31 +13532,21 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
   color: #2c2c2c !important;
   border-bottom: 3px solid rgb(138, 138, 138);
 }
-.tn-ribbon .nav-tabs .nav-link.active, .tn-ribbon .nav-tabs .tl-buttons .nav-link.tf-checked, .tl-buttons .tn-ribbon .nav-tabs .nav-link.tf-checked, .tn-ribbon .tc-tabs > header > ul .nav-link.active, .tn-ribbon .tc-tabs > header > ul .tl-buttons .nav-link.tf-checked, .tl-buttons .tn-ribbon .tc-tabs > header > ul .nav-link.tf-checked, .tn-ribbon .nav-tabs .active.tb-nav-link, .tn-ribbon .nav-tabs .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .tn-ribbon .nav-tabs .tb-nav-link.tf-checked, .tn-ribbon .tc-tabs > header > ul .active.tb-nav-link, .tn-ribbon .tc-tabs > header > ul .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .tn-ribbon .tc-tabs > header > ul .tb-nav-link.tf-checked, .tn-ribbon .tb-nav-tabs .nav-link.active, .tn-ribbon .tb-nav-tabs .tl-buttons .nav-link.tf-checked, .tl-buttons .tn-ribbon .tb-nav-tabs .nav-link.tf-checked, .tn-ribbon .tb-nav-tabs .active.tb-nav-link, .tn-ribbon .tb-nav-tabs .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .tn-ribbon .tb-nav-tabs .tb-nav-link.tf-checked, .tn-ribbon .nav-tabs .tn-ribbon > header > a.active, .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-checked, .tn-ribbon .tc-tabs > header > ul .tn-ribbon > header > a.active, .tl-buttons .tn-ribbon .tc-tabs > header > ul .tn-ribbon > header > a.tf-checked, .tn-ribbon .tb-nav-tabs .tn-ribbon > header > a.active, .tl-buttons .tn-ribbon .tb-nav-tabs .tn-ribbon > header > a.tf-checked,
+.tn-ribbon .nav-tabs .nav-link.active, .tn-ribbon .nav-tabs .tl-buttons .nav-link.tf-checked, .tl-buttons .tn-ribbon .nav-tabs .nav-link.tf-checked, .tn-ribbon .nav-tabs .tn-ribbon > header > a.active, .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-checked,
 .tn-ribbon .nav-tabs .tn-ribbon > footer > a.active,
-.tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-checked,
-.tn-ribbon .tc-tabs > header > ul .tn-ribbon > footer > a.active,
-.tl-buttons .tn-ribbon .tc-tabs > header > ul .tn-ribbon > footer > a.tf-checked,
-.tn-ribbon .tb-nav-tabs .tn-ribbon > footer > a.active,
-.tl-buttons .tn-ribbon .tb-nav-tabs .tn-ribbon > footer > a.tf-checked, .tn-ribbon > header .nav-link.active, .tn-ribbon > header .tl-buttons .nav-link.tf-checked, .tl-buttons .tn-ribbon > header .nav-link.tf-checked, .tn-ribbon > header .active.tb-nav-link, .tn-ribbon > header .tl-buttons .tb-nav-link.tf-checked, .tl-buttons .tn-ribbon > header .tb-nav-link.tf-checked, .tn-ribbon > header > a.active, .tl-buttons .tn-ribbon > header > a.tf-checked,
+.tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-checked, .tn-ribbon > header .nav-link.active, .tn-ribbon > header .tl-buttons .nav-link.tf-checked, .tl-buttons .tn-ribbon > header .nav-link.tf-checked, .tn-ribbon > header > a.active, .tl-buttons .tn-ribbon > header > a.tf-checked,
 .tn-ribbon > header .tn-ribbon > footer > a.active,
 .tl-buttons .tn-ribbon > header .tn-ribbon > footer > a.tf-checked,
 .tn-ribbon > footer .nav-link.active,
 .tn-ribbon > footer .tl-buttons .nav-link.tf-checked,
 .tl-buttons .tn-ribbon > footer .nav-link.tf-checked,
-.tn-ribbon > footer .active.tb-nav-link,
-.tn-ribbon > footer .tl-buttons .tb-nav-link.tf-checked,
-.tl-buttons .tn-ribbon > footer .tb-nav-link.tf-checked,
 .tn-ribbon > footer .tn-ribbon > header > a.active,
 .tl-buttons .tn-ribbon > footer .tn-ribbon > header > a.tf-checked,
 .tn-ribbon > footer > a.active,
-.tl-buttons .tn-ribbon > footer > a.tf-checked, .tn-ribbon .nav-tabs .nav-link.tf-active, .tn-ribbon .tc-tabs > header > ul .nav-link.tf-active, .tn-ribbon .nav-tabs .tf-active.tb-nav-link, .tn-ribbon .tc-tabs > header > ul .tf-active.tb-nav-link, .tn-ribbon .tb-nav-tabs .nav-link.tf-active, .tn-ribbon .tb-nav-tabs .tf-active.tb-nav-link, .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-active, .tn-ribbon .tc-tabs > header > ul .tn-ribbon > header > a.tf-active, .tn-ribbon .tb-nav-tabs .tn-ribbon > header > a.tf-active,
-.tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-active,
-.tn-ribbon .tc-tabs > header > ul .tn-ribbon > footer > a.tf-active,
-.tn-ribbon .tb-nav-tabs .tn-ribbon > footer > a.tf-active, .tn-ribbon > header .nav-link.tf-active, .tn-ribbon > header .tf-active.tb-nav-link, .tn-ribbon > header > a.tf-active,
+.tl-buttons .tn-ribbon > footer > a.tf-checked, .tn-ribbon .nav-tabs .nav-link.tf-active, .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-active,
+.tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-active, .tn-ribbon > header .nav-link.tf-active, .tn-ribbon > header > a.tf-active,
 .tn-ribbon > header .tn-ribbon > footer > a.tf-active,
 .tn-ribbon > footer .nav-link.tf-active,
-.tn-ribbon > footer .tf-active.tb-nav-link,
 .tn-ribbon > footer .tn-ribbon > header > a.tf-active,
 .tn-ribbon > footer > a.tf-active {
   border: none;
@@ -14076,7 +13905,7 @@ label + .form-control-plaintext,
   padding: 0px;
 }
 
-.nav-link, .tb-nav-link, .tn-ribbon > header > a,
+.nav-link, .tn-ribbon > header > a,
 .tn-ribbon > footer > a {
   border-radius: 0px;
 }
@@ -14297,6 +14126,10 @@ label + .form-control-plaintext,
   border-color: var(--t-border-color);
 }
 
+.te > span {
+  font-size: var(--t-font-size);
+}
+
 .te-combo {
   border-radius: var(--button-border-radius);
   border-color: var(--t-border-color);
@@ -14308,6 +14141,7 @@ label + .form-control-plaintext,
 }
 .te-combo span {
   overflow: hidden;
+  font-size: var(--t-font-size);
 }
 .te-combo i {
   font-size: var(--t-font-size) !important;
@@ -15244,12 +15078,34 @@ td > i {
   flex-direction: column;
 }
 
-.tb-nav-link {
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
+/*.tb-nav {
+    @extend .nav;
 }
-
+.tb-nav-tabs {
+    @extend .nav-tabs;
+}
+.tb-nav-item {
+    @extend .nav-item;
+}
+.tb-nav-link {
+    @extend .nav-link;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}*/
+.tc-tabs {
+  display: flex;
+  flex-direction: column;
+}
+.tc-tabs > header {
+  background-color: #f7f7f7;
+  border: 1px solid #e1e5e9;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 .tc-tabs > header > ul {
+  /*@extend .nav;
+  @extend .nav-tabs;*/
   position: relative;
   z-index: 1000;
   border-bottom: 0;
@@ -15257,24 +15113,16 @@ td > i {
   overflow-x: auto;
   display: flex;
   flex-wrap: nowrap;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 .tc-tabs > header > ul li {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
-  background-color: #f3f4f4;
-  border: 1px solid var(--t-border-color);
-  padding: var(--tabs-nav-padding);
-  color: var(--tabs-nav-link-color);
+  padding: 6px;
+  margin: 6px;
   font-size: var(--tabs-font-size);
-  border-top: none;
-  border-bottom: none;
-}
-.tc-tabs > header > ul li:not(:first-child) a {
-  border-top-left-radius: 0;
-}
-.tc-tabs > header > ul li:not(:last-child) a {
-  border-top-right-radius: 0;
 }
 .tc-tabs > header > ul li:hover {
   cursor: pointer;
@@ -15293,12 +15141,9 @@ td > i {
   box-shadow: none !important;
 }
 .tc-tabs > header > ul li.tf-active {
-  background: #ffffff;
+  color: var(--bs-primary);
   font-weight: bold;
-  color: var(--tabs-nav-link-active-color);
-}
-.tc-tabs > header > ul li.tf-active a {
-  background-color: #ffffff !important;
+  border-bottom: 2px solid var(--bs-primary);
 }
 .tc-tabs > header > ul li button {
   padding-top: 0px;
@@ -15328,19 +15173,32 @@ td > i {
   max-height: calc(100% - 44px);
   overflow-y: auto;
   background-color: #fff;
-  margin-bottom: 12px;
+  border-bottom: none;
+}
+.tc-tabs::after {
+  display: block;
+  content: "";
+  border: 1px solid var(--t-border-color);
+  height: 10px;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #fff;
 }
 
 .tc-tabs.tf-noborder {
   padding: 0px !important;
   margin: 0px;
-  margin-top: -12px;
-  margin-left: -16px;
-  margin-right: -16px;
-  margin-bottom: -16px;
-  height: calc(100% + 24px);
+}
+.tc-tabs.tf-noborder > header {
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 .tc-tabs.tf-noborder > header > ul {
+  /*@extend .nav;
+  @extend .nav-tabs;*/
   position: relative;
   z-index: 1000;
   border-bottom: 0;
@@ -15348,9 +15206,9 @@ td > i {
   overflow-x: auto;
   display: flex;
   flex-wrap: nowrap;
-  height: 44px;
 }
 .tc-tabs.tf-noborder > header > ul li {
+  /*@extend .nav-item;*/
   flex: 0 0 auto;
 }
 .tc-tabs.tf-noborder > header > ul li:not(:first-child) a {
@@ -15405,6 +15263,9 @@ td > i {
   margin-left: -12px;
   margin-right: -12px;
 }
+.tc-tabs.tf-noborder > section .tf-noborder > section::after {
+  border-radius: 0;
+}
 
 .ts-modal .tc-tabs.tf-noborder {
   margin-top: -16px;
@@ -15413,6 +15274,10 @@ td > i {
   border: none;
   border-bottom: 1px solid var(--t-border-color);
   border-top: 1px solid var(--t-border-color);
+}
+
+.tc-tabs .tc-tabs.tf-noborder::after {
+  border-bottom: none !important;
 }
 
 .tc-tabs.tf-noborder[id^="CurrentPage.View.DetailsObjectVM"],
@@ -15432,14 +15297,6 @@ td > i {
 .tc-tabs.tf-noborder[id^="CurrentPage.View.Content.DetailsObjectVM"] header ul li:first-child a,
 .tc-tabs.tf-noborder[id^="CurrentPage.View.Events.DetailsObjectVM"] header ul li:first-child a {
   border-left: 0px;
-}
-
-.tc-workspace-it .tc-tabs li {
-  border-top: 1px solid var(--t-border-color);
-}
-
-.tc-workspace-it > .tc-tabs > section > .tc-tabs > header > ul > li {
-  border-top: none;
 }
 
 .tn-pagination ul {
@@ -16005,22 +15862,45 @@ iframe {
   background-color: #73b7ff !important;
   background: #73b7ff !important;
 }
-.tc-workspace > .tc-tabs {
-  margin: -13px -17px;
-  height: calc(100% + 23px) !important;
-}
 .tc-workspace section > .tc-tabs.tf-noborder {
-  margin-top: -12px;
+  margin-top: -12px !important;
   margin-left: -12px;
   margin-right: -12px;
   margin-bottom: -16px;
 }
 
-.tl-stack .tc-workspace .tc-tabs {
-  margin: 0;
+section:has(> .tc-workspace) {
+  background-color: #f5f7fa;
 }
-.tl-stack .tc-workspace .tc-tabs li {
-  border-top: 1px solid var(--t-border-color);
+
+.tc-workspace:has(> .tc-tabs) .tc-tabs .tc-tabs {
+  margin-top: 12px;
+}
+
+.tc-workspace.tf-nofloat:has(> .tc-tabs) {
+  padding: 0px;
+}
+.tc-workspace.tf-nofloat:has(> .tc-tabs) > .tc-tabs::after {
+  height: 0;
+  border-radius: 0;
+  border-bottom: none;
+}
+.tc-workspace.tf-nofloat:has(> .tc-tabs) > .tc-tabs > header {
+  border-radius: 0;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+.tc-workspace.tf-nofloat:has(> .tc-tabs) > .tc-tabs > section {
+  border-left: none;
+  border-right: none;
+}
+.tc-workspace.tf-nofloat:has(> .tc-tabs) > .tc-tabs .tc-tabs {
+  margin-top: 12px;
+}
+
+.tc-workspace .tc-workspace-it .tc-tabs .tc-tabs {
+  margin-top: 12px;
 }
 
 .tl-filedropwrapper.hover {

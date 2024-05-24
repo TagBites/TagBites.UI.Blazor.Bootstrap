@@ -12,9 +12,12 @@
         overflow-y: auto;
         max-width: 100%;
         overflow-x: hidden;
-        padding: var(--t-content-padding);
+        //padding: var(--t-content-padding);
         display: flex;
         flex-direction: column;
+        > *{
+            padding:12px;
+        }
     }
     color: var(--t-font-color);
 }
