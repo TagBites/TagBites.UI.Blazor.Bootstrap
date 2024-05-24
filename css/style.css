@@ -15737,7 +15737,6 @@ iframe {
 
 .tl-split-splitter {
   width: 1px;
-  border-left: 1px solid var(--t-border-color);
   padding: 0 !important;
   margin-top: 12px;
   height: calc(100% - 12px) !important;
