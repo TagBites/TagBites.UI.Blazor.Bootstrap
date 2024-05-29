@@ -1,6 +1,11 @@
 $t-aside-bg: desaturate( darken($blue, 30%), 60%);
 
 :root{
+    --tv-ribbon-tabs-h: 45px;
+    --tv-ribbon-status-h: 32px; 
+    --tv-window-bar-h: 23px;
+
+
 --ts-height:100vh;
 
 --t-border-color: var(--bs-border-color);//base-border-color

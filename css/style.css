@@ -13346,7 +13346,7 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
 }
 
 .tf-topactive {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 .tf-fill {
@@ -14175,6 +14175,10 @@ input, button, select, optgroup, textarea {
   overflow-x: hidden;
   flex: 1 0 auto;
   margin-bottom: 1em;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  -webkit-touch-callout: none;
 }
 .td-datagrid:focus {
   outline: 1px solid rgba(10, 110, 253, 0.25);
@@ -15142,7 +15146,7 @@ td > i {
 }
 .tc-tabs > header > ul li.tf-active {
   color: var(--bs-primary);
-  font-weight: bold;
+  font-weight: normal;
   border-bottom: 2px solid var(--bs-primary);
 }
 .tc-tabs > header > ul li button {
@@ -16001,6 +16005,9 @@ section:has(> .tc-workspace) {
 }
 
 :root {
+  --tv-ribbon-tabs-h: 45px;
+  --tv-ribbon-status-h: 32px;
+  --tv-window-bar-h: 23px;
   --ts-height:100vh;
   --t-border-color: var(--bs-border-color);
   --t-border-radius: var(--bs-border-radius);
