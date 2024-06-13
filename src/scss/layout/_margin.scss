@@ -1,5 +1,5 @@
 :root{
-    --t-base-offset: 24px;
+    --t-base-offset: 12px;
     --t-half-base-offset: calc(var(--t-base-offset) / 2);
   
     --t-base-offset-negative: calc(var(--t-base-offset) * -1);
@@ -21,7 +21,7 @@
     padding: 0!important;
   }
   .tl:not(.tl-stack, .tl-grid,.tl-split),
-  .tn:not(.tn-ribbon, .tn-ribbon .tn, .tn-ribbon-status,.tn-toolbox)
+  .tn:not(.tn-ribbon, .tn-ribbon .tn, .tn-ribbon-status,.tn-toolbox,.tn-navmenu,.tn-pagination)
   {
     padding: var(--t-base-offset);
   }
@@ -87,10 +87,10 @@
   
    .tl-grid > .row > div[class^="col-"]:not(.col-lg-12):first-child > .tl,
    .tl-grid > .row > div[class^="col-"]:not(.col-lg-12):first-child > .tc:not(.tc-tabs){
-  margin-right: var(--t-base-form-offset-negative);
+  /*margin-right: var(--t-base-form-offset-negative);*/
    }
     .tl-grid > .row > div[class^="col-"]:not(.col-lg-12):last-child > .tl,  .tl-grid > .row > div[class^="col-"]:not(.col-lg-12):last-child > .tl{
-  margin-left: var(--t-base-form-offset-negative);
+  /*margin-left: var(--t-base-form-offset-negative);*/
    }
   
  
@@ -160,3 +160,10 @@
   .tl-split-panel{
     padding:0!important;
   }
+
+  .tc-group-header + .tl-grid, .tc-group-header + .tl-stack {
+    padding: 12px;
+}
+.tl-grid > div .tl-grid > div{
+  margin-bottom:0px;
+}

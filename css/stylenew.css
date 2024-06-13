@@ -13407,7 +13407,7 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
 }
 
 :root {
-  --t-base-offset: 24px;
+  --t-base-offset: 12px;
   --t-half-base-offset: calc(var(--t-base-offset) / 2);
   --t-base-offset-negative: calc(var(--t-base-offset) * -1);
   --t-half-base-offset-negative: calc(calc(var(--t-base-offset) / 2) * -1);
@@ -13427,7 +13427,7 @@ section {
 }
 
 .tl:not(.tl-stack, .tl-grid, .tl-split),
-.tn:not(.tn-ribbon, .tn-ribbon .tn, .tn-ribbon-status, .tn-toolbox) {
+.tn:not(.tn-ribbon, .tn-ribbon .tn, .tn-ribbon-status, .tn-toolbox, .tn-navmenu, .tn-pagination) {
   padding: var(--t-base-offset);
 }
 
@@ -13508,11 +13508,11 @@ div.tl > div:not(:empty):last-child > .tl:not(.tl-grid, .tl-split, .tc-tabs) {
 .tl-grid > .row > div[class^=col-]:not(.col-lg-12):first-child > .tc:not(.tc-tabs),
 .tl-grid > .tl-split > div[class^=col-]:not(.col-lg-12):first-child > .tc:not(.tc-tabs),
 .tl-grid > .tl-stack > div[class^=col-]:not(.col-lg-12):first-child > .tc:not(.tc-tabs) {
-  margin-right: var(--t-base-form-offset-negative);
+  /*margin-right: var(--t-base-form-offset-negative);*/
 }
 
 .tl-grid > .row > div[class^=col-]:not(.col-lg-12):last-child > .tl, .tl-grid > .tl-split > div[class^=col-]:not(.col-lg-12):last-child > .tl, .tl-grid > .tl-stack > div[class^=col-]:not(.col-lg-12):last-child > .tl, .tl-grid > .row > div[class^=col-]:not(.col-lg-12):last-child > .tl {
-  margin-left: var(--t-base-form-offset-negative);
+  /*margin-left: var(--t-base-form-offset-negative);*/
 }
 
 div.tl-grid > .row:not(:empty):first-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-split:not(:empty):first-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-stack:not(:empty):first-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs) {
@@ -13591,6 +13591,14 @@ div:not(.tl-formgroup) > .te-textarea {
 
 .tl-split-panel {
   padding: 0 !important;
+}
+
+.tc-group-header + .tl-grid, .tc-group-header + .tl-stack {
+  padding: 12px;
+}
+
+.tl-grid > div .tl-grid > div {
+  margin-bottom: 0px;
 }
 
 .tb-dark-mode { /*TEST*/ }
