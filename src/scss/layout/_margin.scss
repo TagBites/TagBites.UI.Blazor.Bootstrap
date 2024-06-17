@@ -1,3 +1,56 @@
+/*:root{  
+  --tv-default-margin: 8px;
+  --tv-default-padding: 10px;
+  --tv-large-padding: var(--tv-default-padding);
+}
+
+// Reset odstępów
+.tc,
+.tc-tabs,
+.tc-group-header,
+.tl,
+.tl > .tc,
+.tl-grid > div,
+.tl-grid > div > div,
+.tl-grid > div > div > .tc:not(.tc-group-header),
+.tl-grid > div > div > .tl:not(.tl-formgroup),
+.tl-stack > div,
+.tl-stack > div > .tc:not(.tc-group-header),
+.tl-stack > div > .tl:not(.tl-formgroup),
+.tl-split > div
+{
+  margin: 0;
+  padding: 0;
+}
+
+// Co jest kontenerem
+.tc,
+.tc-tabs > section,
+.page > section
+{
+ padding: var(--tv-default-padding);
+}
+
+// Co jest w układzie
+.tl-stack > div > *,
+.tl-grid > div > div > *
+{
+ margin: var(--tv-default-margin); // calc(var(--tv-default-margin) / 2) 
+}
+
+
+// dodatkowy reset
+
+
+.tl-formgroup {
+  margin-top:0 !important;
+}
+
+// Co nie jest układem
+
+*/
+
+
 :root{
     --t-base-offset: 12px;
     --t-half-base-offset: calc(var(--t-base-offset) / 2);
@@ -85,14 +138,7 @@
      padding-bottom: var(--t-base-offset);
    }
   
-   .tl-grid > .row > div[class^="col-"]:not(.col-lg-12):first-child > .tl,
-   .tl-grid > .row > div[class^="col-"]:not(.col-lg-12):first-child > .tc:not(.tc-tabs){
-  /*margin-right: var(--t-base-form-offset-negative);*/
-   }
-    .tl-grid > .row > div[class^="col-"]:not(.col-lg-12):last-child > .tl,  .tl-grid > .row > div[class^="col-"]:not(.col-lg-12):last-child > .tl{
-  /*margin-left: var(--t-base-form-offset-negative);*/
-   }
-  
+
  
   div.tl-grid > .row:not(:empty):first-child > div[class^="col-"]  .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs){
     padding-top: var(--t-base-offset);

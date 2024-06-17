@@ -13406,201 +13406,6 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
   border-bottom-width: 1px !important;
 }
 
-:root {
-  --t-base-offset: 12px;
-  --t-half-base-offset: calc(var(--t-base-offset) / 2);
-  --t-base-offset-negative: calc(var(--t-base-offset) * -1);
-  --t-half-base-offset-negative: calc(calc(var(--t-base-offset) / 2) * -1);
-  --t-base-form-offset: 12px;
-  --t-half-base-form-offset: calc(var(--t-base-form-offset) / 2);
-  --t-base-form-offset-negative: calc(var(--t-base-form-offset) * -1);
-  --t-half-base-form-offset-negative: calc(calc(var(--t-base-form-offset) / 2) * -1);
-  --t-label-offset: 0px ;
-}
-
-::-webkit-scrollbar {
-  background: #efefef;
-}
-
-section {
-  padding: 0 !important;
-}
-
-.tl:not(.tl-stack, .tl-grid, .tl-split),
-.tn:not(.tn-ribbon, .tn-ribbon .tn, .tn-ribbon-status, .tn-toolbox, .tn-navmenu, .tn-pagination) {
-  padding: var(--t-base-offset);
-}
-
-.tc-group,
-div:not(.tc-workspace-it) > .tc-tabs,
-.te-search,
-.tp:not(.tp-label, .tp-image, .tp-button, .tp-badge, .tp-text) {
-  margin: var(--t-base-offset);
-}
-
-.td {
-  padding: var(--t-base-offset);
-}
-
-.tp:not(.tp-label, .tp-button, .tp-badge, .tp-text, .tp-progress) {
-  display: block;
-  padding: var(--t-base-offset);
-}
-
-.tl-stack > *,
-.tl-stack,
-.tl-split > *,
-.tl-split,
-.row,
-div.tc-workspace > .tc-tabs {
-  margin: 0;
-  padding: 0;
-}
-
-.tc-group-header {
-  margin: 0 !important;
-}
-
-.col, div[class^=col-] {
-  margin: 0;
-  padding: 0;
-}
-
-div:not(.tl-formgroup) > .te:not(.te-timespan, .te-check, .te-search, .te-text, .te-textarea, .te-lookup, .te-date) {
-  padding: var(--t-half-base-offset);
-}
-
-.tl > .tl {
-  padding: 0px;
-}
-
-.tc-workspace section > .tc-tabs.tf-noborder {
-  margin: 0 !important;
-}
-
-.te-search {
-  width: calc(100% - var(--t-base-offset) * 2) !important;
-}
-
-.tl-formcheck input[type=checkbox] {
-  margin-left: 0;
-  margin-right: var(--t-base-offset);
-}
-
-.tl-formcheck {
-  margin-bottom: 0;
-}
-
-div.tl > div:not(:empty) > .tl:not(.tl-grid, .tl-split, .tc-tabs) {
-  padding-top: var(--t-half-base-form-offset);
-  padding-bottom: var(--t-half-base-form-offset);
-}
-
-div.tl > div:not(:empty):first-child > .tl:not(.tl-grid, .tl-split, .tc-tabs) {
-  padding-top: var(--t-base-offset);
-}
-
-div.tl > div:not(:empty):last-child > .tl:not(.tl-grid, .tl-split, .tc-tabs) {
-  padding-bottom: var(--t-base-offset);
-}
-
-.tl-grid > .row > div[class^=col-]:not(.col-lg-12):first-child > .tl, .tl-grid > .tl-split > div[class^=col-]:not(.col-lg-12):first-child > .tl, .tl-grid > .tl-stack > div[class^=col-]:not(.col-lg-12):first-child > .tl,
-.tl-grid > .row > div[class^=col-]:not(.col-lg-12):first-child > .tc:not(.tc-tabs),
-.tl-grid > .tl-split > div[class^=col-]:not(.col-lg-12):first-child > .tc:not(.tc-tabs),
-.tl-grid > .tl-stack > div[class^=col-]:not(.col-lg-12):first-child > .tc:not(.tc-tabs) {
-  /*margin-right: var(--t-base-form-offset-negative);*/
-}
-
-.tl-grid > .row > div[class^=col-]:not(.col-lg-12):last-child > .tl, .tl-grid > .tl-split > div[class^=col-]:not(.col-lg-12):last-child > .tl, .tl-grid > .tl-stack > div[class^=col-]:not(.col-lg-12):last-child > .tl, .tl-grid > .row > div[class^=col-]:not(.col-lg-12):last-child > .tl {
-  /*margin-left: var(--t-base-form-offset-negative);*/
-}
-
-div.tl-grid > .row:not(:empty):first-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-split:not(:empty):first-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-stack:not(:empty):first-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs) {
-  padding-top: var(--t-base-offset);
-}
-
-div.tl-grid > .row:not(:empty):last-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-split:not(:empty):last-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-stack:not(:empty):last-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs) {
-  padding-bottom: var(--t-base-offset);
-}
-
-div.tl-grid > .row:not(:empty) > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-split:not(:empty) > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-stack:not(:empty) > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs) {
-  padding-top: var(--t-half-base-form-offset) !important;
-  padding-bottom: var(--t-half-base-form-offset) !important;
-}
-
-.tl-stack > div > .tl-formgroup {
-  padding-top: var(--t-half-base-form-offset) !important;
-  padding-bottom: var(--t-half-base-form-offset) !important;
-}
-
-.tl-stack > div:not(:empty):first-child > .tl-formgroup {
-  padding-top: var(--t-base-offset) !important;
-}
-
-.tl-stack > div:not(:empty):last-child > .tl-formgroup {
-  padding-bottom: var(--t-base-offset) !important;
-}
-
-div.tl-grid > .row:not(:empty) > div[class^=col-] > .tc-group, div.tl-grid > .tl-split:not(:empty) > div[class^=col-] > .tc-group, div.tl-grid > .tl-stack:not(:empty) > div[class^=col-] > .tc-group,
-div.tl-grid > .row:not(:empty) > div[class^=col-] > .tc-tabs,
-div.tl-grid > .tl-split:not(:empty) > div[class^=col-] > .tc-tabs,
-div.tl-grid > .tl-stack:not(:empty) > div[class^=col-] > .tc-tabs {
-  margin-top: var(--t-half-base-offset);
-  margin-bottom: var(--t-half-base-offset);
-}
-
-div.tl-grid > .row:not(:empty):first-child > div[class^=col-] > .tc-group, div.tl-grid > .tl-split:not(:empty):first-child > div[class^=col-] > .tc-group, div.tl-grid > .tl-stack:not(:empty):first-child > div[class^=col-] > .tc-group {
-  margin-top: var(--t-base-offset);
-}
-
-div.tl-grid > .row:not(:empty):last-child > div[class^=col-] > .tc-group, div.tl-grid > .tl-split:not(:empty):last-child > div[class^=col-] > .tc-group, div.tl-grid > .tl-stack:not(:empty):last-child > div[class^=col-] > .tc-group {
-  margin-bottom: var(--t-base-offset);
-}
-
-.tp-text {
-  display: flex;
-  padding: var(--t-half-base-offset) var(--t-base-offset);
-  margin-bottom: 0;
-}
-
-.tp-label {
-  margin: var(--t-label-offset);
-}
-
-.tl-stack > div > .te-search {
-  margin-bottom: 0;
-}
-
-.ts-modal .tc-tabs.tf-noborder {
-  margin-top: 0 !important;
-}
-
-.ts-modal .tc-tabs.tf-noborder > section {
-  border-bottom: 0;
-}
-
-div:not(.tl-formgroup) > .te-textarea {
-  margin: var(--t-half-base-offset) var(--t-base-offset);
-  width: -webkit-fill-available;
-  width: fill-available;
-}
-
-.tl-stack > * {
-  margin-bottom: 0 !important;
-}
-
-.tl-split-panel {
-  padding: 0 !important;
-}
-
-.tc-group-header + .tl-grid, .tc-group-header + .tl-stack {
-  padding: 12px;
-}
-
-.tl-grid > div .tl-grid > div {
-  margin-bottom: 0px;
-}
-
 .tb-dark-mode { /*TEST*/ }
 .tb-dark-mode * {
   background-color: rgb(41, 41, 41) !important;
@@ -14380,8 +14185,8 @@ input, button, select, optgroup, textarea {
   -webkit-touch-callout: none;
 }
 .td-datagrid:focus {
-  outline: 1px solid rgba(10, 110, 253, 0.25);
-  box-shadow: 0 0 0 0.05rem rgba(13, 110, 253, 0.25);
+  outline: none;
+  box-shadow: none;
 }
 .td-datagrid > section {
   overflow: auto;
@@ -14463,8 +14268,8 @@ input, button, select, optgroup, textarea {
 }
 .td-datagrid > footer {
   border: 1px solid var(--footer-border-color);
-  border-top: none;
-  background-color: #f7f7f7 !important;
+  border: none;
+  background-color: transparent;
 }
 .td-datagrid .tb-table-searchbar {
   position: sticky;
@@ -14534,11 +14339,11 @@ input, button, select, optgroup, textarea {
   table-layout: fixed;
   font-size: var(--t-font-size);
 }
-.td-datagrid table thead {
-  background-color: var(--t-table-accent-background-color);
-}
 .td-datagrid table thead th i {
   margin-top: 10px !important;
+}
+.td-datagrid table thead tr {
+  border-bottom-width: 2px;
 }
 .td-datagrid table .td-datagrid-group {
   font-weight: bold;
@@ -14547,7 +14352,6 @@ input, button, select, optgroup, textarea {
 .td-datagrid table .td-datagrid-group {
   font-weight: 500;
   letter-spacing: 0.5px;
-  background-color: var(--t-table-accent-background-color);
 }
 .td-datagrid table tbody tr {
   /*&:not(.tb-table-edit):hover {
@@ -14610,7 +14414,7 @@ input, button, select, optgroup, textarea {
 .td-datagrid table th {
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  text-overflow: unset;
 }
 .td-datagrid table .tbs-cell-icon {
   text-align: center;
@@ -14629,7 +14433,7 @@ table > tbody.tf-active > *,
 table > tbody.tf-active > tr > td,
 tbody > tr.tf-active,
 .td-datagrid > section > table > tbody > tr.tf-active > td {
-  background-color: #e6f2fa;
+  background-color: #f5f5f5;
 }
 .td-datagrid table > tbody.tf-active > tr > td table,
 .td-datagrid table > tbody.tf-active > tr > td table tr,
@@ -14646,7 +14450,7 @@ tbody > tr.tf-active table tr td,
 .td-datagrid > section > table > tbody > tr.tf-active > td table,
 .td-datagrid > section > table > tbody > tr.tf-active > td table tr,
 .td-datagrid > section > table > tbody > tr.tf-active > td table tr td {
-  background-color: #e6f2fa;
+  background-color: #f5f5f5;
 }
 
 /* Editable */
@@ -14688,7 +14492,7 @@ th.td-datagrid-expand {
   /*border-left: 1px solid #7e7e7e;
   border-bottom: 1px solid #7e7e7e;
   padding: 0px 2px;*/
-  background-color: var(--t-table-accent-background-color) !important;
+  text-overflow: unset;
 }
 td.td-datagrid-expand span,
 th.td-datagrid-expand span {
@@ -14698,11 +14502,14 @@ th.td-datagrid-expand span {
   margin-left: calc(14px * (1 + var(--data-level)) - 8px);
 }
 
+.td-datagrid td, .td-datagrid th {
+  border: none;
+}
+.td-datagrid tr {
+  border-top: 0;
+}
 .td-datagrid header {
-  border: 1px solid var(--t-border-color);
-  border-bottom: 0px;
-  background: var(--t-table-accent-background-color);
-  padding: 10px;
+  padding: 0px;
 }
 .td-datagrid header ul.td-datagrid-gbp {
   list-style: none;
@@ -14759,6 +14566,27 @@ td > i {
 
 .table > :not(caption) > * > *, .td-datagrid table > :not(caption) > * > * {
   padding: 0.38rem !important;
+}
+
+tbody tr:last-child {
+  border-bottom: 0;
+}
+
+td.td-datagrid-expand, th, tr, thead, th.td-datagrid-expand {
+  background-color: transparent;
+}
+
+.td-datagrid header ul.td-datagrid-gbp li {
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+.td-datagrid > section > table > tbody .td-datagrid-sr {
+  background-color: transparent;
+}
+
+.td-datagrid:focus .tf-active td {
+  background-color: #e6f2fa;
 }
 
 /* scheduler */
@@ -16244,4 +16072,239 @@ section:has(> .tc-workspace) {
 .tb-card {
   --bs-card-inner-border-radius: var(--t-border-radius);
   --bs-card-border-radius: var(--t-border-radius);
+}
+
+/*:root{  
+  --tv-default-margin: 8px;
+  --tv-default-padding: 10px;
+  --tv-large-padding: var(--tv-default-padding);
+}
+
+// Reset odstępów
+.tc,
+.tc-tabs,
+.tc-group-header,
+.tl,
+.tl > .tc,
+.tl-grid > div,
+.tl-grid > div > div,
+.tl-grid > div > div > .tc:not(.tc-group-header),
+.tl-grid > div > div > .tl:not(.tl-formgroup),
+.tl-stack > div,
+.tl-stack > div > .tc:not(.tc-group-header),
+.tl-stack > div > .tl:not(.tl-formgroup),
+.tl-split > div
+{
+  margin: 0;
+  padding: 0;
+}
+
+// Co jest kontenerem
+.tc,
+.tc-tabs > section,
+.page > section
+{
+ padding: var(--tv-default-padding);
+}
+
+// Co jest w układzie
+.tl-stack > div > *,
+.tl-grid > div > div > *
+{
+ margin: var(--tv-default-margin); // calc(var(--tv-default-margin) / 2) 
+}
+
+
+// dodatkowy reset
+
+
+.tl-formgroup {
+  margin-top:0 !important;
+}
+
+// Co nie jest układem
+
+*/
+:root {
+  --t-base-offset: 12px;
+  --t-half-base-offset: calc(var(--t-base-offset) / 2);
+  --t-base-offset-negative: calc(var(--t-base-offset) * -1);
+  --t-half-base-offset-negative: calc(calc(var(--t-base-offset) / 2) * -1);
+  --t-base-form-offset: 12px;
+  --t-half-base-form-offset: calc(var(--t-base-form-offset) / 2);
+  --t-base-form-offset-negative: calc(var(--t-base-form-offset) * -1);
+  --t-half-base-form-offset-negative: calc(calc(var(--t-base-form-offset) / 2) * -1);
+  --t-label-offset: 0px ;
+}
+
+::-webkit-scrollbar {
+  background: #efefef;
+}
+
+section {
+  padding: 0 !important;
+}
+
+.tl:not(.tl-stack, .tl-grid, .tl-split),
+.tn:not(.tn-ribbon, .tn-ribbon .tn, .tn-ribbon-status, .tn-toolbox, .tn-navmenu, .tn-pagination) {
+  padding: var(--t-base-offset);
+}
+
+.tc-group,
+div:not(.tc-workspace-it) > .tc-tabs,
+.te-search,
+.tp:not(.tp-label, .tp-image, .tp-button, .tp-badge, .tp-text) {
+  margin: var(--t-base-offset);
+}
+
+.td {
+  padding: var(--t-base-offset);
+}
+
+.tp:not(.tp-label, .tp-button, .tp-badge, .tp-text, .tp-progress) {
+  display: block;
+  padding: var(--t-base-offset);
+}
+
+.tl-stack > *,
+.tl-stack,
+.tl-split > *,
+.tl-split,
+.row,
+div.tc-workspace > .tc-tabs {
+  margin: 0;
+  padding: 0;
+}
+
+.tc-group-header {
+  margin: 0 !important;
+}
+
+.col, div[class^=col-] {
+  margin: 0;
+  padding: 0;
+}
+
+div:not(.tl-formgroup) > .te:not(.te-timespan, .te-check, .te-search, .te-text, .te-textarea, .te-lookup, .te-date) {
+  padding: var(--t-half-base-offset);
+}
+
+.tl > .tl {
+  padding: 0px;
+}
+
+.tc-workspace section > .tc-tabs.tf-noborder {
+  margin: 0 !important;
+}
+
+.te-search {
+  width: calc(100% - var(--t-base-offset) * 2) !important;
+}
+
+.tl-formcheck input[type=checkbox] {
+  margin-left: 0;
+  margin-right: var(--t-base-offset);
+}
+
+.tl-formcheck {
+  margin-bottom: 0;
+}
+
+div.tl > div:not(:empty) > .tl:not(.tl-grid, .tl-split, .tc-tabs) {
+  padding-top: var(--t-half-base-form-offset);
+  padding-bottom: var(--t-half-base-form-offset);
+}
+
+div.tl > div:not(:empty):first-child > .tl:not(.tl-grid, .tl-split, .tc-tabs) {
+  padding-top: var(--t-base-offset);
+}
+
+div.tl > div:not(:empty):last-child > .tl:not(.tl-grid, .tl-split, .tc-tabs) {
+  padding-bottom: var(--t-base-offset);
+}
+
+div.tl-grid > .row:not(:empty):first-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-stack:not(:empty):first-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-split:not(:empty):first-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs) {
+  padding-top: var(--t-base-offset);
+}
+
+div.tl-grid > .row:not(:empty):last-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-stack:not(:empty):last-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-split:not(:empty):last-child > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs) {
+  padding-bottom: var(--t-base-offset);
+}
+
+div.tl-grid > .row:not(:empty) > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-stack:not(:empty) > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs), div.tl-grid > .tl-split:not(:empty) > div[class^=col-] .tl:not(.tl-stack, .tl-grid, .tl-split, .tc-tabs) {
+  padding-top: var(--t-half-base-form-offset) !important;
+  padding-bottom: var(--t-half-base-form-offset) !important;
+}
+
+.tl-stack > div > .tl-formgroup {
+  padding-top: var(--t-half-base-form-offset) !important;
+  padding-bottom: var(--t-half-base-form-offset) !important;
+}
+
+.tl-stack > div:not(:empty):first-child > .tl-formgroup {
+  padding-top: var(--t-base-offset) !important;
+}
+
+.tl-stack > div:not(:empty):last-child > .tl-formgroup {
+  padding-bottom: var(--t-base-offset) !important;
+}
+
+div.tl-grid > .row:not(:empty) > div[class^=col-] > .tc-group, div.tl-grid > .tl-stack:not(:empty) > div[class^=col-] > .tc-group, div.tl-grid > .tl-split:not(:empty) > div[class^=col-] > .tc-group,
+div.tl-grid > .row:not(:empty) > div[class^=col-] > .tc-tabs,
+div.tl-grid > .tl-stack:not(:empty) > div[class^=col-] > .tc-tabs,
+div.tl-grid > .tl-split:not(:empty) > div[class^=col-] > .tc-tabs {
+  margin-top: var(--t-half-base-offset);
+  margin-bottom: var(--t-half-base-offset);
+}
+
+div.tl-grid > .row:not(:empty):first-child > div[class^=col-] > .tc-group, div.tl-grid > .tl-stack:not(:empty):first-child > div[class^=col-] > .tc-group, div.tl-grid > .tl-split:not(:empty):first-child > div[class^=col-] > .tc-group {
+  margin-top: var(--t-base-offset);
+}
+
+div.tl-grid > .row:not(:empty):last-child > div[class^=col-] > .tc-group, div.tl-grid > .tl-stack:not(:empty):last-child > div[class^=col-] > .tc-group, div.tl-grid > .tl-split:not(:empty):last-child > div[class^=col-] > .tc-group {
+  margin-bottom: var(--t-base-offset);
+}
+
+.tp-text {
+  display: flex;
+  padding: var(--t-half-base-offset) var(--t-base-offset);
+  margin-bottom: 0;
+}
+
+.tp-label {
+  margin: var(--t-label-offset);
+}
+
+.tl-stack > div > .te-search {
+  margin-bottom: 0;
+}
+
+.ts-modal .tc-tabs.tf-noborder {
+  margin-top: 0 !important;
+}
+
+.ts-modal .tc-tabs.tf-noborder > section {
+  border-bottom: 0;
+}
+
+div:not(.tl-formgroup) > .te-textarea {
+  margin: var(--t-half-base-offset) var(--t-base-offset);
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.tl-stack > * {
+  margin-bottom: 0 !important;
+}
+
+.tl-split-panel {
+  padding: 0 !important;
+}
+
+.tc-group-header + .tl-grid, .tc-group-header + .tl-stack {
+  padding: 12px;
+}
+
+.tl-grid > div .tl-grid > div {
+  margin-bottom: 0px;
 }
