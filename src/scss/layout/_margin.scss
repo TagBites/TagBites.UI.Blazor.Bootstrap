@@ -1,6 +1,99 @@
+:root{
+  --tv-default-section-padding:12px;
+  --tv-default-margin: 6px 12px;
+  --tv-default-padding: 6px 12px;
+}
+::-webkit-scrollbar{
+  background: #efefef;
+}
+// Reset odstępów
+.tc,
+.tl,
+.tl > .tc,
+.tl-grid > div,
+.tl-stack > div,
+.tl-split > div,
+.row > *
+{
+  margin: 0;
+  padding: 0;
+}
+.page > section > *{
+  margin:0;
+  padding: 0;
+}
+
+
+.tc-tabs > section,
+.page > section,
+.tc-group > section
+{
+ padding: var(--tv-default-section-padding);
+}
+.tl-formgroup,
+.tl-formcheck,
+.tl-formswitch,
+.te-search,
+.tc,
+.td,
+section> .tc-tabs,
+.tp-text{
+  margin: var(--tv-default-margin);
+}
+.page > section > .tc-workspace{
+  margin: var(--tv-default-margin);
+  height: calc(100% - 12px);
+}
+.tc-tabs{
+  height: 100%;
+}
+.tc-workspace-it > .tc-tabs{
+  margin:0;
+}
+.tc-workspace > .tc-tabs,
+.td-filedropzone{
+  /*height: calc(100% - 12px)!important;*/
+  margin:0;
+}
+
+.tc-group-header{
+  padding: 6px 24px;
+  margin: 6px -12px;
+}
+.tp-label{
+  margin: 0px;
+}
+.tl-buttons{
+  padding: var(--tv-default-padding);
+}
+.tl-formgroup > .tl-buttons{
+  padding:0;
+}
+/*.tc-workspace:has(> .tc-tabs) .tc-tabs .tc-tabs{
+  margin-top: 0 !important;
+  margin-left: 0;
+  margin-right: 0;
+}*/
+.te-search{
+  width: calc(100% - 24px)!important;
+}
+section:has(>.tf-noborder){
+  padding: 0;
+}
+.tc-workspace section > .tc-tabs.tf-noborder{
+
+}
+
+div:not(.tl) > .tp:not(.tp-image){
+  margin: var(--tv-default-margin);
+}
+.tp-image{
+  padding: var(--tv-default-margin);
+}
+
 /*:root{  
-  --tv-default-margin: 8px;
-  --tv-default-padding: 10px;
+  --tv-default-margin: 6px 12px;
+  --tv-default-padding: 6px 12px;
   --tv-large-padding: var(--tv-default-padding);
 }
 
@@ -12,12 +105,13 @@
 .tl > .tc,
 .tl-grid > div,
 .tl-grid > div > div,
-.tl-grid > div > div > .tc:not(.tc-group-header),
+.tl-grid > div > div > .tc:not(.tc-group-header,.tc-group),
 .tl-grid > div > div > .tl:not(.tl-formgroup),
 .tl-stack > div,
-.tl-stack > div > .tc:not(.tc-group-header),
+.tl-stack > div > .tc:not(.tc-group-header,.tc-group),
 .tl-stack > div > .tl:not(.tl-formgroup),
-.tl-split > div
+.tl-split > div,
+.page > section > *
 {
   margin: 0;
   padding: 0;
@@ -28,7 +122,7 @@
 .tc-tabs > section,
 .page > section
 {
- padding: var(--tv-default-padding);
+ padding: 12px;
 }
 
 // Co jest w układzie
@@ -46,12 +140,18 @@
   margin-top:0 !important;
 }
 
+.tl-formgroup .tl-grid > div > div > *{
+  margin:0;
+}
 // Co nie jest układem
 
+
+
+
 */
-
-
+/*
 :root{
+
     --t-base-offset: 12px;
     --t-half-base-offset: calc(var(--t-base-offset) / 2);
   
@@ -64,7 +164,10 @@
     --t-base-form-offset-negative: calc(var(--t-base-form-offset) * -1);
     --t-half-base-form-offset-negative: calc(calc(var(--t-base-form-offset) / 2) * -1);
   
-    --t-label-offset: 0px
+    --t-label-offset: 0px;
+    --tv-workspace-sp: 12px;
+
+
   }
   
   ::-webkit-scrollbar{
@@ -213,3 +316,4 @@
 .tl-grid > div .tl-grid > div{
   margin-bottom:0px;
 }
+*/

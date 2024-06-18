@@ -1,4 +1,7 @@
 /* Workspace */
+:root{
+    --tv-workspace-sp: 12px;
+}
 .tc-workspace {
     position: relative;
     height: 100%;
@@ -28,13 +31,13 @@
     z-index: 100;
 }
 .tc-workspace-sp-v {
-    height: 10px;
+    height: calc(var(--tv-workspace-sp) * 2);
     width: 100%;
     cursor: ns-resize;
 }
 .tc-workspace-sp-h {
     flex-direction: 1 0 auto;;
-    width: 10px;
+    width: calc(var(--tv-workspace-sp) * 2);
     margin: 0;
     cursor: ew-resize;
 }
@@ -149,7 +152,8 @@ section:has(>.tc-workspace){
 
 @media only screen and (max-width: 1360px) {
     .tc-workspace{
-        padding: 0px!important;
+        margin: -12px!important;
+        height: calc(100% + 24px)!important;
         > .tc-tabs{
             &::after{
                 height: 0;
