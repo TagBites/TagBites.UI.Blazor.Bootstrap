@@ -155,7 +155,8 @@ tr.drop-child {
 }  
 
 .td-webview{
-    margin-top: 0.75rem;
+    margin: 0!important;
+    padding: var(--tv-default-margin);
 }
 
 .tooltip{  

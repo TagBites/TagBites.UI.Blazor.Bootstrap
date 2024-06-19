@@ -1,6 +1,7 @@
 :root{
   --tv-default-section-padding:12px;
   --tv-default-margin: 6px 12px;
+  --tv-default-full-margin: 12px;
   --tv-default-padding: 6px 12px;
 }
 ::-webkit-scrollbar{
@@ -26,7 +27,8 @@
 
 .tc-tabs > section,
 .page > section,
-.tc-group > section
+.tc-group > section,
+.ts-modal > .tw-modal > .page > section
 {
  padding: var(--tv-default-section-padding);
 }
@@ -41,8 +43,8 @@ section> .tc-tabs,
   margin: var(--tv-default-margin);
 }
 .page > section > .tc-workspace{
-  margin: var(--tv-default-margin);
-  height: calc(100% - 12px);
+  margin: var(--tv-default-full-margin);
+  height: calc(100% - calc(var(--tv-default-full-margin) * 2));
 }
 .tc-tabs{
   height: 100%;
@@ -84,11 +86,32 @@ section:has(>.tf-noborder){
 
 }
 
-div:not(.tl) > .tp:not(.tp-image){
+div:not(.tl) > .tp:not(.tp-image,.tp-button){
   margin: var(--tv-default-margin);
 }
 .tp-image{
   padding: var(--tv-default-margin);
+}
+
+.te{
+  font-size: var(--t-font-size);
+}
+
+.tw-modal .tc-tabs.tf-noborder{
+  margin:calc(var(--tv-default-full-margin) * -1)!important;
+
+  &::after{
+    display: none;
+  }
+  > section{
+    border-bottom: none;
+  }
+}
+
+.tw-popup{
+  .td{
+    margin:0;
+  }
 }
 
 /*:root{  

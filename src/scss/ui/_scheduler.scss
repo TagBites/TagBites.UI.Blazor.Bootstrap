@@ -4,7 +4,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    height: 100%;
+    height: calc(100% - var(--tv-default-full-margin));
     background-color: var(--scheduler-background);
 
     table {

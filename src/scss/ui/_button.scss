@@ -13,7 +13,7 @@ button {
 	display: flex;
 	padding: 6px 18px;
 	align-items: center;
-	margin: 3px 6px;
+	margin: var(--tv-default-margin);
 	overflow: hidden;
 	justify-content: center;
 	*:focus {

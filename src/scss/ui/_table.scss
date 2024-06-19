@@ -271,7 +271,7 @@
     th {
         overflow: hidden;
         white-space: nowrap;
-        text-overflow: unset;
+        text-overflow: ellipsis;
     }
     .tbs-cell-icon {
         text-align: center;
@@ -359,9 +359,6 @@ th.td-datagrid-expand {
 }
 
 .td-datagrid{
-    img.rounded-circle{
-        height: 17px;
-    }
     td,th{
         border: none;
       }
@@ -448,3 +445,27 @@ tbody tr:last-child{
   .td-datagrid:focus .tf-active td{
     background-color: #e6f2fa;
   }
+
+  @media only screen and (max-width: 768px) {
+    .td-datagrid{
+        tbody{
+            border:1px solid var(--t-border-color);
+        }
+        tbody tbody{
+            border:none;
+            & > tr:first-child{
+                border-top: none;
+            }
+        }
+        .td-datagrid-details{
+            padding: 0!important;
+        }
+        tr{
+            border: 1px solid var(--t-border-color);
+        }
+    }
+  }
+
+td:has(>img.rounded-circle){
+    padding: 0 6px!important;;
+}
