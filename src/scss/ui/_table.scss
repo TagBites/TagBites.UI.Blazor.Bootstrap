@@ -447,6 +447,9 @@ tbody tr:last-child{
   }
 
   @media only screen and (max-width: 768px) {
+    .td-datagrid-gbp{
+        margin-bottom: calc(var(--tv-default-full-margin) / 2)!important;
+    }
     .td-datagrid{
         tbody{
             border:1px solid var(--t-border-color);
@@ -460,8 +463,14 @@ tbody tr:last-child{
         .td-datagrid-details{
             padding: 0!important;
         }
-        tr{
+        tbody tr{
             border: 1px solid var(--t-border-color);
+            border-right: 0;
+            border-left: 0;
+        }
+        .td-datagrid-expand{
+            border-right: 1px solid var(--t-border-color);
+            
         }
     }
   }

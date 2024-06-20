@@ -7,6 +7,10 @@
 ::-webkit-scrollbar{
   background: #efefef;
 }
+*{
+  box-sizing:border-box;
+}
+
 // Reset odstępów
 .tc,
 .tl,
@@ -47,7 +51,7 @@ section> .tc-tabs,
   height: calc(100% - calc(var(--tv-default-full-margin) * 2));
 }
 .tc-tabs{
-  height: 100%;
+  height: auto;
 }
 .tc-workspace-it > .tc-tabs{
   margin:0;
@@ -112,6 +116,15 @@ div:not(.tl) > .tp:not(.tp-image,.tp-button){
   .td{
     margin:0;
   }
+}
+
+iframe{
+  max-height: calc(100% - var(--tv-default-full-margin));
+}
+
+div:not(.tl-formgroup) > .te-textarea{
+  margin: var(--tv-default-margin);
+  max-width: calc(100% - calc(var(--tv-default-full-margin) * 2));
 }
 
 /*:root{  

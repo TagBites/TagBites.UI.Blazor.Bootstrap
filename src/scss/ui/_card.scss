@@ -1,9 +1,9 @@
 .tc-group{
     @extend .card;
     margin-bottom: 12px;
-    -webkit-box-shadow: 0px 0px 5px px rgba(0, 0, 0, 0.05);
+    /*-webkit-box-shadow: 0px 0px 5px px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);*/
     > header{
         @extend .card-header;
         font-weight: 500;
@@ -57,6 +57,5 @@
     }
 }  
 .tl-grid .tl-grid .tc-group-header{
-    margin: 12px -16px 12px -16px;
-    padding: 6px 16px;
+    margin: 6px -12px 12px -12px;
 }

@@ -108,7 +108,7 @@ section:has(>.tc-workspace){
 }
 .tc-workspace:has(>.tc-tabs){
     .tc-tabs .tc-tabs{
-        margin-top: 12px;
+        //margin-top: 12px;
     }
 }
 
@@ -171,7 +171,7 @@ section:has(>.tc-workspace){
                 border-right: none;
             }
             .tc-tabs{
-                margin-top: 12px;
+                /*margin-top: 12px;*/
             }
         }
     }

@@ -230,3 +230,14 @@
         }
     }
 }
+@media only screen and (max-width: 991px) {
+    .tc-tabs .tc-tabs {
+    margin: 6px -12px;
+    }
+    .tc-tabs .tc-tabs > header{
+        border-radius:0;
+    }
+    .tc-tabs .tc-tabs::after{
+        display:none;
+    }
+}
