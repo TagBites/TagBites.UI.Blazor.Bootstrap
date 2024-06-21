@@ -13377,9 +13377,6 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
     height: auto;
     margin-right: -12px;
   }
-  .t-fill-box > .row > .col-lg-6 > .tf-noborder header ul li, .t-fill-box > .tl-split > .col-lg-6 > .tf-noborder header ul li, .t-fill-box > .tl-stack > .col-lg-6 > .tf-noborder header ul li {
-    border-top: 1px solid var(--t-border-color);
-  }
 }
 .t-documentation {
   height: 100%;
@@ -13885,7 +13882,12 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
 }
 
 .tp-label {
-  /*margin-bottom: 0.3rem;*/
+  height: 21px;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
   font-size: var(--t-font-size-small);
   font-weight: var(--t-font-weight-bold);
   color: var(--t-font-color-light);
@@ -14247,7 +14249,7 @@ input, button, select, optgroup, textarea {
   border: none;
 }
 .td-datagrid > section > table .tf-editor .tc-input-group {
-  margin-bottom: 0px;
+  margin: 0px;
 }
 .td-datagrid > section > table .tf-editor .tc-input-group > * {
   border-top: none;
@@ -14604,6 +14606,7 @@ td.td-datagrid-expand, th, tr, thead, th.td-datagrid-expand {
   }
   .td-datagrid .td-datagrid-details {
     padding: 0 !important;
+    border: 1px solid var(--t-border-color);
   }
   .td-datagrid tbody tr {
     border: 1px solid var(--t-border-color);
@@ -14612,6 +14615,12 @@ td.td-datagrid-expand, th, tr, thead, th.td-datagrid-expand {
   }
   .td-datagrid .td-datagrid-expand {
     border-right: 1px solid var(--t-border-color);
+  }
+  .td-datagrid tbody tbody tr:last-child {
+    border-bottom: 0;
+  }
+  .td-datagrid thead .td-datagrid-expand {
+    border-right: none;
   }
 }
 td:has(> img.rounded-circle) {
@@ -15786,7 +15795,6 @@ iframe {
 
 .tl-split {
   position: relative;
-  height: calc(100% + 24px);
   /*margin: -12px;*/
 }
 .tl-split > div {
