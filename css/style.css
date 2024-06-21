@@ -14627,6 +14627,25 @@ td:has(> img.rounded-circle) {
   padding: 0 6px !important;
 }
 
+tr, tbody {
+  position: relative;
+}
+
+tr[data-handle="-1"]:not(.tf-active)::after,
+tbody[data-handle="-1"]:not(.tf-active)::after {
+  content: "+ Dodaj nowy rekord";
+  position: absolute;
+  top: 6px;
+  left: 40px;
+  pointer-events: none;
+  z-index: 1;
+  color: rgb(130, 130, 130);
+}
+
+tbody[data-handle="-1"]:not(.tf-active)::after {
+  left: 120px;
+}
+
 /* scheduler */
 .tbs-scheduler {
   -webkit-user-select: none;
