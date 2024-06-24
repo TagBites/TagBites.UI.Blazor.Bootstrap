@@ -53,6 +53,15 @@ section> .tc-tabs,
 .tc-tabs{
   height: calc(100% - var(--tv-default-full-margin))!important;
 }
+.tc-workspace-it > .tc-tabs,
+.tc-workspace > .tc-tabs{
+  height: 100%!important;
+}
+@media only screen and (max-width: 1360px){
+  .tc-tabs{
+    height: 100%!important;
+  }
+}
 .tc-workspace-it > .tc-tabs{
   margin:0;
 }
