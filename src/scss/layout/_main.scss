@@ -159,6 +159,13 @@ tr.drop-child {
     padding: var(--tv-default-margin);
 }
 
+.tl:not(.t-documentation, .v-list):has(>.row > * >.td-webview){
+    height:calc(100%);
+}
+.tl:not(.t-documentation, .v-list) .row:has(* >.td-webview){
+    height:calc(100% - 120px);
+}
+
 .tooltip{  
     transition: opacity 0.3s ease-in-out;  
 } 

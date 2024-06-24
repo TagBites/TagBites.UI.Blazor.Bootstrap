@@ -51,7 +51,7 @@ section> .tc-tabs,
   height: calc(100% - calc(var(--tv-default-full-margin) * 2));
 }
 .tc-tabs{
-  height: auto;
+  height: calc(100% - var(--tv-default-full-margin))!important;
 }
 .tc-workspace-it > .tc-tabs{
   margin:0;
