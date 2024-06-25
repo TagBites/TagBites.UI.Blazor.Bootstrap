@@ -12962,6 +12962,9 @@ tr.drop-child {
 .tn-navbar > li > span a {
   cursor: default;
 }
+.tn-navbar > li > span.tf-active {
+  color: var(--bs-primary);
+}
 .tn-navbar > li > ul {
   padding-left: 0.5rem;
 }
@@ -12970,13 +12973,18 @@ tr.drop-child {
   list-style: none;
   padding: var(--nav-item-padding);
   margin: 2px 0px;
-  transition: background-color 0.1s ease;
   border-radius: calc(var(--t-border-radius) * 2);
   color: var(--bs-body-color);
 }
 .tn-navbar > li > ul > li.active, .tl-buttons .tn-navbar > li > ul > li.tf-checked, .tn-navbar > li > ul > li.tf-active, .tn-navbar > li > ul > li:hover {
-  transition: 0s;
   color: #777777;
+}
+.tn-navbar > li > ul > li.tf-active {
+  color: var(--bs-primary);
+  font-weight: 500;
+}
+.tn-navbar > li > ul > li.tf-active:hover {
+  color: var(--bs-primary);
 }
 .tn-navbar > li > ul > li a {
   display: flex;
@@ -13163,7 +13171,6 @@ aside * {
 .tn-navbar li ul li:hover {
   color: #0f0f0f;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 @supports (-moz-appearance: none) {
@@ -14240,6 +14247,9 @@ input, button, select, optgroup, textarea {
 .td-datagrid > section > table .tf-editor {
   padding: 0 !important;
 }
+.td-datagrid > section > table .tf-editor .te {
+  height: 33px;
+}
 .td-datagrid > section > table .tf-editor input,
 .td-datagrid > section > table .tf-editor select,
 .td-datagrid > section > table .tf-editor button {
@@ -14652,6 +14662,11 @@ tbody[data-handle="-1"]:not(.tf-active)::after {
 
 tbody[data-handle="-1"]:not(.tf-active)::after {
   left: 120px;
+}
+
+tr.tf-active:has(.tf-editor),
+tbody.tf-active:has(.tf-editor) {
+  border-bottom: 1px solid var(--t-border-color);
 }
 
 /* scheduler */
@@ -16251,6 +16266,10 @@ section > .tc-tabs,
 
 .tl-formgroup > .tl-buttons {
   padding: 0;
+}
+
+.tl-formgroup .tc-input-group {
+  margin: 0;
 }
 
 /*.tc-workspace:has(> .tc-tabs) .tc-tabs .tc-tabs{

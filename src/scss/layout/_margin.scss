@@ -84,6 +84,9 @@ section> .tc-tabs,
 .tl-formgroup > .tl-buttons{
   padding:0;
 }
+.tl-formgroup .tc-input-group{
+  margin: 0;
+}
 /*.tc-workspace:has(> .tc-tabs) .tc-tabs .tc-tabs{
   margin-top: 0 !important;
   margin-left: 0;

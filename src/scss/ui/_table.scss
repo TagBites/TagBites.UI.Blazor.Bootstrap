@@ -60,6 +60,10 @@
             .tf-editor {
                 //border: 1px solid red;
                 padding: 0 !important;
+                .te{
+                    height: 33px;
+                }
+
                 input,
                 select,
                 button {
@@ -500,4 +504,8 @@ tbody[data-handle="-1"]:not(.tf-active)::after {
 } 
 tbody[data-handle="-1"]:not(.tf-active)::after{
     left: 120px;
+}
+tr.tf-active:has(.tf-editor),
+tbody.tf-active:has(.tf-editor){
+    border-bottom: 1px solid var(--t-border-color);
 }

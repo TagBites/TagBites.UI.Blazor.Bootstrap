@@ -23,6 +23,9 @@
             a {
                 cursor: default;
             }
+            &.tf-active{
+                color: var(--bs-primary);
+            }
         }
         > ul {
             padding-left: 0.5rem;
@@ -31,17 +34,21 @@
                 list-style: none;
                 padding: var(--nav-item-padding);
                 margin: 2px 0px;
-                transition: background-color 0.1s ease;
                 border-radius: calc(var(--t-border-radius) * 2);
                 color: var(--bs-body-color);
                 &.active,
                 &:hover {
-                    transition: 0s;
                     color: #777777;
                     //background-color: #abb5c9;
                     //border-radius: calc(var(--t-border-radius) * 2);
                 }
-
+                &.tf-active{
+                    color: var(--bs-primary);
+                    font-weight: 500;
+                    &:hover{
+                        color: var(--bs-primary);
+                    }
+                }
                 a {
                     display: flex;
                     flex-direction: row;
@@ -267,7 +274,6 @@
   .tn-navbar li ul li:hover{
     color: #0f0f0f;
     cursor: pointer;
-    transition: .3s;
   }
   
 
