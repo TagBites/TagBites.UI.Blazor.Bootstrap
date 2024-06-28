@@ -60,11 +60,11 @@
             .tf-editor {
                 //border: 1px solid red;
                 padding: 0 !important;
-                .te{
+                .te:not(.te-check){
                     height: 33px;
                 }
 
-                input,
+                input:not(.te-check),
                 select,
                 button {
                     border-radius: 0 !important;
@@ -423,7 +423,8 @@ td > i{
     padding: 0!important;
     button{
         padding:0px 0px!important;
-        display: contents;
+        display: inline-flex;
+        margin: 0px 4px;
     }
 }
 

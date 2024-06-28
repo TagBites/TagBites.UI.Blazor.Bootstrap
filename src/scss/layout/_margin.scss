@@ -108,7 +108,8 @@ div:not(.tl) > .tp:not(.tp-image,.tp-button){
 .tp-image{
   padding: var(--tv-default-margin);
 }
-
+.te-color,
+.te:not([type=checkbox]),
 .te{
   font-size: var(--t-font-size);
 }

@@ -12892,14 +12892,6 @@ tr.drop-child {
   padding: var(--tv-default-margin);
 }
 
-.tl:not(.t-documentation, .v-list):has(> .row > * > .td-webview, > .tl-split > * > .td-webview, > .tl-stack > * > .td-webview) {
-  height: 100%;
-}
-
-.tl:not(.t-documentation, .v-list) .row:has(* > .td-webview), .tl:not(.t-documentation, .v-list) .tl-split:has(* > .td-webview), .tl:not(.t-documentation, .v-list) .tl-stack:has(* > .td-webview) {
-  height: calc(100% - 120px);
-}
-
 .tooltip {
   transition: opacity 0.3s ease-in-out;
 }
@@ -13393,13 +13385,6 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
     margin-right: -12px;
   }
 }
-.t-documentation {
-  height: 100%;
-}
-.t-documentation > div:nth-of-type(2) {
-  height: 95% !important;
-}
-
 .tc-group:has(> header.tf-headeronly) {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -14247,10 +14232,10 @@ input, button, select, optgroup, textarea {
 .td-datagrid > section > table .tf-editor {
   padding: 0 !important;
 }
-.td-datagrid > section > table .tf-editor .te {
+.td-datagrid > section > table .tf-editor .te:not(.te-check) {
   height: 33px;
 }
-.td-datagrid > section > table .tf-editor input,
+.td-datagrid > section > table .tf-editor input:not(.te-check),
 .td-datagrid > section > table .tf-editor select,
 .td-datagrid > section > table .tf-editor button {
   border-radius: 0 !important;
@@ -14581,7 +14566,8 @@ td > i {
 }
 .td-datagrid-toolbox button {
   padding: 0px 0px !important;
-  display: contents;
+  display: inline-flex;
+  margin: 0px 4px;
 }
 
 .table > :not(caption) > * > *, .td-datagrid table > :not(caption) > * > * {
@@ -16293,6 +16279,8 @@ div:not(.tl) > .tp:not(.tp-image, .tp-button) {
   padding: var(--tv-default-margin);
 }
 
+.te-color,
+.te:not([type=checkbox]),
 .te {
   font-size: var(--t-font-size);
 }
