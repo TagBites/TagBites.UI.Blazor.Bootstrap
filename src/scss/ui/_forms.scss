@@ -141,9 +141,18 @@ input[type="checkbox"]{
 }
 .tl-formcheck{
 	@extend .form-check;
+	display: flex;
+	align-items: center;
+	.te-check{
+		margin-left: 0px!important;
+		margin-top: 0px;
+	}
 	label{
-	@extend .form-check-label;
-}
+		@extend .form-check-label;
+		width: auto;
+		margin-left: 6px;
+		height: auto!important;
+	}
 }
 
 .te:not([type="checkbox"]):focus,

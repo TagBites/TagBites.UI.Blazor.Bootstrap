@@ -12,11 +12,11 @@
         margin: 0;
         background-color: var(--scheduler-background);
         border-color: var(--table-border-color) !important;
-        table-layout: fixed!important;
-        > tbody{
+        table-layout: fixed !important;
+        > tbody {
             border: 1px solid var(--table-border-color);
-            &:first-child{
-                border-top:0px;
+            &:first-child {
+                border-top: 0px;
             }
         }
     }
@@ -29,10 +29,11 @@
         font-size: var(--t-font-size-small);
         background-color: var(--scheduler-background);
     }
-    td, th{
+    td,
+    th {
         overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
 .dragging {
@@ -142,7 +143,7 @@
 .tbs-scheduler-task-container {
     div {
         position: absolute;
-        /*border: 1px #3c9fe5 solid;*/
+        border: 1px #3c9fe5 solid;
         background-color: var(--bs-info);
         border-radius: 3px;
         overflow: hidden;
@@ -155,7 +156,7 @@
         -moz-box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
         box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
 
-        h5{
+        h5 {
             font-size: var(--t-font-size-small);
             margin-bottom: 0px;
             font-weight: bold;
@@ -228,5 +229,44 @@
 @media (max-width: 767.98px) {
     .tbs-scheduler table {
         margin-top: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    .tc-workspace {
+        .tbs-scheduler {
+            margin: 0 !important;
+            height: calc(100% + 1px) !important;
+            margin-left: -1px !important;
+            margin-top: -1px !important;
+            .tbs-scheduler-view {
+                border-bottom: none !important;
+            }
+        }
+        section:has(> .tbs-scheduler) {
+            padding: 0 !important;
+        }
+    }
+}
+
+.tc-tabs {
+    container-name: tc-tabs;
+    container-type: inline-size;
+}
+@container tc-tabs (width < 800px) {
+    .tc-workspace-it {
+        .tbs-scheduler {
+            margin: 0 !important;
+            height: calc(100% + 1px) !important;
+            margin-left: -1px !important;
+            margin-top: -1px !important;
+            .tbs-scheduler-view {
+                border-bottom: none !important;
+            }
+        }
+
+        section:has(> .tbs-scheduler) {
+            padding: 0 !important;
+        }
     }
 }

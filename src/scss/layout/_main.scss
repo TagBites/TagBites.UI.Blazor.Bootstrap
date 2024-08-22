@@ -1,14 +1,14 @@
-html{
+html {
     height: 100svh;
     max-height: 100svh;
-    //height :var(--ts-height); 
+    //height :var(--ts-height);
     overflow: hidden;
 }
-body{
-    background: #dfdfdf;
+body {
+    background: #fafafa;
     height: 100svh;
     max-height: 100svh;
-    //height :var(--ts-height); 
+    //height :var(--ts-height);
     overflow: hidden;
 }
 
@@ -16,57 +16,60 @@ body{
     user-select: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-label,textarea,code{
+label,
+textarea,
+code {
     user-select: text;
 }
 
-.tb-no-border{
+.tb-no-border {
     border: none !important;
 }
 
-.wrapper,.wrapper-fluid{
-    width:100vw;
-    height:100svh;
+.wrapper,
+.wrapper-fluid {
+    width: 100vw;
+    height: 100svh;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     padding: 0px;
     background-color: var(--wrapper-background-color);
-    //height :var(--ts-height); 
+    //height :var(--ts-height);
 }
-.wrapper{
-    margin:0 auto;
+.wrapper {
+    margin: 0 auto;
     max-width: var(--base-site-max-width);
-    -webkit-box-shadow: 0px 0px 25px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 25px -4px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 25px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.75);
 }
-.tb-left{
-    float: left!important;
+.tb-left {
+    float: left !important;
 }
-.tb-right{
-    float: right!important;
+.tb-right {
+    float: right !important;
 }
 
-.tw-window{
+.tw-window {
     @extend .wrapper-fluid;
     @extend .container-fluid;
 }
 
-.tw-inline{
-    position: absolute;  
-    height: 100%;  
-    width: 100%;  
+.tw-inline {
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 #blazor-error-ui {
     background: #ffffe0;
     bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
     display: none;
     left: 0;
     padding: 0.6rem 1.25rem 0.7rem 1.25rem;
@@ -74,12 +77,14 @@ label,textarea,code{
     width: 100%;
     z-index: 9999;
 }
-.ts-toast{
+.ts-toast {
     z-index: 10000;
     bottom: 45px;
     position: absolute;
     right: 20px;
-    > div { //TODO Sprawdzić dziedziczenie z alert - problem z kolorami. pewnie wymagane nadpisanie klas później w wynikowym css
+    max-width: 90%;
+    > div {
+        //TODO Sprawdzić dziedziczenie z alert - problem z kolorami. pewnie wymagane nadpisanie klas później w wynikowym css
         --bs-toast-zindex: 1090;
         --bs-toast-padding-x: 0.75rem;
         --bs-toast-padding-y: 0.5rem;
@@ -104,61 +109,76 @@ label,textarea,code{
         border: var(--bs-toast-border-width) solid var(--bs-toast-border-color);
         box-shadow: var(--bs-toast-box-shadow);
         border-radius: var(--bs-toast-border-radius);
-        display: block!important;
-        header{
+        display: block !important;
+        header {
             @extend .toast-header;
         }
-        section{
+        section {
             @extend .toast-body;
         }
     }
 }
 
-
-.tl-wrap{
+.tl-wrap {
     @extend .d-flex;
     @extend .flex-wrap;
 }
 
-:focus-visible{
+:focus-visible {
     outline: none;
-} 
-
-.tp-text{
-    font-size: var(--t-font-size);
-    margin-bottom: 0.5rem;;
 }
 
+.tp-text {
+    font-size: var(--t-font-size);
+    margin-bottom: 0.5rem;
+    display: block;
+}
 
+.dragging {
+    background-color: #5999ff !important;
+}
+.drop {
+    --drop-color: #5999ff;
+    background-color: #cedef8 !important;
+}
+.drop-blocked {
+    --drop-color: red;
+}
+.drop:not(tr) {
+    border: 2px dashed var(--drop-color) !important;
+}
+tr.drop-before {
+    border-top: 3px dashed var(--drop-color) !important;
+}
+tr.drop-after {
+    border-bottom: 3px dashed var(--drop-color) !important;
+}
+tr.drop-child {
+    border-left: 3px dashed var(--drop-color) !important;
+}
 
-.dragging {  
-    background-color: #5999ff !important;  
-}  
-.drop{  
-    --drop-color: #5999ff;  
-    background-color: #cedef8 !important;  
-}  
-.drop-blocked{  
-    --drop-color: red;  
-}  
-.drop:not(tr) {  
-    border: 2px dashed var( --drop-color) !important;  
-}  
-tr.drop-before {  
-    border-top: 3px dashed var( --drop-color) !important;  
-}  
-tr.drop-after {  
-    border-bottom: 3px dashed var( --drop-color) !important;  
-}  
-tr.drop-child {  
-    border-left: 3px dashed var( --drop-color) !important;  
-}  
-
-.td-webview{
-    margin: 0!important;
+.td-webview {
+    margin: 0 !important;
     padding: var(--tv-default-margin);
 }
 
-.tooltip{  
-    transition: opacity 0.3s ease-in-out;  
-} 
+.tooltip {
+    transition: opacity 0.3s ease-in-out;
+}
+
+table tbody tr:hover,
+.tn-navbar li li:hover,
+.tc-tabs > header > ul > li:not(.tf-active):hover,
+.tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted),
+:not(.td-datagrid-toolbox, li, .tc-input-group) > button:not(.tp-button):hover {
+    background-color: #ebf1fa !important; //Primary color with 0.1 transparency
+    background-color: color-mix(in srgb, #3b71ca, #ffffff 90%) !important;
+    transition: 0.1s;
+    border-radius: 6px;
+}
+table tbody tr:hover a {
+    text-decoration: underline;
+}
+li > button:not(.tp-button):hover {
+    background-color: unset !important;
+}

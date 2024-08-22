@@ -193,7 +193,7 @@
         //background-color: var(--t-table-accent-background-color);
         th{
             i{
-                margin-top: 10px!important;
+                margin-top: 4px!important;
             }
         }
         tr{
@@ -346,12 +346,13 @@ th.text-center a {
     display: flex;
     justify-content: center;
 }
+
 td.td-datagrid-expand,
 th.td-datagrid-expand {
     /*border-left: 1px solid #7e7e7e;
     border-bottom: 1px solid #7e7e7e;
     padding: 0px 2px;*/
-    text-overflow: unset;
+    text-overflow: unset!important;
     //background-color: var(--t-table-accent-background-color)!important;
     span {
         //border-left: 1px solid var(--t-border-color);
@@ -421,6 +422,8 @@ td > i{
 .td-datagrid-toolbox{
     @extend .text-center;
     padding: 0!important;
+    line-height: 1;
+    text-overflow: initial!important;
     button{
         padding:0px 0px!important;
         display: inline-flex;
@@ -509,4 +512,12 @@ tbody[data-handle="-1"]:not(.tf-active)::after{
 tr.tf-active:has(.tf-editor),
 tbody.tf-active:has(.tf-editor){
     border-bottom: 1px solid var(--t-border-color);
+}
+
+
+
+
+
+tr:not(.tf-active) > .td-datagrid-toolbox{
+    background-color: var(--bs-gray-100)!important;
 }

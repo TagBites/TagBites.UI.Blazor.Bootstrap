@@ -12750,7 +12750,7 @@ html {
 }
 
 body {
-  background: #dfdfdf;
+  background: #fafafa;
   height: 100svh;
   max-height: 100svh;
   overflow: hidden;
@@ -12764,7 +12764,9 @@ a {
   text-decoration: none;
 }
 
-label, textarea, code {
+label,
+textarea,
+code {
   user-select: text;
 }
 
@@ -12772,7 +12774,9 @@ label, textarea, code {
   border: none !important;
 }
 
-.wrapper, .wrapper-fluid, .tw-window {
+.wrapper,
+.wrapper-fluid,
+.tw-window {
   width: 100vw;
   height: 100svh;
   overflow: hidden;
@@ -12821,6 +12825,7 @@ label, textarea, code {
   bottom: 45px;
   position: absolute;
   right: 20px;
+  max-width: 90%;
 }
 .ts-toast > div {
   --bs-toast-zindex: 1090;
@@ -12856,6 +12861,7 @@ label, textarea, code {
 .tp-text {
   font-size: var(--t-font-size);
   margin-bottom: 0.5rem;
+  display: block;
 }
 
 .dragging {
@@ -12894,6 +12900,25 @@ tr.drop-child {
 
 .tooltip {
   transition: opacity 0.3s ease-in-out;
+}
+
+table tbody tr:hover,
+.tn-navbar li li:hover,
+.tc-tabs > header > ul > li:not(.tf-active):hover,
+.tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted),
+:not(.td-datagrid-toolbox, li, .tc-input-group) > button:not(.tp-button):hover {
+  background-color: #ebf1fa !important;
+  background-color: color-mix(in srgb, #3b71ca, #ffffff 90%) !important;
+  transition: 0.1s;
+  border-radius: 6px;
+}
+
+table tbody tr:hover a {
+  text-decoration: underline;
+}
+
+li > button:not(.tp-button):hover {
+  background-color: unset !important;
 }
 
 .page {
@@ -13284,6 +13309,11 @@ div.page > header .tn-toolbox button:active, div.page > header .tn-toolbox butto
   box-shadow: none !important;
 }
 
+.tn-ribbon header div, .tn-ribbon header span {
+  color: #6c757d;
+  font-size: var(--t-font-size);
+}
+
 .col-auto {
   max-width: 200px;
 }
@@ -13404,6 +13434,105 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
   border-bottom-width: 1px !important;
 }
 
+/*
+.tf-fill{
+    height: 100%;
+    overflow: auto!important;
+}
+.tf-h-100{ //Dla kontenerów. 
+    height: 100%;
+    overflow: hidden;
+}
+.tf-flex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.tf-flex-min{
+    flex: 0 1 auto;
+    overflow: hidden;
+}
+.tf-flex-max{
+    flex: 1 0 auto;
+    overflow: hidden;
+}
+.tf-flex-auto{
+    flex: 1 0 0%;
+    overflow: hidden;
+}
+.tc-group.tf-fill{
+    height: calc(100% - 6px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    header{
+        flex: 0 0 auto;
+    }
+    section{
+        flex: 1 1 auto;
+        overflow: auto;
+    }
+}
+.tc-group.tf-flex-h{
+    height: calc(100% - 6px);
+}
+.tl-split.tf-flex{
+    flex-direction: row;
+}
+.td-datagrid.tf-fill{
+    height: calc(100% - 12px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    section{
+        table{
+            thead{
+                position:sticky;
+                top:0;
+                z-index:1;
+                background-color: white;
+                &::after{
+                    content:"";
+                    position:absolute;
+                    display:block;
+                    width: 100%;
+                    border-bottom:2px solid var(--t-border-color);
+                }
+                tr{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+.tc-tabs.tf-flex-h{
+    height: 100%!important;
+}
+
+.tl-stack.tf-h-100{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    > .tf-h-100{
+        flex: 1 0 0%;
+        overflow: hidden;
+    }
+}
+
+.tl-grid.tf-h-100{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-height: 700px ) {
+    .tf-h-100 {
+        height: unset;
+        overflow: unset;
+    }
+}
+    */
 .tb-dark-mode { /*TEST*/ }
 .tb-dark-mode * {
   background-color: rgb(41, 41, 41) !important;
@@ -14157,6 +14286,20 @@ label + .form-control-plaintext,
   font-size: var(--t-font-size) !important;
 }
 
+.tl-formcheck {
+  display: flex;
+  align-items: center;
+}
+.tl-formcheck .te-check {
+  margin-left: 0px !important;
+  margin-top: 0px;
+}
+.tl-formcheck label {
+  width: auto;
+  margin-left: 6px;
+  height: auto !important;
+}
+
 .te:not([type=checkbox]):focus,
 .te-combo:focus,
 .tb-form-select:focus,
@@ -14345,7 +14488,7 @@ input, button, select, optgroup, textarea {
   font-size: var(--t-font-size);
 }
 .td-datagrid table thead th i {
-  margin-top: 10px !important;
+  margin-top: 4px !important;
 }
 .td-datagrid table thead tr {
   border-bottom-width: 2px;
@@ -14497,7 +14640,7 @@ th.td-datagrid-expand {
   /*border-left: 1px solid #7e7e7e;
   border-bottom: 1px solid #7e7e7e;
   padding: 0px 2px;*/
-  text-overflow: unset;
+  text-overflow: unset !important;
 }
 td.td-datagrid-expand span,
 th.td-datagrid-expand span {
@@ -14563,6 +14706,8 @@ td > i {
 
 .td-datagrid-toolbox {
   padding: 0 !important;
+  line-height: 1;
+  text-overflow: initial !important;
 }
 .td-datagrid-toolbox button {
   padding: 0px 0px !important;
@@ -14655,6 +14800,10 @@ tbody.tf-active:has(.tf-editor) {
   border-bottom: 1px solid var(--t-border-color);
 }
 
+tr:not(.tf-active) > .td-datagrid-toolbox {
+  background-color: var(--bs-gray-100) !important;
+}
+
 /* scheduler */
 .tbs-scheduler {
   -webkit-user-select: none;
@@ -14686,7 +14835,8 @@ tbody.tf-active:has(.tf-editor) {
   font-size: var(--t-font-size-small);
   background-color: var(--scheduler-background);
 }
-.tbs-scheduler td, .tbs-scheduler th {
+.tbs-scheduler td,
+.tbs-scheduler th {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -14815,7 +14965,7 @@ tbody.tf-active:has(.tf-editor) {
 
 .tbs-scheduler-task-container div {
   position: absolute;
-  /*border: 1px #3c9fe5 solid;*/
+  border: 1px #3c9fe5 solid;
   background-color: var(--bs-info);
   border-radius: 3px;
   overflow: hidden;
@@ -14898,6 +15048,39 @@ tbody.tf-active:has(.tf-editor) {
 @media (max-width: 767.98px) {
   .tbs-scheduler table {
     margin-top: 0px !important;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  .tc-workspace .tbs-scheduler {
+    margin: 0 !important;
+    height: calc(100% + 1px) !important;
+    margin-left: -1px !important;
+    margin-top: -1px !important;
+  }
+  .tc-workspace .tbs-scheduler .tbs-scheduler-view {
+    border-bottom: none !important;
+  }
+  .tc-workspace section:has(> .tbs-scheduler) {
+    padding: 0 !important;
+  }
+}
+.tc-tabs {
+  container-name: tc-tabs;
+  container-type: inline-size;
+}
+
+@container tc-tabs (width < 800px) {
+  .tc-workspace-it .tbs-scheduler {
+    margin: 0 !important;
+    height: calc(100% + 1px) !important;
+    margin-left: -1px !important;
+    margin-top: -1px !important;
+  }
+  .tc-workspace-it .tbs-scheduler .tbs-scheduler-view {
+    border-bottom: none !important;
+  }
+  .tc-workspace-it section:has(> .tbs-scheduler) {
+    padding: 0 !important;
   }
 }
 .ts-modal,
@@ -16117,8 +16300,8 @@ section:has(> .tc-workspace) {
 :root {
   --tv-ribbon-tabs-h: 45px;
   --tv-ribbon-status-h: 32px;
-  --tv-window-bar-h: 23px;
-  --ts-height:100vh;
+  --tv-window-bar-h: 40px;
+  --ts-height: 100vh;
   --t-border-color: var(--bs-border-color);
   --t-border-radius: var(--bs-border-radius);
   --t-content-padding: 12px 16px;
@@ -16149,7 +16332,7 @@ section:has(> .tc-workspace) {
   --table-border-color: var(--t-border-color);
   --footer-border-color: var(--t-border-color);
   --scheduler-background: #fff;
-  --button-border-radius:var(--t-border-radius);
+  --button-border-radius: var(--t-border-radius);
 }
 
 .tb-card {
