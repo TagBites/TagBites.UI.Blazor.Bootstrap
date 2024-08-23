@@ -12904,17 +12904,15 @@ tr.drop-child {
 
 table tbody tr:hover,
 .tn-navbar li li:hover,
+.tn-navbar li > span:hover,
 .tc-tabs > header > ul > li:not(.tf-active):hover,
 .tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted),
-:not(.td-datagrid-toolbox, li, .tc-input-group) > button:not(.tp-button):hover {
+:not(.td-datagrid-toolbox, li, .tc-input-group) > button:not(.tp-button):hover,
+.td-datagrid-toolbox button:hover {
   background-color: #ebf1fa !important;
   background-color: color-mix(in srgb, #3b71ca, #ffffff 90%) !important;
   transition: 0.1s;
   border-radius: 6px;
-}
-
-table tbody tr:hover a {
-  text-decoration: underline;
 }
 
 li > button:not(.tp-button):hover {
@@ -12968,8 +12966,9 @@ li > button:not(.tp-button):hover {
   margin-bottom: 0px;
 }
 .tn-navbar > li > span {
-  padding-top: 6px;
-  padding-left: 0px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -14710,9 +14709,9 @@ td > i {
   text-overflow: initial !important;
 }
 .td-datagrid-toolbox button {
-  padding: 0px 0px !important;
+  padding: 2px 2px !important;
   display: inline-flex;
-  margin: 0px 4px;
+  margin: 0px 2px;
 }
 
 .table > :not(caption) > * > *, .td-datagrid table > :not(caption) > * > * {
@@ -14798,10 +14797,6 @@ tbody[data-handle="-1"]:not(.tf-active)::after {
 tr.tf-active:has(.tf-editor),
 tbody.tf-active:has(.tf-editor) {
   border-bottom: 1px solid var(--t-border-color);
-}
-
-tr:not(.tf-active) > .td-datagrid-toolbox {
-  background-color: var(--bs-gray-100) !important;
 }
 
 /* scheduler */
@@ -14965,7 +14960,6 @@ tr:not(.tf-active) > .td-datagrid-toolbox {
 
 .tbs-scheduler-task-container div {
   position: absolute;
-  border: 1px #3c9fe5 solid;
   background-color: var(--bs-info);
   border-radius: 3px;
   overflow: hidden;
@@ -14974,9 +14968,12 @@ tr:not(.tf-active) > .td-datagrid-toolbox {
   line-height: normal;
   font-size: var(--t-font-size-small);
   color: white;
-  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
+  /*-webkit-box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);*/
+}
+.tbs-scheduler-task-container div:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 .tbs-scheduler-task-container div h5, .tbs-scheduler-task-container div .h5 {
   font-size: var(--t-font-size-small);
