@@ -16294,6 +16294,54 @@ section:has(> .tc-workspace) {
   list-style-type: none;
 }
 
+.te-tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 0px;
+}
+
+.te-tags-item {
+  margin: 4px 0px;
+  margin-left: 4px;
+  background-color: var(--nav-item-color);
+  display: flex;
+  align-items: center;
+  border-radius: var(--bs-border-radius);
+}
+
+.te-tags-item * {
+  margin: 0px 4px;
+}
+
+.te-tags-item button {
+  padding: 0;
+}
+
+.te-tags-editor {
+  width: auto !important;
+  min-width: 120px;
+}
+
+.te-tags .tc-input-group {
+  flex: 1 1;
+  flex-wrap: nowrap;
+}
+
+.te-tags .tc *, .te-tags .te {
+  border: 0 !important;
+  box-shadow: none;
+}
+
+.te-tags .te {
+  flex: 1 1;
+}
+
+.te-tags .tc .te {
+  height: 33px;
+}
+
 :root {
   --tv-ribbon-tabs-h: 45px;
   --tv-ribbon-status-h: 32px;
