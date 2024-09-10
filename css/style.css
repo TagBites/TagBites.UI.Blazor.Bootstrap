@@ -13194,6 +13194,10 @@ aside * {
     scrollbar-width: thin;
   }
 }
+aside.tf-asview tr.tf-active td {
+  background-color: var(--bs-gray-200) !important;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 4px;
@@ -16220,6 +16224,51 @@ section:has(> .tc-workspace) {
   box-shadow: 0px 0px 10px 0px rgb(232, 232, 232);
 }
 
+.tc-workspace .tc-workspace * .tc-tabs header,
+.tc-workspace .tc-workspace * .tc-tabs section {
+  border-radius: 0;
+}
+
+.tc-workspace .tc-workspace {
+  margin: -1px !important;
+}
+
+.tc-workspace .tc-workspace .tc-workspace-sp-h {
+  width: 10px;
+}
+
+.tc-workspace .tc-workspace .tc-workspace-sp-v {
+  height: 10px;
+}
+
+.tc-tabs > section:has(> .td:only-child) > .td:only-child {
+  margin: -1px 0 0 -1px;
+}
+
+.tc-tabs > section:has(> .td:only-child) {
+  padding: 0;
+}
+
+.tc-workspace section:has(.tc-workspace) {
+  padding: 0px !important;
+  --tv-workspace-sp: 5px;
+}
+.tc-workspace section:has(.tc-workspace) .tc-tabs:after {
+  content: unset !important;
+}
+
+.tc-workspace:has(.tc-workspace) .tc-tabs::after {
+  content: unset !important;
+}
+
+.tc-workspace:has(.tc-workspace) {
+  border-bottom: 1px solid var(--t-border-color);
+}
+
+.tc-workspace .tc-workspace .tc-workspace-it .tc-tabs {
+  margin-top: 0 !important;
+}
+
 .tl-filedropwrapper.hover {
   position: relative;
 }
@@ -16298,24 +16347,27 @@ section:has(> .tc-workspace) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  min-height: 33px;
   height: auto;
   padding: 0px;
 }
-
-.te-tags-item {
+.te-tags .tc-input-group {
+  flex: 1 1;
+  flex-wrap: nowrap;
+}
+.te-tags .te-tags-item {
   margin: 4px 0px;
   margin-left: 4px;
   background-color: var(--nav-item-color);
   display: flex;
   align-items: center;
   border-radius: var(--bs-border-radius);
+  padding: 0;
 }
-
-.te-tags-item * {
+.te-tags .te-tags-item > * {
   margin: 0px 4px;
 }
-
-.te-tags-item button {
+.te-tags .te-tags-item button {
   padding: 0;
 }
 
@@ -16324,12 +16376,8 @@ section:has(> .tc-workspace) {
   min-width: 120px;
 }
 
-.te-tags .tc-input-group {
-  flex: 1 1;
-  flex-wrap: nowrap;
-}
-
-.te-tags .tc *, .te-tags .te {
+.te-tags .tc *,
+.te-tags .te {
   border: 0 !important;
   box-shadow: none;
 }
