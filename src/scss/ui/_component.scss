@@ -1,0 +1,9 @@
+.tc-component .tp-text{
+    margin:2px;
+}
+.tc-component{
+    @extend .tc-widget;
+    border:none;
+    background-color: unset!important;
+    box-shadow: none;
+}

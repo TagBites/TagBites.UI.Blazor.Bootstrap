@@ -521,3 +521,6 @@ tbody.tf-active:has(.tf-editor){
 tr:not(.tf-active) > .td-datagrid-toolbox{
     //background-color: var(--bs-gray-100)!important;
 }
+tr[data-handle="-1"]{
+    min-height: 38px;
+} 

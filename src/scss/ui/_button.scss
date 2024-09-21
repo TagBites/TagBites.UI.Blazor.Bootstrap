@@ -167,7 +167,7 @@ aside {
 	align-items: center;
 	justify-items: stretch;
 
-	--grid-layout-gap: 6px;
+	--grid-layout-gap: 0px;
 	--grid-column-count: 8; /* This gets overridden by an inline style. */
 	--grid-item--min-width: 250px; /* This gets overridden by an inline style. */
 

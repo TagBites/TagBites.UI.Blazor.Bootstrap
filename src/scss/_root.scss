@@ -8,7 +8,7 @@ $t-aside-bg: desaturate(darken($blue, 30%), 60%);
     --ts-height: 100vh;
 
     --t-border-color: var(--bs-border-color); //base-border-color
-    --t-border-radius: var(--bs-border-radius); //base-border-radius
+    --t-border-radius: 5px; // var(--bs-border-radius); //base-border-radius
 
     --t-content-padding: 12px 16px;
     --t-background-color: var(--bs-gray-100);
@@ -17,6 +17,7 @@ $t-aside-bg: desaturate(darken($blue, 30%), 60%);
 
     --t-font-size: 14px;
     --t-font-size-small: 12px; //calc(var(--t-font-size) * 0.7)
+    --tv-font-size-large: 2rem;
 
     --t-font-color: #161616;
     --t-font-color-light: var(--bs-gray-700);
@@ -55,4 +56,11 @@ $t-aside-bg: desaturate(darken($blue, 30%), 60%);
 .tb-card {
     --bs-card-inner-border-radius: var(--t-border-radius);
     --bs-card-border-radius: var(--t-border-radius);
+}
+.tf-fs-small{
+    font-size: var(--t-font-size-small);
+}
+
+.tf-fs-large{
+    font-size: var(--tv-font-size-large);
 }

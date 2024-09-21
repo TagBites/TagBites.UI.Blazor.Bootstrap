@@ -106,7 +106,10 @@ div:not(.tl) > .tp:not(.tp-image,.tp-button){
   margin: var(--tv-default-margin);
 }
 .tp-image{
-  padding: var(--tv-default-margin);
+  margin: var(--tv-default-margin);
+  width: var(--tv-icon-size);
+  height: var(--tv-icon-size);
+  font-size: var(--tv-icon-size) !important;
 }
 .te-color,
 .te:not([type=checkbox]),

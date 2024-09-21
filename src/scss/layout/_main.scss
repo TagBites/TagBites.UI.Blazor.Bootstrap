@@ -168,7 +168,6 @@ tr.drop-child {
 
 table tbody tr:hover,
 .tn-navbar li li:hover,
-.tn-navbar li>span:hover,
 .tc-tabs > header > ul > li:not(.tf-active):hover,
 .tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted),
 :not(.td-datagrid-toolbox, li, .tc-input-group) > button:not(.tp-button):hover,
@@ -177,6 +176,9 @@ table tbody tr:hover,
     background-color: color-mix(in srgb, #3b71ca, #ffffff 90%) !important;
     transition: 0.1s;
     border-radius: 6px;
+}
+.tn-navbar li>span:hover{
+    cursor: pointer;
 }
 table tbody tr:hover a {
     //text-decoration: underline;

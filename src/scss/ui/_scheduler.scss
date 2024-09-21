@@ -152,6 +152,9 @@
         line-height: normal;
         font-size: var(--t-font-size-small);
         color: white;
+        --tv-border-color: color-mix(in srgb, var(--tv-background-color), black 20%);
+        border: 1px solid var(--tv-border-color);
+        background-color: var(--tv-background-color);
         /*-webkit-box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
         -moz-box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
         box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);*/

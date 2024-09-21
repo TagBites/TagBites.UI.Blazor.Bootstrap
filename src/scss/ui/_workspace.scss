@@ -219,12 +219,20 @@ section:has(>.tc-workspace){
         content:unset!important;
     }
 }
-.tc-workspace:has(.tc-workspace) .tc-tabs::after{
+.tc-workspace:has(.tc-workspace) .tc-workspace .tc-tabs::after{
 content:unset!important;
 }
 .tc-workspace:has(.tc-workspace){
-    border-bottom:1px solid var(--t-border-color);
+    //border-bottom:1px solid var(--t-border-color);
 }
 .tc-workspace .tc-workspace .tc-workspace-it .tc-tabs {
     margin-top: 0!important;
 } 
+
+.tc-tabs:has(.tc-workspace)::after{
+    content: unset!important;
+}
+.tc-tabs:has(.tc-workspace) > section{
+    border-bottom-left-radius:12px;
+    border-bottom-right-radius:12px;
+}

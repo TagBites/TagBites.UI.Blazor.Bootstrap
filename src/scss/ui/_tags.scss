@@ -1,10 +1,10 @@
 .te-tags {
-  display: flex;
+  display: flex!important;
   flex-direction: row;
   flex-wrap: wrap;
   min-height: 33px;
   height: auto;
-  padding: 0px;
+  padding: 0px!important;
   .tc-input-group {
     flex: 1 1;
     flex-wrap: nowrap;
