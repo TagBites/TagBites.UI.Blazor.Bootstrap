@@ -98,7 +98,8 @@ html[data-ui-mode="mini"] {
     .tc-tabs > section{
         max-height: calc(100% - 36px);
     }
-    img[src^="https://www.libravatar.org/avatar/"]{
+    img[src^="https://www.libravatar.org/avatar/"],
+    img[src^="https://ui-avatars.com/"]{
         width: 16px;
     }
 

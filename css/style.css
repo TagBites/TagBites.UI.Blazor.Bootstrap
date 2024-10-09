@@ -17007,7 +17007,8 @@ html[data-ui-mode=mini] .td-datagrid table > :not(caption) > * > * {
 html[data-ui-mode=mini] .tc-tabs > section {
   max-height: calc(100% - 36px);
 }
-html[data-ui-mode=mini] img[src^="https://www.libravatar.org/avatar/"] {
+html[data-ui-mode=mini] img[src^="https://www.libravatar.org/avatar/"],
+html[data-ui-mode=mini] img[src^="https://ui-avatars.com/"] {
   width: 16px;
 }
 html[data-ui-mode=mini] .tbs-scheduler-task-container div {
