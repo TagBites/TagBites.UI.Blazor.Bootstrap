@@ -44,8 +44,8 @@ html[data-ui-mode="mini"] {
         border: 1px solid var(--t-border-color);
     }
     .tn-ribbon > section {
-        overflow-x: visible;
-        overflow-y: visible;
+        overflow-x: auto;
+        overflow-y: hidden;
         z-index: 1;
         > ul > li {
             position: relative;
