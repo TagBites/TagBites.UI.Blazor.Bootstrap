@@ -19,7 +19,7 @@
         @extend .modal-dialog;
         margin-right: auto;
         margin-left: auto;
-        height: min-content;
+        /*height: min-content;*/
         > .page {
             @extend .modal-content;
             max-height: calc(100svh - 56px);
