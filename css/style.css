@@ -13140,12 +13140,8 @@ li > button:not(.tp-button):hover {
   margin-left: 6px;
 }
 
-:root {
-  --color-back: #fafafa;
-}
-
 aside {
-  background-color: var(--color-back) !important;
+  background-color: var(--nav-background-color) !important;
   color: #595959 !important;
   font-weight: 400;
   border-right: 1px solid #dedede;
@@ -13539,24 +13535,89 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
     }
 }
     */
-.tb-dark-mode { /*TEST*/ }
-.tb-dark-mode * {
-  background-color: rgb(41, 41, 41) !important;
-  color: rgb(182, 182, 182) !important;
-  border-color: rgb(131, 131, 131) !important;
+html[data-bs-theme=dark] {
+  --dark-background: var(--bs-body-bg);
+  --nav-background-color: var(--dark-background);
+  --content-background-color: var(--dark-background);
+  --content-background-hover-color: #383838;
+  --t-background-color: var(--dark-background);
+  --t-font-color:var(--bs-body-color);
+  --t-font-color-light:var(--bs-body-color);
+  --scheduler-background: var(--content-background-color);
 }
-.tb-dark-mode .tb-card {
-  background-color: rgb(50, 50, 50) !important;
+html[data-bs-theme=dark] ::-webkit-scrollbar-thumb {
+  background: #3f3f3f !important;
 }
-.tb-dark-mode .tb-navbar, .tb-dark-mode .tb-navbar * {
+html[data-bs-theme=dark] ::-webkit-scrollbar-thumb:hover {
+  background: #313131 !important;
+}
+html[data-bs-theme=dark] ::-webkit-scrollbar-track {
+  background: var(--content-background-color);
+}
+html[data-bs-theme=dark] .tw > aside::-webkit-scrollbar-track {
+  background: var(--content-background-color);
+}
+html[data-bs-theme=dark] .tw > aside::-webkit-scrollbar-thumb {
+  background: #3f3f3f !important;
+}
+html[data-bs-theme=dark] .tw > aside:hover::-webkit-scrollbar-thumb {
+  background: #3f3f3f !important;
+}
+html[data-bs-theme=dark] .tw > aside::-webkit-scrollbar-thumb:hover {
+  background: #3f3f3f !important;
+}
+html[data-bs-theme=dark] .tc-tabs > section,
+html[data-bs-theme=dark] .tc-tabs > header,
+html[data-bs-theme=dark] .tc-tabs::after,
+html[data-bs-theme=dark] div.page > header {
+  background-color: var(--content-background-color);
+}
+html[data-bs-theme=dark] section:has(> .tc-workspace) {
+  background: var(--content-background-color);
+}
+html[data-bs-theme=dark] .td-datagrid > section > table > tbody tr {
+  background: var(--content-background-color);
+}
+html[data-bs-theme=dark] .tc-widget, html[data-bs-theme=dark] .tc-component {
   background-color: rgb(61, 61, 61) !important;
 }
-.tb-dark-mode .tb-btn, .tb-dark-mode .tc-input-group button, .tc-input-group .tb-dark-mode button {
-  /*background-color: red!important;*/
+html[data-bs-theme=dark] .page > footer {
+  background-color: var(--content-background-color);
 }
-.tb-dark-mode input, .tb-dark-mode select {
-  background-color: rgb(90, 90, 90) !important;
-  color: rgb(201, 201, 201) !important;
+html[data-bs-theme=dark] .tn-ribbon > header > a:hover, html[data-bs-theme=dark] .tn-ribbon > footer > a:hover {
+  background-color: var(--content-background-hover-color);
+}
+html[data-bs-theme=dark] .tc-tabs > header {
+  border: 1px solid var(--t-border-color);
+}
+html[data-bs-theme=dark] .td-datagrid table > tbody.tf-active > tr > td, html[data-bs-theme=dark] table > tbody.tf-active > *, html[data-bs-theme=dark] table > tbody.tf-active > tr > td, html[data-bs-theme=dark] tbody > tr.tf-active, html[data-bs-theme=dark] .td-datagrid > section > table > tbody > tr.tf-active > td {
+  background-color: var(--content-background-hover-color);
+}
+html[data-bs-theme=dark] .tc-group-header {
+  background-color: var(--content-background-hover-color);
+  border-bottom: 1px solid var(--t-border-color);
+}
+html[data-bs-theme=dark] .tc-workspace > .tc-tabs:hover, html[data-bs-theme=dark] .tc-workspace-it > .tc-tabs:hover {
+  box-shadow: 0px 0px 10px 0px rgb(53, 53, 53);
+}
+html[data-bs-theme=dark] .tn-ribbon .nav-tabs .nav-link.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon .nav-tabs .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tl-buttons .nav-link.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon .nav-tabs .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > header > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > header > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > footer > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > footer > a.active,
+.tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon > header .nav-link.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > header .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon > header .tl-buttons .nav-link.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon > header > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > footer > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon > footer .nav-link.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon > footer .tl-buttons .nav-link.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > header > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon > footer > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .nav-link.tf-active, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-active, html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > header > a.tf-active, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-active,
+html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > footer > a.tf-active, html[data-bs-theme=dark] .tn-ribbon > header .nav-link.tf-active, html[data-bs-theme=dark] .tn-ribbon > header > a.tf-active, html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > footer > a.tf-active, html[data-bs-theme=dark] .tn-ribbon > footer .nav-link.tf-active, html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > header > a.tf-active, html[data-bs-theme=dark] .tn-ribbon > footer > a.tf-active {
+  background-color: var(--content-background-hover-color);
+}
+html[data-bs-theme=dark] table tbody tr:hover, html[data-bs-theme=dark] .tn-navbar li li:hover, html[data-bs-theme=dark] .tc-tabs > header > ul > li:not(.tf-active):hover, html[data-bs-theme=dark] .tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted), html[data-bs-theme=dark] :not(.td-datagrid-toolbox, li, .tc-input-group) > button:not(.tp-button):hover, html[data-bs-theme=dark] .td-datagrid-toolbox button:hover {
+  background-color: var(--content-background-hover-color) !important;
+}
+html[data-bs-theme=dark] .tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted) {
+  color: var(--t-font-color);
+}
+html[data-bs-theme=dark] .tn-navbar li ul li:hover {
+  color: var(--t-font-color-light);
+}
+html[data-bs-theme=dark] .tl-buttons .tf-checked {
+  background-color: var(--content-background-hover-color) !important;
 }
 
 .scroll {
@@ -13581,7 +13642,7 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
   /*font-family: "Nunito", sans-serif;*/
   font-size: var(--t-font-size-small);
   border-bottom: 1px solid var(--t-border-color);
-  background: #fafafa;
+  background: var(--nav-background-color);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -16502,7 +16563,7 @@ div.tl.tl-wrapgrid {
   --bs-body-font-size: var(--t-font-size);
   --modal-radius: var(--t-border-radius);
   --nav-width: 250px;
-  --nav-background-color: #23344e;
+  --nav-background-color: #fafafa;
   --nav-item-color: #f8f9fa;
   --nav-item-color-hover: #dee2e6;
   --nav-item-padding: 3px 2px 3px 12px;
@@ -16932,8 +16993,8 @@ div:not(.tl-formgroup) > .te-textarea {
   }
   html[data-ui-mode=mini] .tn-ribbon > section > ul > li > ul > li {
     height: 60px;
-    min-width: 75px;
-    max-width: 75px;
+    min-width: 60px;
+    max-width: 82px;
   }
   html[data-ui-mode=mini] .tn-ribbon > section > ul > li > ul > li i {
     font-size: 24px;

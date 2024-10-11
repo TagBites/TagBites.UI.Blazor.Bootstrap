@@ -1,5 +1,3 @@
-$t-aside-bg: desaturate(darken($blue, 30%), 60%);
-
 :root {
     --tv-ribbon-tabs-h: 45px;
     --tv-ribbon-status-h: 32px;
@@ -29,7 +27,12 @@ $t-aside-bg: desaturate(darken($blue, 30%), 60%);
     --modal-radius: var(--t-border-radius); //Max 30px
 
     --nav-width: 250px;
-    --nav-background-color: #{$t-aside-bg};
+
+
+    --nav-background-color: #fafafa;
+
+
+
     --nav-item-color: #{$gray-100};
     --nav-item-color-hover: #{$gray-300};
     --nav-item-padding: 3px 2px 3px 12px;
