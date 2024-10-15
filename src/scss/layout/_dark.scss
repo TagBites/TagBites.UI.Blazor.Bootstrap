@@ -1,15 +1,28 @@
 html[data-bs-theme="dark"] {
     --dark-background: var(--bs-body-bg);
-
+    --t-body-color: var(--dark-background);
     --nav-background-color: var(--dark-background);
     --content-background-color:  var(--dark-background);
     --content-background-hover-color:  #383838;
 
     --t-background-color: var(--dark-background);
-
+    --t-table-accent-background-color: var(--dark-background);
     --t-font-color:var(--bs-body-color);
     --t-font-color-light:var(--bs-body-color);
     --scheduler-background: var(--content-background-color);
+    --table-active-background-color: #272727;
+    
+    .tc-group{
+        --bs-card-cap-bg: var(--content-background-hover-color);
+    }
+
+    .td-datagrid-details table tbody tr td:first-of-type{
+        color: var(--t-font-color);
+        background-color: var(--content-background-color);
+    }
+    .td-datagrid > section > table > tbody{
+        box-shadow: 3px 3px 5px 0px #494949;
+    }
     ::-webkit-scrollbar-thumb {
         background: #3f3f3f !important;
       }
@@ -52,17 +65,18 @@ html[data-bs-theme="dark"] {
     }
 
     .tc-widget, .tc-component{
-        background-color: rgb(61 61 61) !important;
+        background-color: var(--content-background-hover-color) !important
     }
     .page > footer{
         background-color: var(--content-background-color);
     }
 
     .tn-ribbon > header > a:hover, .tn-ribbon > footer > a:hover{
-        background-color: var(--content-background-hover-color);
+        background-color: var(--content-background-hover-color)!important;
+        color: var(--t-font-color)!important;
     }
     .tc-tabs > header{
-        border: 1px solid var(--t-border-color)
+        border-color:var(--t-border-color);
     }
 
     .td-datagrid table > tbody.tf-active > tr > td, table > tbody.tf-active > *, table > tbody.tf-active > tr > td, tbody > tr.tf-active, .td-datagrid > section > table > tbody > tr.tf-active > td{
@@ -92,4 +106,14 @@ html[data-bs-theme="dark"] {
         background-color: var(--content-background-hover-color)!important;
     }
   
+    .tn-ribbon > header > a, .tn-ribbon > footer > a{
+        background-color: var(--content-background-color)!important;
+        color: var(--t-font-color)!important;
+    }
+    .tn-menu li:focus{
+        background-color: var(--content-background-hover-color)!important;
+    }
+    .td-datagrid:focus .tf-active td{
+        background-color: var(--content-background-hover-color);
+    }
 }

@@ -13,6 +13,7 @@ table.tl {
   }  
     
   .tc-widget{  
+    color: var(--t-font-color);
     padding: var(--tv-default-margin)!important;  
     border-top: 1px solid var(--t-border-color);
     border-radius: var(--t-border-radius);

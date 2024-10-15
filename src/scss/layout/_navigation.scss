@@ -225,7 +225,7 @@
     background-color: var(--nav-background-color)!important;
     color: #595959!important;
     font-weight: 400;
-    border-right: 1px solid #dedede;
+    border-right: 1px solid var(--t-border-color);
     *{
         background-color:transparent!important;
     }

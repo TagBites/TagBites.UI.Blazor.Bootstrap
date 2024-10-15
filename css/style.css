@@ -12750,7 +12750,7 @@ html {
 }
 
 body {
-  background: #fafafa;
+  background: var(--t-body-color);
   height: 100svh;
   max-height: 100svh;
   overflow: hidden;
@@ -13144,7 +13144,7 @@ aside {
   background-color: var(--nav-background-color) !important;
   color: #595959 !important;
   font-weight: 400;
-  border-right: 1px solid #dedede;
+  border-right: 1px solid var(--t-border-color);
 }
 aside * {
   background-color: transparent !important;
@@ -13537,13 +13537,26 @@ aside.tf-asview > .td-datagrid tr, aside.tf-asview > .td-datagrid td {
     */
 html[data-bs-theme=dark] {
   --dark-background: var(--bs-body-bg);
+  --t-body-color: var(--dark-background);
   --nav-background-color: var(--dark-background);
   --content-background-color: var(--dark-background);
   --content-background-hover-color: #383838;
   --t-background-color: var(--dark-background);
+  --t-table-accent-background-color: var(--dark-background);
   --t-font-color:var(--bs-body-color);
   --t-font-color-light:var(--bs-body-color);
   --scheduler-background: var(--content-background-color);
+  --table-active-background-color: #272727;
+}
+html[data-bs-theme=dark] .tc-group {
+  --bs-card-cap-bg: var(--content-background-hover-color);
+}
+html[data-bs-theme=dark] .td-datagrid-details table tbody tr td:first-of-type {
+  color: var(--t-font-color);
+  background-color: var(--content-background-color);
+}
+html[data-bs-theme=dark] .td-datagrid > section > table > tbody {
+  box-shadow: 3px 3px 5px 0px #494949;
 }
 html[data-bs-theme=dark] ::-webkit-scrollbar-thumb {
   background: #3f3f3f !important;
@@ -13579,16 +13592,17 @@ html[data-bs-theme=dark] .td-datagrid > section > table > tbody tr {
   background: var(--content-background-color);
 }
 html[data-bs-theme=dark] .tc-widget, html[data-bs-theme=dark] .tc-component {
-  background-color: rgb(61, 61, 61) !important;
+  background-color: var(--content-background-hover-color) !important;
 }
 html[data-bs-theme=dark] .page > footer {
   background-color: var(--content-background-color);
 }
 html[data-bs-theme=dark] .tn-ribbon > header > a:hover, html[data-bs-theme=dark] .tn-ribbon > footer > a:hover {
-  background-color: var(--content-background-hover-color);
+  background-color: var(--content-background-hover-color) !important;
+  color: var(--t-font-color) !important;
 }
 html[data-bs-theme=dark] .tc-tabs > header {
-  border: 1px solid var(--t-border-color);
+  border-color: var(--t-border-color);
 }
 html[data-bs-theme=dark] .td-datagrid table > tbody.tf-active > tr > td, html[data-bs-theme=dark] table > tbody.tf-active > *, html[data-bs-theme=dark] table > tbody.tf-active > tr > td, html[data-bs-theme=dark] tbody > tr.tf-active, html[data-bs-theme=dark] .td-datagrid > section > table > tbody > tr.tf-active > td {
   background-color: var(--content-background-hover-color);
@@ -13618,6 +13632,16 @@ html[data-bs-theme=dark] .tn-navbar li ul li:hover {
 }
 html[data-bs-theme=dark] .tl-buttons .tf-checked {
   background-color: var(--content-background-hover-color) !important;
+}
+html[data-bs-theme=dark] .tn-ribbon > header > a, html[data-bs-theme=dark] .tn-ribbon > footer > a {
+  background-color: var(--content-background-color) !important;
+  color: var(--t-font-color) !important;
+}
+html[data-bs-theme=dark] .tn-menu li:focus {
+  background-color: var(--content-background-hover-color) !important;
+}
+html[data-bs-theme=dark] .td-datagrid:focus .tf-active td {
+  background-color: var(--content-background-hover-color);
 }
 
 .scroll {
@@ -14648,7 +14672,7 @@ table > tbody.tf-active > *,
 table > tbody.tf-active > tr > td,
 tbody > tr.tf-active,
 .td-datagrid > section > table > tbody > tr.tf-active > td {
-  background-color: #f5f5f5;
+  background-color: var(--table-active-background-color);
 }
 .td-datagrid table > tbody.tf-active > tr > td table,
 .td-datagrid table > tbody.tf-active > tr > td table tr,
@@ -14665,7 +14689,7 @@ tbody > tr.tf-active table tr td,
 .td-datagrid > section > table > tbody > tr.tf-active > td table,
 .td-datagrid > section > table > tbody > tr.tf-active > td table tr,
 .td-datagrid > section > table > tbody > tr.tf-active > td table tr td {
-  background-color: #f5f5f5;
+  background-color: var(--table-active-background-color);
 }
 
 /* Editable */
@@ -15198,6 +15222,7 @@ tr[data-handle="-1"] {
 .ts-wait .tw-menu > .page {
   max-height: calc(100svh - 56px);
   border-radius: var(--modal-radius);
+  height: auto;
   border: none;
   -webkit-box-shadow: 0px 0px 15px px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
@@ -16060,7 +16085,7 @@ iframe {
   background-color: #e6f2fa !important;
 }
 .tn-menu li:has(hr):focus, .tn-menu li:has(hr):hover {
-  background-color: #ffffff !important;
+  background-color: transparent !important;
 }
 .tn-menu li span {
   margin-left: 30px;
@@ -16483,6 +16508,7 @@ table.tl tr td {
 }
 
 .tc-widget, .tc-component {
+  color: var(--t-font-color);
   padding: var(--tv-default-margin) !important;
   border-top: 1px solid var(--t-border-color);
   border-radius: var(--t-border-radius);
@@ -16547,6 +16573,7 @@ div.tl.tl-wrapgrid {
   --tv-ribbon-status-h: 32px;
   --tv-window-bar-h: 40px;
   --ts-height: 100vh;
+  --t-body-color: #fafafa;
   --t-border-color: var(--bs-border-color);
   --t-border-radius: 5px;
   --t-content-padding: 12px 16px;
@@ -16579,6 +16606,7 @@ div.tl.tl-wrapgrid {
   --footer-border-color: var(--t-border-color);
   --scheduler-background: #fff;
   --button-border-radius: var(--t-border-radius);
+  --table-active-background-color: #f5f5f5;
 }
 
 .tb-card {

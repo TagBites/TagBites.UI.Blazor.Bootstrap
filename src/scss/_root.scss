@@ -5,6 +5,9 @@
 
     --ts-height: 100vh;
 
+    --t-body-color: #fafafa;
+
+
     --t-border-color: var(--bs-border-color); //base-border-color
     --t-border-radius: 5px; // var(--bs-border-radius); //base-border-radius
 
@@ -31,8 +34,6 @@
 
     --nav-background-color: #fafafa;
 
-
-
     --nav-item-color: #{$gray-100};
     --nav-item-color-hover: #{$gray-300};
     --nav-item-padding: 3px 2px 3px 12px;
@@ -55,6 +56,8 @@
     --scheduler-background: #{$white};
 
     --button-border-radius: var(--t-border-radius);
+
+    --table-active-background-color: #f5f5f5;
 }
 .tb-card {
     --bs-card-inner-border-radius: var(--t-border-radius);

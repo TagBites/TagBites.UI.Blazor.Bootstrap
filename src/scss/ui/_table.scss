@@ -296,11 +296,11 @@ table > tbody.tf-active > *,
 table > tbody.tf-active > tr > td,
 tbody > tr.tf-active,
 .td-datagrid > section > table > tbody > tr.tf-active > td {
-    background-color: #f5f5f5;
+    background-color: var(--table-active-background-color);
     table,
     table tr,
     table tr td {
-        background-color: #f5f5f5;
+        background-color: var(--table-active-background-color);
     }
 }
 

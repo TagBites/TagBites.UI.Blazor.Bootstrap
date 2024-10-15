@@ -5,7 +5,7 @@ html {
     overflow: hidden;
 }
 body {
-    background: #fafafa;
+    background: var(--t-body-color);
     height: 100svh;
     max-height: 100svh;
     //height :var(--ts-height);
