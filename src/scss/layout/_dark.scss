@@ -84,7 +84,8 @@ html[data-bs-theme="dark"] {
     }
     .tc-group-header{
         background-color: var(--content-background-hover-color);
-        border-bottom: 1px solid var(--t-border-color)
+        border-bottom: 1px solid var(--t-border-color);
+        border-color:var(--t-border-color);
     }
     .tc-workspace > .tc-tabs:hover, .tc-workspace-it > .tc-tabs:hover{
         box-shadow: 0px 0px 10px 0px rgb(53, 53, 53)

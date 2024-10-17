@@ -93,7 +93,7 @@
             font-weight: var(--t-font-weight-bold);
             color: var(--t-font-color-light);
         }
-        .tl-stack div:first-child .tc-group-header {
+        .tl-stack div:first-child > .tc-group-header {
             margin-top: -5px;
         }
         .tc-tabs > header > ul li {
