@@ -117,4 +117,8 @@ html[data-bs-theme="dark"] {
     .td-datagrid:focus .tf-active td{
         background-color: var(--content-background-hover-color);
     }
+    .tbs-scheduler td,
+    .tbs-scheduler-allday{
+        border-color:var(--t-border-color);
+    }
 }
