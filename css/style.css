@@ -16299,6 +16299,22 @@ section:has(> .tc-workspace) {
   margin-top: 12px;
 }
 
+@media only screen and (min-width: 1361px) and (max-width: 1799px) {
+  .tc-workspace .tc-workspace-it .tc-tabs .tc-workspace {
+    margin: 0px !important;
+  }
+  .tc-workspace .tc-workspace-it .tc-tabs .tc-workspace .tc-tabs {
+    margin-top: 0px;
+  }
+  .tc-workspace .tc-workspace-it .tc-tabs .tc-workspace .tc-tabs header {
+    border: none;
+    border-radius: 0;
+  }
+  .tc-workspace .tc-workspace-it .tc-tabs .tc-workspace .tc-tabs section {
+    border-left: none;
+    border-right: none;
+  }
+}
 @media only screen and (max-width: 1360px) {
   .tc-workspace {
     margin: -12px !important;

@@ -1,5 +1,5 @@
 /* Workspace */
-:root{
+:root {
     --tv-workspace-sp: 12px;
 }
 .tc-workspace {
@@ -36,7 +36,7 @@
     cursor: ns-resize;
 }
 .tc-workspace-sp-h {
-    flex-direction: 1 0 auto;;
+    flex-direction: 1 0 auto;
     width: calc(var(--tv-workspace-sp) * 2);
     margin: 0;
     cursor: ew-resize;
@@ -69,7 +69,6 @@
     margin-bottom: 0px !important;
 }
 
-
 .tc-workspace {
     .dragging {
         box-shadow: none !important;
@@ -77,25 +76,25 @@
         background-color: #007bff !important;
         color: white !important;
     }
-    li.tf-active.dragging{
+    li.tf-active.dragging {
         background-color: #007bff !important;
         color: white !important;
-        a{
+        a {
             color: rgb(255, 255, 255) !important;
-            background-color: inherit!important;
+            background-color: inherit !important;
         }
     }
     .dragging-over,
-    li.tf-active.dragging-over{
+    li.tf-active.dragging-over {
         background-color: #73b7ff !important;
-        a{
+        a {
             color: white !important;
-            background-color: #73b7ff!important;
-            background: #73b7ff!important;
+            background-color: #73b7ff !important;
+            background: #73b7ff !important;
         }
     }
 
-    section > .tc-tabs.tf-noborder{
+    section > .tc-tabs.tf-noborder {
         /*margin-top: -12px!important;*/
         margin-left: -12px;
         margin-right: -12px;
@@ -103,136 +102,149 @@
     }
 }
 
-section:has(>.tc-workspace){
+section:has(> .tc-workspace) {
     background-color: #f5f7fa;
 }
-.tc-workspace:has(>.tc-tabs){
-    .tc-tabs .tc-tabs{
+.tc-workspace:has(> .tc-tabs) {
+    .tc-tabs .tc-tabs {
         //margin-top: 12px;
     }
 }
 
-.tc-workspace.tf-nofloat:has(>.tc-tabs){
+.tc-workspace.tf-nofloat:has(> .tc-tabs) {
     padding: 0px;
-    > .tc-tabs{
-        &::after{
+    > .tc-tabs {
+        &::after {
             height: 0;
             border-radius: 0;
             border-bottom: none;
         }
-        >header{
+        > header {
             border-radius: 0;
             border-left: none;
             border-top: none;
             border-right: none;
         }
-        >section{
+        > section {
             border-left: none;
             border-right: none;
         }
-        .tc-tabs{
+        .tc-tabs {
             margin-top: 12px;
         }
     }
 }
 
-
-
-
-.tc-workspace{
-    .tc-workspace-it{
-        .tc-tabs{
-            .tc-tabs{
+.tc-workspace {
+    .tc-workspace-it {
+        .tc-tabs {
+            .tc-tabs {
                 margin-top: 12px;
             }
         }
     }
 }
+@media only screen and (min-width: 1361px) and (max-width: 1799px) {
+    .tc-workspace {
+        .tc-workspace-it {
+            .tc-tabs {
+                .tc-workspace {
+                    margin: 0px !important;
+                    .tc-tabs {
+                        margin-top: 0px;
 
+                        header {
+                            border: none;
+                            border-radius: 0;
+                        }
+                        section{
+                            border-left:none;
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 1360px) {
-    .tc-workspace{
-        margin: -12px!important;
-        height: calc(100% + 24px)!important;
-        > .tc-tabs{
-            &::after{
+    .tc-workspace {
+        margin: -12px !important;
+        height: calc(100% + 24px) !important;
+        > .tc-tabs {
+            &::after {
                 height: 0;
                 border-radius: 0;
                 border-bottom: none;
             }
-            >header{
+            > header {
                 border-radius: 0;
                 border-left: none;
                 border-top: none;
                 border-right: none;
             }
-            >section{
+            > section {
                 border-left: none;
                 border-right: none;
             }
-            .tc-tabs{
+            .tc-tabs {
                 /*margin-top: 12px;*/
             }
         }
     }
 }
 
-
 .tc-workspace > .tc-tabs:hover,
-.tc-workspace-it > .tc-tabs:hover{
-    border-radius:12px;
+.tc-workspace-it > .tc-tabs:hover {
+    border-radius: 12px;
     box-shadow: 0px 0px 10px 0px rgb(232 232 232);
 }
 
-
-
-
 .tc-workspace .tc-workspace * .tc-tabs header,
-.tc-workspace .tc-workspace * .tc-tabs section{
+.tc-workspace .tc-workspace * .tc-tabs section {
     //border: none;
     border-radius: 0;
 }
 .tc-workspace .tc-workspace {
-    margin: -1px!important;
+    margin: -1px !important;
 }
-.tc-workspace .tc-workspace .tc-workspace-sp-h{
+.tc-workspace .tc-workspace .tc-workspace-sp-h {
     width: 10px;
-  
 }
-.tc-workspace .tc-workspace .tc-workspace-sp-v{
+.tc-workspace .tc-workspace .tc-workspace-sp-v {
     height: 10px;
 }
 
+.tc-tabs > section:has(> .td:only-child) > .td:only-child {
+    margin: -1px 0 0 -1px;
+}
 
-.tc-tabs > section:has(> .td:only-child) > .td:only-child {  
-    margin: -1px 0 0 -1px;  
-}  
-  
-.tc-tabs > section:has(> .td:only-child) {  
-    padding: 0;  
-}  
+.tc-tabs > section:has(> .td:only-child) {
+    padding: 0;
+}
 
-.tc-workspace section:has(.tc-workspace){
-    padding:0px!important;
+.tc-workspace section:has(.tc-workspace) {
+    padding: 0px !important;
     --tv-workspace-sp: 5px;
-    .tc-tabs:after{
-        content:unset!important;
+    .tc-tabs:after {
+        content: unset !important;
     }
 }
-.tc-workspace:has(.tc-workspace) .tc-workspace .tc-tabs::after{
-content:unset!important;
+.tc-workspace:has(.tc-workspace) .tc-workspace .tc-tabs::after {
+    content: unset !important;
 }
-.tc-workspace:has(.tc-workspace){
+.tc-workspace:has(.tc-workspace) {
     //border-bottom:1px solid var(--t-border-color);
 }
 .tc-workspace .tc-workspace .tc-workspace-it .tc-tabs {
-    margin-top: 0!important;
-} 
-
-.tc-tabs:has(.tc-workspace)::after{
-    content: unset!important;
+    margin-top: 0 !important;
 }
-.tc-tabs:has(.tc-workspace) > section{
-    border-bottom-left-radius:12px;
-    border-bottom-right-radius:12px;
+
+.tc-tabs:has(.tc-workspace)::after {
+    content: unset !important;
+}
+.tc-tabs:has(.tc-workspace) > section {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
