@@ -121,4 +121,8 @@ html[data-bs-theme="dark"] {
     .tbs-scheduler-allday{
         border-color:var(--t-border-color);
     }
+
+    .td-datagrid > section > table i {
+        color: rgb(191 191 191);
+    }
 }
