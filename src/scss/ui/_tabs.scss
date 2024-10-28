@@ -243,6 +243,7 @@
 }
 
 .tc-tabs{
+    --content-background-hover-color: #f3f4f4;
     &::after{
         display:none;
     }

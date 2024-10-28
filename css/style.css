@@ -15696,6 +15696,9 @@ tr[data-handle="-1"] {
     display: none;
   }
 }
+.tc-tabs {
+  --content-background-hover-color: #f3f4f4;
+}
 .tc-tabs::after {
   display: none;
 }
