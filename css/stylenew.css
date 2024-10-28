@@ -15696,6 +15696,27 @@ tr[data-handle="-1"] {
     display: none;
   }
 }
+.tc-tabs::after {
+  display: none;
+}
+.tc-tabs .tc-group {
+  border: none;
+  margin: 0px -12px;
+}
+.tc-tabs .tc-group header {
+  background-color: var(--content-background-hover-color);
+  font-size: 16px;
+  padding: 6px 24px;
+  margin: 6px 0px;
+  font-weight: 500;
+  color: var(--t-font-color-light);
+  border-radius: 0;
+  border-top: 1px solid var(--t-border-color);
+}
+.tc-tabs .tl-stack div:first-child > .tc-group > header {
+  margin-top: -13px;
+}
+
 .tn-pagination ul {
   margin-bottom: 0;
 }
@@ -17148,6 +17169,18 @@ div:not(.tl-formgroup) > .te-textarea {
   }
   html[data-ui-mode=mini] .tbs-scheduler-task-container div h5, html[data-ui-mode=mini] .tbs-scheduler-task-container div .h5 {
     font-weight: var(--t-font-weight-bold);
+  }
+  html[data-ui-mode=mini] .tc-tabs .tc-group {
+    border: none;
+    margin: 0px -4px;
+  }
+  html[data-ui-mode=mini] .tc-tabs .tc-group header {
+    font-size: 12px;
+    padding: 4px 16px;
+    margin: 4px 0px;
+  }
+  html[data-ui-mode=mini] .tc-tabs .tl-stack div:first-child > .tc-group > header {
+    margin-top: -6px;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 1360px) {

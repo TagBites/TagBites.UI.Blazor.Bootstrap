@@ -241,3 +241,27 @@
         display:none;
     }
 }
+
+.tc-tabs{
+    &::after{
+        display:none;
+    }
+    .tc-group{
+        border: none;
+        margin :0px -12px;
+        
+        header{
+            background-color: var(--content-background-hover-color);
+            font-size: 16px;
+            padding: 6px 24px;
+            margin: 6px 0px;
+            font-weight: 500;
+            color: var(--t-font-color-light);
+            border-radius: 0;
+            border-top: 1px solid var(--t-border-color);
+        }
+    }
+    .tl-stack div:first-child > .tc-group > header{
+        margin-top: -13px
+    }
+}

@@ -128,6 +128,23 @@
                 font-weight: var(--t-font-weight-bold);
             }
         }
+
+        .tc-tabs{
+            .tc-group{
+                border: none;
+                margin :0px -4px;
+                
+                header{
+                    font-size: 12px;
+                    padding: 4px 16px;
+                    margin: 4px 0px;
+                }
+            }
+            .tl-stack div:first-child > .tc-group > header{
+                margin-top: -6px
+            }
+        }
+
     }
 }
 
