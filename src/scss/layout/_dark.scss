@@ -125,4 +125,13 @@ html[data-bs-theme="dark"] {
     .td-datagrid > section > table i {
         color: rgb(191 191 191);
     }
+
+    .tc-tabs{
+        .tc-group{
+
+            header{
+                background-color: var(--content-background-hover-color);
+            }
+        }
+    }
 }
