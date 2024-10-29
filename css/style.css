@@ -15720,6 +15720,11 @@ tr[data-handle="-1"] {
   margin-top: -13px;
 }
 
+.tc-workspace > .tc-tabs::after,
+.tc-workspace-it > .tc-tabs::after {
+  display: block;
+}
+
 .tn-pagination ul {
   margin-bottom: 0;
 }
