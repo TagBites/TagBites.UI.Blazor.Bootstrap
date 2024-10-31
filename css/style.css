@@ -15720,6 +15720,15 @@ tr[data-handle="-1"] {
   margin-top: -13px;
 }
 
+.tl-grid div[class^=col-] .tc-group {
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+}
+.tl-grid div[class^=col-] .tc-group > header {
+  margin-top: 4px !important;
+  border: 1px solid var(--t-border-color);
+}
+
 .tc-workspace > .tc-tabs::after,
 .tc-workspace-it > .tc-tabs::after {
   display: block;
