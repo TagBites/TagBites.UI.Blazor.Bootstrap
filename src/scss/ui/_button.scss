@@ -120,9 +120,28 @@ button {
 		font-weight: 500;
     	color: rgb(108, 117, 125)!important;
     	background-color: rgb(225 225 225)!important;
+
 	}
 	.tp-button {
 		margin: 0px;
+
+	}
+}
+.tl-formgroup {
+	> .tl-buttons {
+		.tf-checked {
+			color: var(--bs-white)!important;
+			background-color: var(--bs-primary)!important;
+			border: 1px solid var(--t-border-color)!important;
+		}
+		.tp-button {
+			border: 1px solid var(--t-border-color);
+			max-width: 60px;
+			&:hover{
+				color: var(--bs-white)!important;
+				background-color: var(--bs-primary)!important;
+			}
+		}
 	}
 }
 .tp-image {

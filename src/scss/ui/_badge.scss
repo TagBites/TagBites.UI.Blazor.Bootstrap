@@ -2,4 +2,7 @@
     @extend .badge;
     @extend .rounded-pill;
     background-color: rgb(167, 167, 167);
+    &.text-end{
+        float:inline-end;
+    }
 }
