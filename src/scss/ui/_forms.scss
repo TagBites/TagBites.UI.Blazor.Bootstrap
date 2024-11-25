@@ -185,3 +185,9 @@ input, button, select, optgroup, textarea {
 .tl-grid > div .tl-grid > div{
 	//margin-bottom:6px;
   }
+
+  .tl-wrap{
+	>.te{
+		width: auto;
+	}
+  }
