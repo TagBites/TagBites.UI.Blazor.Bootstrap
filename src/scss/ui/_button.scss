@@ -115,6 +115,7 @@ button {
 	//margin-bottom: 1rem;
 	border-top-width: 0px;
 	border-bottom-width: 0px;
+	width: auto;
 	.tf-checked {
 		@extend .active;
 		font-weight: 500;
@@ -136,7 +137,8 @@ button {
 		}
 		.tp-button {
 			border: 1px solid var(--t-border-color);
-			max-width: 60px;
+			min-width: 60px;
+    		flex: 0 1 auto;
 			&:hover{
 				color: var(--bs-white)!important;
 				background-color: var(--bs-primary)!important;

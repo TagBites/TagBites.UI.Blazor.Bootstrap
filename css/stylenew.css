@@ -15855,6 +15855,7 @@ tr[data-handle="-1"] {
 .tl-buttons {
   border-top-width: 0px;
   border-bottom-width: 0px;
+  width: auto;
 }
 .tl-buttons .tf-checked {
   font-weight: 500;
@@ -15872,7 +15873,8 @@ tr[data-handle="-1"] {
 }
 .tl-formgroup > .tl-buttons .tp-button {
   border: 1px solid var(--t-border-color);
-  max-width: 60px;
+  min-width: 60px;
+  flex: 0 1 auto;
 }
 .tl-formgroup > .tl-buttons .tp-button:hover {
   color: var(--bs-white) !important;
@@ -16682,7 +16684,7 @@ div.tl.tl-wrapgrid {
   --modal-radius: var(--t-border-radius);
   --nav-width: 250px;
   --nav-background-color: var(--bs-gray-100);
-  --nav-item-color: var(--bs-code-color);
+  --nav-item-color: var(--bs-gray-200);
   --nav-item-color-hover: var(--bs-code-color);
   --nav-item-padding: 3px 2px 3px 12px;
   --nav-font-size: var(--t-font-size);
@@ -17155,7 +17157,8 @@ div:not(.tl-formgroup) > .te-textarea {
   html[data-ui-mode=mini] .tn-ribbon > section > ul > li {
     height: 74px;
   }
-  html[data-ui-mode=mini] .te {
+  html[data-ui-mode=mini] .te,
+  html[data-ui-mode=mini] .te-tags .tc .te {
     height: 30px;
     /*line-height: 1;*/
   }
