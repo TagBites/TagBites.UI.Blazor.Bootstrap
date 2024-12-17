@@ -17162,6 +17162,10 @@ div:not(.tl-formgroup) > .te-textarea {
     height: 30px;
     /*line-height: 1;*/
   }
+  html[data-ui-mode=mini] .te-tags {
+    min-height: 30px;
+    height: auto !important;
+  }
   html[data-ui-mode=mini] div.te {
     display: flex;
     align-items: center;

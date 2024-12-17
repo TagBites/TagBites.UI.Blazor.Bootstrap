@@ -64,6 +64,10 @@
         .te-tags .tc .te {
             height: 30px;
             /*line-height: 1;*/
+        } 
+        .te-tags{
+            min-height: 30px;
+            height: auto !important;
         }
         div.te {
             display: flex;
