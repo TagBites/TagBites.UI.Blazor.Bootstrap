@@ -187,7 +187,7 @@
         height: 100%;
         max-height: calc(100% - 44px);
         overflow-y: auto;
-        background-color: var(--tabs-body-background);
+        background-color: var(--content-background-color);
         .tb-card:last-child{
             margin-bottom: 0px;
         }
