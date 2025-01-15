@@ -248,3 +248,11 @@ section:has(> .tc-workspace) {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 }
+
+.tc-workspace div:has(>.tc-workspace){
+    height: 100%;
+    overflow: hidden;
+    .tc-workspace{
+        margin: 0px !important;
+    }
+}

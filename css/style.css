@@ -14116,7 +14116,7 @@ html[data-bs-theme=dark] .tc-tabs .tc-group header {
   height: 21px;
   display: block;
   overflow: hidden;
-  width: 100%;
+  width: calc(100% - 30px);
   text-overflow: ellipsis;
   text-wrap: nowrap;
   font-size: var(--t-font-size-small);
@@ -15790,6 +15790,12 @@ tr[data-handle="-1"] {
 .tp-button i + span {
   margin-left: 6px;
 }
+.tp-button span {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .tb-button-group button, .tb-button-group-custom-color button {
   display: inline-flex;
@@ -16464,10 +16470,28 @@ section:has(> .tc-workspace) {
   border-bottom-right-radius: 12px;
 }
 
+.tc-workspace div:has(> .tc-workspace) {
+  height: 100%;
+  overflow: hidden;
+}
+.tc-workspace div:has(> .tc-workspace) .tc-workspace {
+  margin: 0px !important;
+}
+
 .tl-filedropwrapper.hover {
   position: relative;
 }
 
+.tl-filedropwrapper .visually-hidden {
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 !important;
+  margin: 0px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 .tl-filedropwrapper.flex-fill {
   overflow-y: auto;
 }
@@ -16550,6 +16574,9 @@ section:has(> .tc-workspace) {
   flex: 1 1;
   flex-wrap: nowrap;
 }
+.te-tags .tc-input-group input:focus {
+  box-shadow: none;
+}
 .te-tags .te-tags-item {
   margin: 4px 0px;
   margin-left: 4px;
@@ -16567,8 +16594,7 @@ section:has(> .tc-workspace) {
 }
 
 .te-tags-editor {
-  width: auto !important;
-  min-width: 120px;
+  min-width: 90px;
 }
 
 .te-tags .tc *,
@@ -16604,12 +16630,11 @@ table.tl tr td {
 .tc-widget, .tc-component {
   color: var(--t-font-color);
   padding: var(--tv-default-margin) !important;
-  border-top: 1px solid var(--t-border-color);
+  border: 1px solid var(--t-border-color);
   border-radius: var(--t-border-radius);
-  background-color: rgba(246, 248, 251, 0.5490196078) !important;
+  background-color: var(--bs-gray-100) !important;
   overflow: hidden;
   margin: var(--tv-default-margin) !important;
-  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .tc-widget * .tp-text, .tc-component * .tp-text {

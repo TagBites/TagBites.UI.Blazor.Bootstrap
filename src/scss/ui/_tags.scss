@@ -8,6 +8,11 @@
   .tc-input-group {
     flex: 1 1;
     flex-wrap: nowrap;
+    input{
+      &:focus{
+        box-shadow: none;
+      }
+    }
   }
   .te-tags-item {
     margin: 4px 0px;
@@ -27,8 +32,7 @@
 }
 
 .te-tags-editor {
-  width: auto !important;
-  min-width: 120px;
+  min-width: 90px;
 }
 .te-tags .tc *,
 .te-tags .te {

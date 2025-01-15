@@ -28,7 +28,12 @@ button {
 			//width: min-content;
 		}
 	}
-
+	span{
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap
+	}
 	//border-color: var(--t-border-color);
 	border-radius: var(--button-border-radius);
 }
