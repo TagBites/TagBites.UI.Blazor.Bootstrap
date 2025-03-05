@@ -528,6 +528,9 @@ tr[data-handle="-1"] {
 }
 
 @media only screen and (max-width: 768px) {
+    .td-datagrid > section > table > tbody tr{
+        background-color: transparent;
+    }
     .td-datagrid-rs{
         border-left-color:#ffffff!important;
         border-right-color:#ffffff!important;
@@ -560,5 +563,8 @@ tr[data-handle="-1"] {
             border-left-color: var(--content-background-color)!important;
             border-right-color: var(--content-background-color)!important;
         }
+    }
+    html[data-bs-theme=dark] .td-datagrid > section > table > tbody tr{
+        background-color: rgb(30, 30, 30);
     }
 }
