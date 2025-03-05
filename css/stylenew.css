@@ -14757,7 +14757,8 @@ th.td-datagrid-expand span {
   margin-left: calc(14px * (1 + var(--data-level)) - 8px);
 }
 
-.td-datagrid td, .td-datagrid th {
+.td-datagrid td,
+.td-datagrid th {
   border: none;
 }
 .td-datagrid tr {
@@ -14822,7 +14823,8 @@ td > i {
   margin: 0px 2px;
 }
 
-.table > :not(caption) > * > *, .td-datagrid table > :not(caption) > * > * {
+.table > :not(caption) > * > *,
+.td-datagrid table > :not(caption) > * > * {
   padding: 0.38rem !important;
 }
 
@@ -14830,7 +14832,11 @@ tbody tr:last-child {
   border-bottom: 0;
 }
 
-td.td-datagrid-expand, th, tr, thead, th.td-datagrid-expand {
+td.td-datagrid-expand,
+th,
+tr,
+thead,
+th.td-datagrid-expand {
   background-color: transparent;
 }
 
@@ -14883,7 +14889,8 @@ td:has(> img.rounded-circle) {
   padding: 0 6px !important;
 }
 
-tr, tbody {
+tr,
+tbody {
   position: relative;
 }
 
@@ -14911,6 +14918,37 @@ tr[data-handle="-1"] {
   min-height: 38px;
 }
 
+@media only screen and (max-width: 768px) {
+  .td-datagrid-rs {
+    border-left-color: #ffffff !important;
+    border-right-color: #ffffff !important;
+  }
+  .td-datagrid-rs * {
+    border-left-color: #ffffff !important;
+    border-right-color: #ffffff !important;
+  }
+  .td-datagrid-rs td {
+    height: 24px;
+  }
+  .td-datagrid-details table tbody tr td:first-of-type,
+  html[data-bs-theme=dark] .td-datagrid-details table tbody tr td:first-of-type {
+    background-color: transparent;
+  }
+  .td-datagrid > section > table {
+    --t-background-color: rgb(250 250 250)!important;
+  }
+  .td-datagrid > section > table > tbody {
+    box-shadow: none !important;
+  }
+  html[data-bs-theme=dark] .td-datagrid .td-datagrid-rs {
+    border-left-color: var(--content-background-color) !important;
+    border-right-color: var(--content-background-color) !important;
+  }
+  html[data-bs-theme=dark] .td-datagrid .td-datagrid-rs * {
+    border-left-color: var(--content-background-color) !important;
+    border-right-color: var(--content-background-color) !important;
+  }
+}
 /* scheduler */
 .tbs-scheduler {
   -webkit-user-select: none;

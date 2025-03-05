@@ -6,7 +6,7 @@
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
     -webkit-touch-callout: none;
-    &:focus{
+    &:focus {
         outline: none;
         box-shadow: none;
     }
@@ -36,7 +36,7 @@
                 td {
                     background-color: rgb(209 209 209 / 15%) !important;
                 }
-                }*/ 
+                }*/
                 tr {
                     background-color: #fff;
                 }
@@ -46,12 +46,12 @@
                     // position: relative;
                     // content: "";
                 }
-                .td-datagrid-sr{
+                .td-datagrid-sr {
                     background-color: #f7f7f7 !important;
                 }
-                &.td-datagrid-rs{
+                &.td-datagrid-rs {
                     height: 8px;
-                    td{
+                    td {
                         padding: 0;
                         background-color: var(--t-table-accent-background-color);
                     }
@@ -60,7 +60,7 @@
             .tf-editor {
                 //border: 1px solid red;
                 padding: 0 !important;
-                .te:not(.te-check){
+                .te:not(.te-check) {
                     height: 33px;
                 }
 
@@ -73,7 +73,7 @@
                     background-color: var(--bs-white) !important;
                     height: 100%;
                     margin: 0;
-                    &:last-of-type{
+                    &:last-of-type {
                         border-right: none;
                     }
                 }
@@ -94,19 +94,18 @@
                 .tl-stack {
                     padding: 0px 4px;
                 }
-                .te-combo{
+                .te-combo {
                     font-size: var(--t-font-size) !important;
-                    border: none!important;
-                    border-radius: 0!important;
-                    height: 33px!important;
+                    border: none !important;
+                    border-radius: 0 !important;
+                    height: 33px !important;
                 }
-
             }
         }
     }
-    > footer{
+    > footer {
         border: 1px solid var(--footer-border-color);
-        border:none;
+        border: none;
         background-color: transparent;
     }
     .tb-table-searchbar {
@@ -191,12 +190,12 @@
     font-size: var(--t-font-size);
     thead {
         //background-color: var(--t-table-accent-background-color);
-        th{
-            i{
-                margin-top: 4px!important;
+        th {
+            i {
+                margin-top: 4px !important;
             }
         }
-        tr{
+        tr {
             border-bottom-width: 2px;
         }
     }
@@ -219,11 +218,11 @@
                     //background-blend-mode: multiply;
                 }
             }*/
-            td{
+            td {
                 i + span,
-                img + span{
+                img + span {
                     margin-left: 6px;
-                }  
+                }
             }
             &.tb-table-empty {
                 text-align: center;
@@ -320,9 +319,9 @@ tbody > tr.tf-active,
             &::before {
                 height: 0;
             }
-            tr{
-                td{
-                    &:first-of-type{
+            tr {
+                td {
+                    &:first-of-type {
                         background: #fcfcfd;
                         font-size: var(--t-font-size);
                         color: #7d7d7d;
@@ -353,27 +352,28 @@ th.td-datagrid-expand {
     /*border-left: 1px solid #7e7e7e;
     border-bottom: 1px solid #7e7e7e;
     padding: 0px 2px;*/
-    text-overflow: unset!important;
+    text-overflow: unset !important;
     //background-color: var(--t-table-accent-background-color)!important;
     span {
         //border-left: 1px solid var(--t-border-color);
-        font-size: var(--t-font-size);;
+        font-size: var(--t-font-size);
         font-weight: bold;
         line-height: 1;
         margin-left: calc(14px * (1 + var(--data-level)) - 8px);
     }
 }
 
-.td-datagrid{
-    td,th{
+.td-datagrid {
+    td,
+    th {
         border: none;
-      }
-      tr{
-        border-top:0
-      }
-    header{
+    }
+    tr {
+        border-top: 0;
+    }
+    header {
         padding: 0px;
-        ul.td-datagrid-gbp{
+        ul.td-datagrid-gbp {
             list-style: none;
             margin: 0;
             padding: 0;
@@ -382,7 +382,7 @@ th.td-datagrid-expand {
             flex-wrap: wrap;
             column-gap: 12px;
             row-gap: 6px;
-            li{
+            li {
                 display: flex;
                 align-items: center;
                 padding: 2px 8px;
@@ -390,10 +390,10 @@ th.td-datagrid-expand {
                 background: #e7e7e7;
                 flex-direction: row;
                 font-weight: 500;
-                &:first-child{
+                &:first-child {
                     margin-left: 0px;
                 }
-                i{
+                i {
                     float: none !important;
                     margin-left: 6px;
                 }
@@ -402,14 +402,14 @@ th.td-datagrid-expand {
     }
 }
 
-.td-datagrid-group-s {  
-    margin-left: 1rem !important;  
-    font-weight: normal !important;  
-    color: var(--bs-secondary);  
-    font-size: small !important;  
-}  
+.td-datagrid-group-s {
+    margin-left: 1rem !important;
+    font-weight: normal !important;
+    color: var(--bs-secondary);
+    font-size: small !important;
+}
 
-td > i{
+td > i {
     vertical-align: middle;
     font-size: var(--t-font-size) !important;
 }
@@ -420,81 +420,86 @@ td > i{
     padding-bottom: 0px !important;
 }
 
-.td-datagrid-toolbox{
+.td-datagrid-toolbox {
     @extend .text-center;
-    padding: 0!important;
+    padding: 0 !important;
     line-height: 1;
-    text-overflow: initial!important;
-    button{
-        padding:2px 2px!important;
+    text-overflow: initial !important;
+    button {
+        padding: 2px 2px !important;
         display: inline-flex;
         margin: 0px 2px;
     }
 }
 
-.table > :not(caption) > * > *, .td-datagrid table > :not(caption) > * > * {
-    padding: 0.38rem!important;
+.table > :not(caption) > * > *,
+.td-datagrid table > :not(caption) > * > * {
+    padding: 0.38rem !important;
 }
 
-tbody tr:last-child{
+tbody tr:last-child {
     border-bottom: 0;
-  }
-  td.td-datagrid-expand,th,tr,thead,th.td-datagrid-expand{
+}
+td.td-datagrid-expand,
+th,
+tr,
+thead,
+th.td-datagrid-expand {
     background-color: transparent;
-  }
-    .td-datagrid header ul.td-datagrid-gbp li{
+}
+.td-datagrid header ul.td-datagrid-gbp li {
     background-color: transparent;
     border-radius: 3px;
-  }
-  .td-datagrid > section > table > tbody .td-datagrid-sr {
+}
+.td-datagrid > section > table > tbody .td-datagrid-sr {
     background-color: transparent;
-  }
+}
 
-
-  .td-datagrid:focus .tf-active td{
+.td-datagrid:focus .tf-active td {
     background-color: #e6f2fa;
-  }
+}
 
-  @media only screen and (max-width: 768px) {
-    .td-datagrid-gbp{
-        margin-bottom: calc(var(--tv-default-full-margin) / 2)!important;
+@media only screen and (max-width: 768px) {
+    .td-datagrid-gbp {
+        margin-bottom: calc(var(--tv-default-full-margin) / 2) !important;
     }
-    .td-datagrid{
-        tbody{
-            border:1px solid var(--t-border-color);
+    .td-datagrid {
+        tbody {
+            border: 1px solid var(--t-border-color);
         }
-        tbody tbody{
-            border:none;
-            & > tr:first-child{
+        tbody tbody {
+            border: none;
+            & > tr:first-child {
                 border-top: none;
             }
         }
-        .td-datagrid-details{
-            padding: 0!important;
-            border:1px solid var(--t-border-color);
+        .td-datagrid-details {
+            padding: 0 !important;
+            border: 1px solid var(--t-border-color);
         }
-        tbody tr{
+        tbody tr {
             border: 1px solid var(--t-border-color);
             border-right: 0;
             border-left: 0;
         }
-        .td-datagrid-expand{
+        .td-datagrid-expand {
             border-right: 1px solid var(--t-border-color);
         }
-        tbody tbody tr:last-child{
+        tbody tbody tr:last-child {
             border-bottom: 0;
         }
-        thead .td-datagrid-expand{
+        thead .td-datagrid-expand {
             border-right: none;
         }
     }
-  }
-
-td:has(>img.rounded-circle){
-    padding: 0 6px!important;;
 }
 
-tr,tbody{
+td:has(> img.rounded-circle) {
+    padding: 0 6px !important;
+}
+
+tr,
+tbody {
     position: relative;
 }
 tr[data-handle="-1"]:not(.tf-active)::after,
@@ -506,22 +511,54 @@ tbody[data-handle="-1"]:not(.tf-active)::after {
     pointer-events: none;
     z-index: 1;
     color: rgb(130 130 130);
-} 
-tbody[data-handle="-1"]:not(.tf-active)::after{
+}
+tbody[data-handle="-1"]:not(.tf-active)::after {
     left: 120px;
 }
 tr.tf-active:has(.tf-editor),
-tbody.tf-active:has(.tf-editor){
+tbody.tf-active:has(.tf-editor) {
     border-bottom: 1px solid var(--t-border-color);
 }
 
-
-
-
-
-tr:not(.tf-active) > .td-datagrid-toolbox{
+tr:not(.tf-active) > .td-datagrid-toolbox {
     //background-color: var(--bs-gray-100)!important;
 }
-tr[data-handle="-1"]{
+tr[data-handle="-1"] {
     min-height: 38px;
-} 
+}
+
+@media only screen and (max-width: 768px) {
+    .td-datagrid-rs{
+        border-left-color:#ffffff!important;
+        border-right-color:#ffffff!important;
+    }
+    .td-datagrid-rs * {
+        border-left-color: #ffffff !important;
+        border-right-color: #ffffff !important;
+    }
+    .td-datagrid-rs td {
+        height: 24px;
+    }
+    .td-datagrid-details table tbody tr td:first-of-type,
+    html[data-bs-theme=dark] .td-datagrid-details table tbody tr td:first-of-type {
+        background-color: transparent;
+    }
+
+    .td-datagrid > section > table {
+        --t-background-color: rgb(250 250 250)!important;
+    }
+    .td-datagrid > section > table > tbody {
+        box-shadow: none!important;
+    }
+
+    html[data-bs-theme=dark] .td-datagrid{
+        .td-datagrid-rs{
+            border-left-color:var(--content-background-color)!important;
+            border-right-color:var(--content-background-color)!important;
+        }
+        .td-datagrid-rs * {
+            border-left-color: var(--content-background-color)!important;
+            border-right-color: var(--content-background-color)!important;
+        }
+    }
+}
