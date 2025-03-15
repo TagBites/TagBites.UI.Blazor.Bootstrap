@@ -45,3 +45,8 @@
 .te-tags .tc .te {
   height: 33px;
 }
+html[data-bs-theme="dark"]{
+  .te-tags-item{
+    background-color: var(--content-background-hover-color) !important
+  }
+}

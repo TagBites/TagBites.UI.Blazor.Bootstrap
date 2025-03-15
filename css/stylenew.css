@@ -16655,6 +16655,10 @@ section:has(> .tc-workspace) {
   height: 33px;
 }
 
+html[data-bs-theme=dark] .te-tags-item {
+  background-color: var(--content-background-hover-color) !important;
+}
+
 .td.td-chart {
   margin: -4px;
 }
