@@ -14469,7 +14469,7 @@ input, button, select, optgroup, textarea {
   background-color: #fff;
 }
 .td-datagrid > section > table > tbody .td-datagrid-sr {
-  background-color: #f7f7f7 !important;
+  /*background-color: #f7f7f7 !important;*/
 }
 .td-datagrid > section > table > tbody.td-datagrid-rs {
   height: 8px;
@@ -14938,7 +14938,7 @@ tr[data-handle="-1"] {
     background-color: transparent;
   }
   .td-datagrid > section > table {
-    --t-background-color: rgb(250 250 250)!important;
+    --t-background-color: rgb(250 250 250) !important;
   }
   .td-datagrid > section > table > tbody {
     box-shadow: none !important;
@@ -14951,8 +14951,13 @@ tr[data-handle="-1"] {
     border-left-color: var(--content-background-color) !important;
     border-right-color: var(--content-background-color) !important;
   }
-  html[data-bs-theme=dark] .td-datagrid > section > table > tbody tr {
-    background-color: rgb(30, 30, 30);
+  html[data-bs-theme=dark] .td-datagrid > section > table > tbody tr,
+  html[data-bs-theme=dark] .td-datagrid > section > table > thead tr,
+  html[data-bs-theme=dark] .td-datagrid > section > table {
+    background-color: rgb(30, 30, 30) !important;
+  }
+  html[data-bs-theme=dark] .td-datagrid > section > table > tbody .td-datagrid-sr {
+    background-color: rgb(30, 30, 30) !important;
   }
 }
 /* scheduler */
