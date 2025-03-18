@@ -16,6 +16,7 @@ button {
 	margin: var(--tv-default-margin);
 	overflow: hidden;
 	justify-content: center;
+	color: var(--t-font-color);
 	*:focus {
 		box-shadow: none;
 	}

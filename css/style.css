@@ -15827,6 +15827,7 @@ tr[data-handle="-1"] {
   margin: var(--tv-default-margin);
   overflow: hidden;
   justify-content: center;
+  color: var(--t-font-color);
   border-radius: var(--button-border-radius);
 }
 .tp-button *:focus {
