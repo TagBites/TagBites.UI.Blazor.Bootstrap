@@ -14960,6 +14960,10 @@ tr[data-handle="-1"] {
     background-color: rgb(30, 30, 30) !important;
   }
 }
+td > a {
+  display: block;
+}
+
 /* scheduler */
 .tbs-scheduler {
   -webkit-user-select: none;
