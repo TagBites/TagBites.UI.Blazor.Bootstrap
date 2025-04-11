@@ -584,3 +584,24 @@ tr[data-handle="-1"] {
 td > a{
     display: block;
 }
+
+tr:has(> .tf-editor) > td{
+    vertical-align: middle!important;
+}
+
+@media only screen and (min-width: 767px) {
+    html[data-ui-mode=mini] .td-datagrid table > :not(caption) > * > td.tf-editor {
+    padding:0!important;
+    }
+}
+
+tbody tr[data-handle] td:not([readonly]):not(.td-datagrid-toolbox) {
+    cursor:text;
+}
+tbody tr[data-handle] td:not([readonly]):not(.td-datagrid-toolbox):has(input) {
+    cursor:default;
+}
+
+button[disabled]{
+    border: transparent!important;
+}

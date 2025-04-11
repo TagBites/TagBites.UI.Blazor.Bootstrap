@@ -6,7 +6,7 @@ div.tp-separator {
     text-align: center;
     color: #a5a5a5;
     font-size: 14px;
-    width:100%!important;
+    width:auto;
     &::before,
     &::after {
         content: "";

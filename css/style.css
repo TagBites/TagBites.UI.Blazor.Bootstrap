@@ -14969,6 +14969,27 @@ td > a {
   display: block;
 }
 
+tr:has(> .tf-editor) > td {
+  vertical-align: middle !important;
+}
+
+@media only screen and (min-width: 767px) {
+  html[data-ui-mode=mini] .td-datagrid table > :not(caption) > * > td.tf-editor {
+    padding: 0 !important;
+  }
+}
+tbody tr[data-handle] td:not([readonly]):not(.td-datagrid-toolbox) {
+  cursor: text;
+}
+
+tbody tr[data-handle] td:not([readonly]):not(.td-datagrid-toolbox):has(input) {
+  cursor: default;
+}
+
+button[disabled] {
+  border: transparent !important;
+}
+
 /* scheduler */
 .tbs-scheduler {
   -webkit-user-select: none;
@@ -16153,7 +16174,7 @@ div.tp-separator {
   text-align: center;
   color: #a5a5a5;
   font-size: 14px;
-  width: 100% !important;
+  width: auto;
 }
 div.tp-separator::before, div.tp-separator::after {
   content: "";
