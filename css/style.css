@@ -12894,6 +12894,7 @@ tr.drop-child {
 }
 
 .td-webview {
+  max-height: 80vh;
   margin: 0 !important;
   padding: var(--tv-default-margin);
 }
