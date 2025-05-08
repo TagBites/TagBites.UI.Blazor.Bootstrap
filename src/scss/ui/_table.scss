@@ -605,3 +605,12 @@ tbody tr[data-handle] td:not([readonly]):not(.td-datagrid-toolbox):has(input) {
 button[disabled]{
     border: transparent!important;
 }
+
+
+.td-datagrid:not([readonly]) tbody tr[data-handle]:not([data-handle="-1"]) td:not([readonly]):not(.td-datagrid-toolbox):not(:has(input)) {
+    background: #eef5ff;
+    cursor: text;
+    position: relative;
+    
+}
+
