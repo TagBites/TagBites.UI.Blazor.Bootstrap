@@ -134,7 +134,11 @@
                 font-weight: var(--t-font-weight-bold);
             }
         }
-
+        .tf-editor{
+            input, button{
+                height: 28px!important;
+            }
+        }
         .tc-tabs{
             .tc-group{
                 border: none;

@@ -17340,6 +17340,9 @@ div:not(.tl-formgroup) > .te-textarea {
   html[data-ui-mode=mini] .tbs-scheduler-task-container div h5, html[data-ui-mode=mini] .tbs-scheduler-task-container div .h5 {
     font-weight: var(--t-font-weight-bold);
   }
+  html[data-ui-mode=mini] .tf-editor input, html[data-ui-mode=mini] .tf-editor button {
+    height: 28px !important;
+  }
   html[data-ui-mode=mini] .tc-tabs .tc-group {
     border: none;
     margin: 0px -4px;
