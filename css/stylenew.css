@@ -16274,6 +16274,7 @@ iframe {
 
 .tl-split {
   position: relative;
+  height: 100%;
   /*margin: -12px;*/
 }
 .tl-split > div {
@@ -16314,6 +16315,45 @@ iframe {
   border-right: 1px solid var(--t-border-color);
 }
 
+.t-fill-box.v-list > .row > .col-lg-12, .t-fill-box.v-list > .tl-stack > .col-lg-12, .t-fill-box.v-list > .tl-split > .col-lg-12,
+.t-fill-box.v-list > .row > .col-lg-6,
+.t-fill-box.v-list > .tl-stack > .col-lg-6,
+.t-fill-box.v-list > .tl-split > .col-lg-6 {
+  height: 100%;
+}
+.t-fill-box.v-list .tl-split-panel > .td-datagrid {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-height: unset;
+  height: unset;
+}
+
+@media (min-width: 768px) {
+  .t-fill-box {
+    height: 100%;
+  }
+  .t-fill-box > .row, .t-fill-box > .tl-stack, .t-fill-box > .tl-split {
+    height: 100%;
+  }
+  .t-fill-box > .row > .row > .col-lg-12, .t-fill-box > .tl-stack > .row > .col-lg-12, .t-fill-box > .tl-split > .row > .col-lg-12, .t-fill-box > .row > .tl-stack > .col-lg-12, .t-fill-box > .tl-stack > .tl-stack > .col-lg-12, .t-fill-box > .tl-split > .tl-stack > .col-lg-12, .t-fill-box > .row > .tl-split > .col-lg-12, .t-fill-box > .tl-stack > .tl-split > .col-lg-12, .t-fill-box > .tl-split > .tl-split > .col-lg-12,
+  .t-fill-box > .row > .row > .col-lg-6,
+  .t-fill-box > .tl-stack > .row > .col-lg-6,
+  .t-fill-box > .tl-split > .row > .col-lg-6,
+  .t-fill-box > .row > .tl-stack > .col-lg-6,
+  .t-fill-box > .tl-stack > .tl-stack > .col-lg-6,
+  .t-fill-box > .tl-split > .tl-stack > .col-lg-6,
+  .t-fill-box > .row > .tl-split > .col-lg-6,
+  .t-fill-box > .tl-stack > .tl-split > .col-lg-6,
+  .t-fill-box > .tl-split > .tl-split > .col-lg-6 {
+    height: 100%;
+  }
+  .t-fill-box > .row .tl-split-panel > .td-datagrid, .t-fill-box > .tl-stack .tl-split-panel > .td-datagrid, .t-fill-box > .tl-split .tl-split-panel > .td-datagrid {
+    margin-top: 0;
+    margin-bottom: 0;
+    max-height: unset;
+    height: unset;
+  }
+}
 /* Workspace */
 :root {
   --tv-workspace-sp: 12px;
