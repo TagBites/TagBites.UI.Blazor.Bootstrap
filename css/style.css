@@ -13887,6 +13887,7 @@ html[data-bs-theme=dark] .tc-tabs .tc-group header {
 }
 .tn-ribbon > header {
   max-height: 39px;
+  min-height: 39px;
   align-items: center;
 }
 .tn-ribbon > header,
@@ -13907,6 +13908,7 @@ html[data-bs-theme=dark] .tc-tabs .tc-group header {
   transition: background-color 0.5s;
   border-bottom: 3px solid var(--t-border-color);
   flex: 0 0 auto;
+  height: 38px;
 }
 .tn-ribbon > header > a:hover,
 .tn-ribbon > footer > a:hover {
@@ -15811,7 +15813,7 @@ button[disabled] {
   border-radius: 0;
   border-top: 1px solid var(--t-border-color);
 }
-.tc-tabs .tl-stack div:first-child > .tc-group > header {
+.tc-tabs .tl-stack > div:first-child > .tc-group > header {
   margin-top: -13px;
 }
 
@@ -15821,7 +15823,7 @@ button[disabled] {
 }
 .tl-grid div[class^=col-] .tc-group > header {
   margin-top: 4px !important;
-  border: 1px solid var(--t-border-color);
+  /*border: 1px solid var(--t-border-color);*/
 }
 
 .tc-workspace > .tc-tabs::after,
@@ -17317,6 +17319,9 @@ div:not(.tl-formgroup) > .te-textarea {
   html[data-ui-mode=mini] .te-tags .tc .te {
     height: 30px;
     /*line-height: 1;*/
+  }
+  html[data-ui-mode=mini] .te.te-check {
+    height: 1em !important;
   }
   html[data-ui-mode=mini] .te-tags {
     min-height: 30px;

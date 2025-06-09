@@ -213,6 +213,7 @@
 	}
 	> header{
 		max-height: 39px;
+		min-height: 39px;
 		align-items: center;
 	}
 	> header,
@@ -235,6 +236,7 @@
 			transition: background-color 0.5s;
 			border-bottom: 3px solid var(--t-border-color);
 			flex: 0 0 auto;
+			height: 38px;
 			&:hover {
 				transition: border-bottom 0.5s;
 				background-color: #dedede !important;

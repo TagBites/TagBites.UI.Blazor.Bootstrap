@@ -265,7 +265,7 @@
             border-top: 1px solid var(--t-border-color);
         }
     }
-    .tl-stack div:first-child > .tc-group > header{
+    .tl-stack > div:first-child > .tc-group > header{
         margin-top: -13px
     }
 }
@@ -277,7 +277,7 @@
             margin-right: 4px!important;
             > header{
                 margin-top: 4px!important;
-                border: 1px solid var(--t-border-color);
+                /*border: 1px solid var(--t-border-color);*/
             }
         }
     }
