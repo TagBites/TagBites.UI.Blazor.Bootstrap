@@ -13544,8 +13544,8 @@ html[data-bs-theme=dark] {
   --content-background-hover-color: #383838;
   --t-background-color: var(--dark-background);
   --t-table-accent-background-color: var(--dark-background);
-  --t-font-color:var(--bs-body-color);
-  --t-font-color-light:var(--bs-body-color);
+  --t-font-color: var(--bs-body-color);
+  --t-font-color-light: var(--bs-body-color);
   --scheduler-background: var(--content-background-color);
   --table-active-background-color: #272727;
 }
@@ -13592,20 +13592,26 @@ html[data-bs-theme=dark] section:has(> .tc-workspace) {
 html[data-bs-theme=dark] .td-datagrid > section > table > tbody tr {
   background: var(--content-background-color);
 }
-html[data-bs-theme=dark] .tc-widget, html[data-bs-theme=dark] .tc-component {
+html[data-bs-theme=dark] .tc-widget,
+html[data-bs-theme=dark] .tc-component {
   background-color: var(--content-background-hover-color) !important;
 }
 html[data-bs-theme=dark] .page > footer {
   background-color: var(--content-background-color);
 }
-html[data-bs-theme=dark] .tn-ribbon > header > a:hover, html[data-bs-theme=dark] .tn-ribbon > footer > a:hover {
+html[data-bs-theme=dark] .tn-ribbon > header > a:hover,
+html[data-bs-theme=dark] .tn-ribbon > footer > a:hover {
   background-color: var(--content-background-hover-color) !important;
   color: var(--t-font-color) !important;
 }
 html[data-bs-theme=dark] .tc-tabs > header {
   border-color: var(--t-border-color);
 }
-html[data-bs-theme=dark] .td-datagrid table > tbody.tf-active > tr > td, html[data-bs-theme=dark] table > tbody.tf-active > *, html[data-bs-theme=dark] table > tbody.tf-active > tr > td, html[data-bs-theme=dark] tbody > tr.tf-active, html[data-bs-theme=dark] .td-datagrid > section > table > tbody > tr.tf-active > td {
+html[data-bs-theme=dark] .td-datagrid table > tbody.tf-active > tr > td,
+html[data-bs-theme=dark] table > tbody.tf-active > *,
+html[data-bs-theme=dark] table > tbody.tf-active > tr > td,
+html[data-bs-theme=dark] tbody > tr.tf-active,
+html[data-bs-theme=dark] .td-datagrid > section > table > tbody > tr.tf-active > td {
   background-color: var(--content-background-hover-color);
 }
 html[data-bs-theme=dark] .tc-group-header {
@@ -13613,17 +13619,64 @@ html[data-bs-theme=dark] .tc-group-header {
   border-bottom: 1px solid var(--t-border-color);
   border-color: var(--t-border-color);
 }
-html[data-bs-theme=dark] .tc-workspace > .tc-tabs:hover, html[data-bs-theme=dark] .tc-workspace-it > .tc-tabs:hover {
+html[data-bs-theme=dark] .tc-workspace > .tc-tabs:hover,
+html[data-bs-theme=dark] .tc-workspace-it > .tc-tabs:hover {
   box-shadow: 0px 0px 10px 0px rgb(53, 53, 53);
 }
-html[data-bs-theme=dark] .tn-ribbon .nav-tabs .nav-link.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon .nav-tabs .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tl-buttons .nav-link.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon .nav-tabs .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > header > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > header > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > footer > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon .nav-tabs .nav-link.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon .nav-tabs .nav-link.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tl-buttons .nav-link.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon .nav-tabs .nav-link.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > header > a.active,
+.tl-buttons html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > header > a.active,
+.tl-buttons html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > header > a.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header .tn-ribbon > header > a.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > footer > a.active,
+.tl-buttons html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-checked,
 html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > footer > a.active,
-.tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-checked,
-html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon > header .nav-link.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > header .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon > header .tl-buttons .nav-link.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon > header > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > footer > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon > footer .nav-link.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon > footer .tl-buttons .nav-link.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer .nav-link.tf-checked, html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > header > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer .tn-ribbon > header > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon > footer > a.active, .tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer > a.tf-checked, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .nav-link.tf-active, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-active, html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > header > a.tf-active, html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-active,
-html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > footer > a.tf-active, html[data-bs-theme=dark] .tn-ribbon > header .nav-link.tf-active, html[data-bs-theme=dark] .tn-ribbon > header > a.tf-active, html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > footer > a.tf-active, html[data-bs-theme=dark] .tn-ribbon > footer .nav-link.tf-active, html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > header > a.tf-active, html[data-bs-theme=dark] .tn-ribbon > footer > a.tf-active {
+.tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > footer > a.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer .tn-ribbon > footer > a.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon > header .nav-link.active,
+.tl-buttons html[data-bs-theme=dark] .tn-ribbon > header .nav-link.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon > header .tl-buttons .nav-link.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header .nav-link.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon > header > a.active,
+.tl-buttons html[data-bs-theme=dark] .tn-ribbon > header > a.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header > a.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > footer > a.active,
+.tl-buttons html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > footer > a.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon > header .tn-ribbon > footer > a.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon > footer .nav-link.active,
+.tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer .nav-link.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon > footer .tl-buttons .nav-link.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer .nav-link.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > header > a.active,
+.tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > header > a.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer .tn-ribbon > header > a.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon > footer > a.active,
+.tl-buttons html[data-bs-theme=dark] .tn-ribbon > footer > a.tf-checked,
+html[data-bs-theme=dark] .tl-buttons .tn-ribbon > footer > a.tf-checked,
+html[data-bs-theme=dark] .tn-ribbon .nav-tabs .nav-link.tf-active,
+html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-active,
+html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > header > a.tf-active,
+html[data-bs-theme=dark] .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-active,
+html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > footer > a.tf-active,
+html[data-bs-theme=dark] .tn-ribbon > header .nav-link.tf-active,
+html[data-bs-theme=dark] .tn-ribbon > header > a.tf-active,
+html[data-bs-theme=dark] .tn-ribbon > header .tn-ribbon > footer > a.tf-active,
+html[data-bs-theme=dark] .tn-ribbon > footer .nav-link.tf-active,
+html[data-bs-theme=dark] .tn-ribbon > footer .tn-ribbon > header > a.tf-active,
+html[data-bs-theme=dark] .tn-ribbon > footer > a.tf-active {
   background-color: var(--content-background-hover-color);
 }
-html[data-bs-theme=dark] table tbody tr:hover, html[data-bs-theme=dark] .tn-navbar li li:hover, html[data-bs-theme=dark] .tc-tabs > header > ul > li:not(.tf-active):hover, html[data-bs-theme=dark] .tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted), html[data-bs-theme=dark] :not(.td-datagrid-toolbox, li, .tc-input-group) > button:not(.tp-button):hover, html[data-bs-theme=dark] .td-datagrid-toolbox button:hover {
+html[data-bs-theme=dark] table tbody tr:hover,
+html[data-bs-theme=dark] .tn-navbar li li:hover,
+html[data-bs-theme=dark] .tc-tabs > header > ul > li:not(.tf-active):hover,
+html[data-bs-theme=dark] .tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted),
+html[data-bs-theme=dark] :not(.td-datagrid-toolbox, li, .tc-input-group) > button:not(.tp-button):hover,
+html[data-bs-theme=dark] .td-datagrid-toolbox button:hover {
   background-color: var(--content-background-hover-color) !important;
 }
 html[data-bs-theme=dark] .tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted) {
@@ -13635,7 +13688,8 @@ html[data-bs-theme=dark] .tn-navbar li ul li:hover {
 html[data-bs-theme=dark] .tl-buttons .tf-checked {
   background-color: var(--content-background-hover-color) !important;
 }
-html[data-bs-theme=dark] .tn-ribbon > header > a, html[data-bs-theme=dark] .tn-ribbon > footer > a {
+html[data-bs-theme=dark] .tn-ribbon > header > a,
+html[data-bs-theme=dark] .tn-ribbon > footer > a {
   background-color: var(--content-background-color) !important;
   color: var(--t-font-color) !important;
 }
@@ -13654,6 +13708,18 @@ html[data-bs-theme=dark] .td-datagrid > section > table i {
 }
 html[data-bs-theme=dark] .tc-tabs .tc-group header {
   background-color: var(--content-background-hover-color);
+}
+html[data-bs-theme=dark] .td-datagrid:not([readonly]) tbody tr[data-handle]:not([data-handle="-1"]) td:not([readonly]):not(.td-datagrid-toolbox, .td-datagrid-expand):not(:has(input)) {
+  background: #3f3f3f;
+  cursor: text;
+  color: #dbdbdb;
+  position: relative;
+}
+html[data-bs-theme=dark] .td-datagrid > section > table .tf-editor button {
+  background-color: transparent !important;
+}
+html[data-bs-theme=dark] .td-datagrid > section > table .tf-editor button:last-of-type {
+  border-right: 1px solid var(--t-border-color);
 }
 
 .scroll {
@@ -15829,6 +15895,12 @@ button[disabled] {
 .tc-workspace > .tc-tabs::after,
 .tc-workspace-it > .tc-tabs::after {
   display: block;
+}
+
+*:not(.tc-workspace, .tc-workspace-it) > .tc-tabs:not(.tf-noborder) > section {
+  border-bottom: 1px solid var(--t-border-color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .tn-pagination ul {

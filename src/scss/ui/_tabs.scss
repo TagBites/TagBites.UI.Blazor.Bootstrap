@@ -285,3 +285,10 @@
 
 .tc-workspace > .tc-tabs::after,
 .tc-workspace-it > .tc-tabs::after{ display:block}
+*:not(.tc-workspace, .tc-workspace-it) > .tc-tabs:not(.tf-noborder){
+    > section{
+        border-bottom:1px solid var(--t-border-color);
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+    }
+}

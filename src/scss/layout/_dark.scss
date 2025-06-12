@@ -2,136 +2,188 @@ html[data-bs-theme="dark"] {
     --dark-background: var(--bs-body-bg);
     --t-body-color: var(--dark-background);
     --nav-background-color: var(--dark-background);
-    --content-background-color:  var(--dark-background);
-    --content-background-hover-color:  #383838;
+    --content-background-color: var(--dark-background);
+    --content-background-hover-color: #383838;
 
     --t-background-color: var(--dark-background);
     --t-table-accent-background-color: var(--dark-background);
-    --t-font-color:var(--bs-body-color);
-    --t-font-color-light:var(--bs-body-color);
+    --t-font-color: var(--bs-body-color);
+    --t-font-color-light: var(--bs-body-color);
     --scheduler-background: var(--content-background-color);
     --table-active-background-color: #272727;
-    
-    .tc-group{
+
+    .tc-group {
         --bs-card-cap-bg: var(--content-background-hover-color);
     }
 
-    .td-datagrid-details table tbody tr td:first-of-type{
+    .td-datagrid-details table tbody tr td:first-of-type {
         color: var(--t-font-color);
         background-color: var(--content-background-color);
     }
-    .td-datagrid > section > table > tbody{
+    .td-datagrid > section > table > tbody {
         box-shadow: 3px 3px 5px 0px #494949;
     }
     ::-webkit-scrollbar-thumb {
         background: #3f3f3f !important;
-      }
-      
-      ::-webkit-scrollbar-thumb:hover {
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
         background: #313131 !important;
-      }
-      ::-webkit-scrollbar-track {
+    }
+    ::-webkit-scrollbar-track {
         background: var(--content-background-color);
-      }
+    }
 
-      .tw > aside::-webkit-scrollbar-track {
+    .tw > aside::-webkit-scrollbar-track {
         background: var(--content-background-color);
-      }
-      
-      .tw > aside::-webkit-scrollbar-thumb {
-        background: #3f3f3f !important;
-      }
-      
-      .tw > aside:hover::-webkit-scrollbar-thumb {
-        background: #3f3f3f !important;
-      }
-      
-      .tw > aside::-webkit-scrollbar-thumb:hover {
-        background: #3f3f3f !important;
-      }
+    }
 
+    .tw > aside::-webkit-scrollbar-thumb {
+        background: #3f3f3f !important;
+    }
+
+    .tw > aside:hover::-webkit-scrollbar-thumb {
+        background: #3f3f3f !important;
+    }
+
+    .tw > aside::-webkit-scrollbar-thumb:hover {
+        background: #3f3f3f !important;
+    }
 
     .tc-tabs > section,
     .tc-tabs > header,
     .tc-tabs::after,
-    div.page > header{
+    div.page > header {
         background-color: var(--content-background-color);
     }
-    section:has(> .tc-workspace){
-        background: var(--content-background-color) ;
+    section:has(> .tc-workspace) {
+        background: var(--content-background-color);
     }
-    .td-datagrid > section > table > tbody tr{
-        background: var(--content-background-color) ;
+    .td-datagrid > section > table > tbody tr {
+        background: var(--content-background-color);
     }
 
-    .tc-widget, .tc-component{
-        background-color: var(--content-background-hover-color) !important
+    .tc-widget,
+    .tc-component {
+        background-color: var(--content-background-hover-color) !important;
     }
-    .page > footer{
+    .page > footer {
         background-color: var(--content-background-color);
     }
 
-    .tn-ribbon > header > a:hover, .tn-ribbon > footer > a:hover{
-        background-color: var(--content-background-hover-color)!important;
-        color: var(--t-font-color)!important;
+    .tn-ribbon > header > a:hover,
+    .tn-ribbon > footer > a:hover {
+        background-color: var(--content-background-hover-color) !important;
+        color: var(--t-font-color) !important;
     }
-    .tc-tabs > header{
-        border-color:var(--t-border-color);
+    .tc-tabs > header {
+        border-color: var(--t-border-color);
     }
 
-    .td-datagrid table > tbody.tf-active > tr > td, table > tbody.tf-active > *, table > tbody.tf-active > tr > td, tbody > tr.tf-active, .td-datagrid > section > table > tbody > tr.tf-active > td{
+    .td-datagrid table > tbody.tf-active > tr > td,
+    table > tbody.tf-active > *,
+    table > tbody.tf-active > tr > td,
+    tbody > tr.tf-active,
+    .td-datagrid > section > table > tbody > tr.tf-active > td {
         background-color: var(--content-background-hover-color);
     }
-    .tc-group-header{
+    .tc-group-header {
         background-color: var(--content-background-hover-color);
         border-bottom: 1px solid var(--t-border-color);
-        border-color:var(--t-border-color);
+        border-color: var(--t-border-color);
     }
-    .tc-workspace > .tc-tabs:hover, .tc-workspace-it > .tc-tabs:hover{
-        box-shadow: 0px 0px 10px 0px rgb(53, 53, 53)
+    .tc-workspace > .tc-tabs:hover,
+    .tc-workspace-it > .tc-tabs:hover {
+        box-shadow: 0px 0px 10px 0px rgb(53, 53, 53);
     }
-    .tn-ribbon .nav-tabs .nav-link.active, .tn-ribbon .nav-tabs .tl-buttons .nav-link.tf-checked, .tl-buttons .tn-ribbon .nav-tabs .nav-link.tf-checked, .tn-ribbon .nav-tabs .tn-ribbon > header > a.active, .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-checked, .tn-ribbon .nav-tabs .tn-ribbon > footer > a.active, .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-checked, .tn-ribbon > header .nav-link.active, .tn-ribbon > header .tl-buttons .nav-link.tf-checked, .tl-buttons .tn-ribbon > header .nav-link.tf-checked, .tn-ribbon > header > a.active, .tl-buttons .tn-ribbon > header > a.tf-checked, .tn-ribbon > header .tn-ribbon > footer > a.active, .tl-buttons .tn-ribbon > header .tn-ribbon > footer > a.tf-checked, .tn-ribbon > footer .nav-link.active, .tn-ribbon > footer .tl-buttons .nav-link.tf-checked, .tl-buttons .tn-ribbon > footer .nav-link.tf-checked, .tn-ribbon > footer .tn-ribbon > header > a.active, .tl-buttons .tn-ribbon > footer .tn-ribbon > header > a.tf-checked, .tn-ribbon > footer > a.active, .tl-buttons .tn-ribbon > footer > a.tf-checked, .tn-ribbon .nav-tabs .nav-link.tf-active, .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-active, .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-active, .tn-ribbon > header .nav-link.tf-active, .tn-ribbon > header > a.tf-active, .tn-ribbon > header .tn-ribbon > footer > a.tf-active, .tn-ribbon > footer .nav-link.tf-active, .tn-ribbon > footer .tn-ribbon > header > a.tf-active, .tn-ribbon > footer > a.tf-active{
+    .tn-ribbon .nav-tabs .nav-link.active,
+    .tn-ribbon .nav-tabs .tl-buttons .nav-link.tf-checked,
+    .tl-buttons .tn-ribbon .nav-tabs .nav-link.tf-checked,
+    .tn-ribbon .nav-tabs .tn-ribbon > header > a.active,
+    .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-checked,
+    .tn-ribbon .nav-tabs .tn-ribbon > footer > a.active,
+    .tl-buttons .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-checked,
+    .tn-ribbon > header .nav-link.active,
+    .tn-ribbon > header .tl-buttons .nav-link.tf-checked,
+    .tl-buttons .tn-ribbon > header .nav-link.tf-checked,
+    .tn-ribbon > header > a.active,
+    .tl-buttons .tn-ribbon > header > a.tf-checked,
+    .tn-ribbon > header .tn-ribbon > footer > a.active,
+    .tl-buttons .tn-ribbon > header .tn-ribbon > footer > a.tf-checked,
+    .tn-ribbon > footer .nav-link.active,
+    .tn-ribbon > footer .tl-buttons .nav-link.tf-checked,
+    .tl-buttons .tn-ribbon > footer .nav-link.tf-checked,
+    .tn-ribbon > footer .tn-ribbon > header > a.active,
+    .tl-buttons .tn-ribbon > footer .tn-ribbon > header > a.tf-checked,
+    .tn-ribbon > footer > a.active,
+    .tl-buttons .tn-ribbon > footer > a.tf-checked,
+    .tn-ribbon .nav-tabs .nav-link.tf-active,
+    .tn-ribbon .nav-tabs .tn-ribbon > header > a.tf-active,
+    .tn-ribbon .nav-tabs .tn-ribbon > footer > a.tf-active,
+    .tn-ribbon > header .nav-link.tf-active,
+    .tn-ribbon > header > a.tf-active,
+    .tn-ribbon > header .tn-ribbon > footer > a.tf-active,
+    .tn-ribbon > footer .nav-link.tf-active,
+    .tn-ribbon > footer .tn-ribbon > header > a.tf-active,
+    .tn-ribbon > footer > a.tf-active {
         background-color: var(--content-background-hover-color);
     }
-    table tbody tr:hover, .tn-navbar li li:hover, .tc-tabs > header > ul > li:not(.tf-active):hover, .tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted), :not(.td-datagrid-toolbox, li, .tc-input-group) > button:not(.tp-button):hover, .td-datagrid-toolbox button:hover{
-        background-color: var(--content-background-hover-color)!important;
+    table tbody tr:hover,
+    .tn-navbar li li:hover,
+    .tc-tabs > header > ul > li:not(.tf-active):hover,
+    .tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted),
+    :not(.td-datagrid-toolbox, li, .tc-input-group) > button:not(.tp-button):hover,
+    .td-datagrid-toolbox button:hover {
+        background-color: var(--content-background-hover-color) !important;
     }
-    .tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted){
+    .tn-ribbon > section > ul > li > ul > li:hover:not(.text-muted) {
         color: var(--t-font-color);
     }
-    .tn-navbar li ul li:hover{
+    .tn-navbar li ul li:hover {
         color: var(--t-font-color-light);
     }
 
-    .tl-buttons .tf-checked{
-        background-color: var(--content-background-hover-color)!important;
+    .tl-buttons .tf-checked {
+        background-color: var(--content-background-hover-color) !important;
     }
-  
-    .tn-ribbon > header > a, .tn-ribbon > footer > a{
-        background-color: var(--content-background-color)!important;
-        color: var(--t-font-color)!important;
+
+    .tn-ribbon > header > a,
+    .tn-ribbon > footer > a {
+        background-color: var(--content-background-color) !important;
+        color: var(--t-font-color) !important;
     }
-    .tn-menu li:focus{
-        background-color: var(--content-background-hover-color)!important;
+    .tn-menu li:focus {
+        background-color: var(--content-background-hover-color) !important;
     }
-    .td-datagrid:focus .tf-active td{
+    .td-datagrid:focus .tf-active td {
         background-color: var(--content-background-hover-color);
     }
     .tbs-scheduler td,
-    .tbs-scheduler-allday{
-        border-color:var(--t-border-color);
+    .tbs-scheduler-allday {
+        border-color: var(--t-border-color);
     }
 
     .td-datagrid > section > table i {
         color: rgb(191 191 191);
     }
 
-    .tc-tabs{
-        .tc-group{
-
-            header{
+    .tc-tabs {
+        .tc-group {
+            header {
                 background-color: var(--content-background-hover-color);
             }
+        }
+    }
+    .td-datagrid:not([readonly]) tbody tr[data-handle]:not([data-handle="-1"]) td:not([readonly]):not(.td-datagrid-toolbox, .td-datagrid-expand):not(:has(input)) {
+        background: #3f3f3f;
+        cursor: text;
+        color: #dbdbdb;
+        position: relative;
+    }
+    .td-datagrid > section > table .tf-editor button{
+        background-color: transparent!important;
+        &:last-of-type{
+            border-right: 1px solid var(--t-border-color);
         }
     }
 }
