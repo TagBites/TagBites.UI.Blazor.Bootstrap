@@ -107,6 +107,7 @@
     overflow-y: scroll;
     flex-direction: column;
     flex: 1 1 auto;
+    justify-content: flex-start;
     ul {
         > li {
             > span {
