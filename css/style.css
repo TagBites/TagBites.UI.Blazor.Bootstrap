@@ -15066,6 +15066,11 @@ button[disabled] {
   position: relative;
 }
 
+.table-primary {
+  background-color: #4d4d4d !important;
+  color: rgb(240, 240, 240);
+}
+
 /* scheduler */
 .tbs-scheduler {
   -webkit-user-select: none;
