@@ -166,6 +166,10 @@
             font-size: var(--t-font-size-small);
             margin-bottom: 0px;
             font-weight: bold;
+            display: inline-block;  
+        }
+        span{
+            display: block; 
         }
     }
 
