@@ -163,6 +163,10 @@ tr.drop-child {
     padding: var(--tv-default-margin);
 }
 
+.page > section:has(> .td-webview.tf-nomargin){
+    padding:0!important;
+}
+
 .tooltip {
     transition: opacity 0.3s ease-in-out;
 }
