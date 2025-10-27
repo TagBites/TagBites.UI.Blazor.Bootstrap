@@ -614,7 +614,7 @@ button[disabled]{
     
 }
 
-.table-primary {
+[data-bs-theme=dark] .table-primary {
     background-color: #4d4d4d !important;
     color: rgb(240, 240, 240);
 }
