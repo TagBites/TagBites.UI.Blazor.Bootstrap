@@ -14083,7 +14083,7 @@ html[data-bs-theme=dark] .td-datagrid > section > table .tf-editor button:last-o
   min-width: 60px;
 }
 .tn-ribbon.tf-mini > section > ul > li > ul > li i {
-  font-size: 22px !important;
+  font-size: 18px !important;
   line-height: 1 !important;
 }
 .tn-ribbon.tf-mini > section > ul > li > ul > li span {
@@ -14095,6 +14095,7 @@ html[data-bs-theme=dark] .td-datagrid > section > table .tf-editor button:last-o
 .tn-ribbon.tf-mini > section > ul > li > footer {
   flex: 0 1 15px;
   height: auto;
+  display: none;
 }
 .tn-ribbon.tf-mini > footer {
   border-top: none !important;
