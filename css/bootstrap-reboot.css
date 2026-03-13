@@ -406,12 +406,14 @@ legend {
   padding: 0;
   margin-bottom: 0.5rem;
   font-size: calc(1.275rem + 0.3vw);
-  line-height: inherit;
 }
 @media (min-width: 1200px) {
   legend {
     font-size: 1.5rem;
   }
+}
+legend {
+  line-height: inherit;
 }
 legend + * {
   clear: left;
@@ -476,8 +478,7 @@ progress {
 
 [hidden] {
   display: none !important;
-}
-  font-size: calc(1.325rem + 0.9vw);
+}e: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
   h2 {
@@ -760,12 +761,14 @@ legend {
   padding: 0;
   margin-bottom: 0.5rem;
   font-size: calc(1.275rem + 0.3vw);
-  line-height: inherit;
 }
 @media (min-width: 1200px) {
   legend {
     font-size: 1.5rem;
   }
+}
+legend {
+  line-height: inherit;
 }
 legend + * {
   clear: left;

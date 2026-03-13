@@ -618,3 +618,7 @@ button[disabled]{
     background-color: #4d4d4d !important;
     color: rgb(240, 240, 240);
 }
+
+html[data-ui-mode=mini] .td-datagrid .tf-editor .te-combo{
+    height: 29px!important;
+}

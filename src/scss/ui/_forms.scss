@@ -191,3 +191,8 @@ input, button, select, optgroup, textarea {
 		width: auto;
 	}
   }
+
+  textarea{
+	overscroll-behavior-y: contain;
+  	-webkit-overflow-scrolling: touch;
+  }

@@ -292,3 +292,13 @@
         border-bottom-right-radius:10px;
     }
 }
+
+
+.tc-tabs>section>.tl-buttons{
+    flex-wrap: wrap;
+    gap: 6px;
+    .tp-button{
+        flex:0 0 auto;
+        border-radius: 0;
+    }
+}
