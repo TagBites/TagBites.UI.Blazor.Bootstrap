@@ -15983,11 +15983,11 @@ html[data-ui-mode=mini] .td-datagrid .tf-editor .te-combo {
   border-bottom-right-radius: 10px;
 }
 
-.tc-tabs > section > .tl-buttons {
+.tc-tabs > section > .tl-stack > div > .tl-buttons {
   flex-wrap: wrap;
   gap: 6px;
 }
-.tc-tabs > section > .tl-buttons .tp-button {
+.tc-tabs > section > .tl-stack > div > .tl-buttons .tp-button {
   flex: 0 0 auto;
   border-radius: 0;
 }
