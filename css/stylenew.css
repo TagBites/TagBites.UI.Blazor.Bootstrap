@@ -15801,6 +15801,7 @@ html[data-ui-mode=mini] .td-datagrid .tf-editor .te-combo {
   max-height: calc(100% - 44px);
   overflow-y: auto;
   background-color: #fff;
+  overflow-x: hidden;
   /*background-color: var(--bs-code-color);*/
   border-bottom: none;
 }
