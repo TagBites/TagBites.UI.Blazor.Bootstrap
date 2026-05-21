@@ -14557,11 +14557,12 @@ input, button, select, optgroup, textarea {
   width: auto;
 }
 
-textarea {
-  overscroll-behavior-y: contain;
-  -webkit-overflow-scrolling: touch;
+@supports (-webkit-touch-callout: none) {
+  textarea {
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
 }
-
 .td-datagrid {
   overflow-x: hidden;
   flex: 1 0 auto;

@@ -192,7 +192,10 @@ input, button, select, optgroup, textarea {
 	}
   }
 
+
+  @supports (-webkit-touch-callout: none){
   textarea{
 	overscroll-behavior-y: contain;
   	-webkit-overflow-scrolling: touch;
+  }
   }
