@@ -196,7 +196,7 @@
             }
         }
         tr {
-            border-bottom-width: 2px;
+            border-bottom-width: 1px;
         }
     }
     .td-datagrid-group {
@@ -372,6 +372,7 @@ th.td-datagrid-expand {
         border-top: 0;
     }
     header {
+        margin-bottom: 12px;
         padding: 0px;
         > .te-search{
             width: 100% !important;
@@ -470,6 +471,11 @@ th.td-datagrid-expand {
         margin-bottom: calc(var(--tv-default-full-margin) / 2) !important;
     }
     .td-datagrid {
+
+        header{
+            margin-bottom: 16px;
+        }
+
         tbody {
             border: 1px solid var(--t-border-color);
         }

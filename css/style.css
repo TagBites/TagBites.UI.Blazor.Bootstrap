@@ -14734,7 +14734,7 @@ input, button, select, optgroup, textarea {
   margin-top: 4px !important;
 }
 .td-datagrid table thead tr {
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
 }
 .td-datagrid table .td-datagrid-group {
   font-weight: bold;
@@ -14902,6 +14902,7 @@ th.td-datagrid-expand span {
   border-top: 0;
 }
 .td-datagrid header {
+  margin-bottom: 12px;
   padding: 0px;
 }
 .td-datagrid header > .te-search {
@@ -14998,6 +14999,9 @@ th.td-datagrid-expand {
 @media only screen and (max-width: 768px) {
   .td-datagrid-gbp {
     margin-bottom: calc(var(--tv-default-full-margin) / 2) !important;
+  }
+  .td-datagrid header {
+    margin-bottom: 16px;
   }
   .td-datagrid tbody {
     border: 1px solid var(--t-border-color);
