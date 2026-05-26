@@ -296,6 +296,7 @@ table > tbody.tf-active > *,
 table > tbody.tf-active > tr > td,
 tbody > tr.tf-active,
 .td-datagrid > section > table > tbody > tr.tf-active > td {
+    --table-active-background-color: rgb(243, 243, 243);
     background-color: var(--table-active-background-color);
     table,
     table tr,

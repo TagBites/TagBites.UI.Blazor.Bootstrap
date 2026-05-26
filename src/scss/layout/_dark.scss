@@ -23,32 +23,7 @@ html[data-bs-theme="dark"] {
     .td-datagrid > section > table > tbody {
         box-shadow: 3px 3px 5px 0px #494949;
     }
-    ::-webkit-scrollbar-thumb {
-        background: #3f3f3f !important;
-    }
 
-    ::-webkit-scrollbar-thumb:hover {
-        background: #313131 !important;
-    }
-    ::-webkit-scrollbar-track {
-        background: var(--content-background-color);
-    }
-
-    .tw > aside::-webkit-scrollbar-track {
-        background: var(--content-background-color);
-    }
-
-    .tw > aside::-webkit-scrollbar-thumb {
-        background: #3f3f3f !important;
-    }
-
-    .tw > aside:hover::-webkit-scrollbar-thumb {
-        background: #3f3f3f !important;
-    }
-
-    .tw > aside::-webkit-scrollbar-thumb:hover {
-        background: #3f3f3f !important;
-    }
 
     .tc-tabs > section,
     .tc-tabs > header,

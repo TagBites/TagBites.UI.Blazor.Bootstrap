@@ -13210,22 +13210,6 @@ aside * {
   background-color: transparent !important;
 }
 
-.tw > aside::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.tw > aside::-webkit-scrollbar-thumb {
-  background: transparent;
-}
-
-.tw > aside:hover::-webkit-scrollbar-thumb {
-  background: #ddd !important;
-}
-
-.tw > aside::-webkit-scrollbar-thumb:hover {
-  background: #d0d0d0 !important;
-}
-
 .tn-navbar {
   padding: 12px;
 }
@@ -13260,6 +13244,7 @@ aside.tf-asview tr.tf-active td {
 ::-webkit-scrollbar {
   width: 8px;
   height: 6px;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-track {
@@ -13270,11 +13255,12 @@ aside.tf-asview tr.tf-active td {
     background: transparent;
   }*/
 ::-webkit-scrollbar-thumb {
-  background: #ddd !important;
+  background: #d2d2d2 !important;
+  border-radius: 12px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d0d0d0 !important;
+  background: #8b8b8b !important;
 }
 
 @supports (-moz-appearance: none) {
@@ -13416,15 +13402,6 @@ aside.tf-asview {
 }
 aside.tf-asview * {
   color: var(--t-font-color);
-}
-aside.tf-asview::-webkit-scrollbar-track {
-  background: #b3b3b3 !important;
-}
-aside.tf-asview::-webkit-scrollbar-thumb {
-  background: #888 !important;
-}
-aside.tf-asview::-webkit-scrollbar-thumb:hover {
-  background: #555 !important;
 }
 aside.tf-asview > .td-datagrid {
   margin-left: 0 !important;
@@ -13619,27 +13596,6 @@ html[data-bs-theme=dark] .td-datagrid-details table tbody tr td:first-of-type {
 }
 html[data-bs-theme=dark] .td-datagrid > section > table > tbody {
   box-shadow: 3px 3px 5px 0px #494949;
-}
-html[data-bs-theme=dark] ::-webkit-scrollbar-thumb {
-  background: #3f3f3f !important;
-}
-html[data-bs-theme=dark] ::-webkit-scrollbar-thumb:hover {
-  background: #313131 !important;
-}
-html[data-bs-theme=dark] ::-webkit-scrollbar-track {
-  background: var(--content-background-color);
-}
-html[data-bs-theme=dark] .tw > aside::-webkit-scrollbar-track {
-  background: var(--content-background-color);
-}
-html[data-bs-theme=dark] .tw > aside::-webkit-scrollbar-thumb {
-  background: #3f3f3f !important;
-}
-html[data-bs-theme=dark] .tw > aside:hover::-webkit-scrollbar-thumb {
-  background: #3f3f3f !important;
-}
-html[data-bs-theme=dark] .tw > aside::-webkit-scrollbar-thumb:hover {
-  background: #3f3f3f !important;
 }
 html[data-bs-theme=dark] .tc-tabs > section,
 html[data-bs-theme=dark] .tc-tabs > header,
@@ -14825,6 +14781,7 @@ table > tbody.tf-active > *,
 table > tbody.tf-active > tr > td,
 tbody > tr.tf-active,
 .td-datagrid > section > table > tbody > tr.tf-active > td {
+  --table-active-background-color: rgb(243, 243, 243);
   background-color: var(--table-active-background-color);
 }
 .td-datagrid table > tbody.tf-active > tr > td table,
@@ -17049,10 +17006,6 @@ div.tl.tl-wrapgrid {
   --tv-default-margin: 6px 12px;
   --tv-default-full-margin: 12px;
   --tv-default-padding: 6px 12px;
-}
-
-::-webkit-scrollbar {
-  background: #efefef;
 }
 
 * {

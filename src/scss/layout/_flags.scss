@@ -22,17 +22,7 @@ aside.tf-asview{
     *{
         color: var(--t-font-color);
     }
-    &::-webkit-scrollbar-track {
-        background: #b3b3b3!important;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-        background: #888!important;
-    }
-    
-    &::-webkit-scrollbar-thumb:hover {
-        background: #555!important;
-    }
+
     > .td-datagrid{
         margin-left: 0!important;
         margin-bottom: 0;

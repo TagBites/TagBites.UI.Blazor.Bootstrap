@@ -2,6 +2,7 @@
 ::-webkit-scrollbar {
     width: 8px;
     height: 6px;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-track{
@@ -11,11 +12,12 @@
     background: transparent;
   }*/
 ::-webkit-scrollbar-thumb{
-    background: #ddd!important;
+    background: #d2d2d2!important;
+    border-radius: 12px;
   }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #d0d0d0!important;
+    background: #8b8b8b!important;
   }
 
   @supports (-moz-appearance:none) {
