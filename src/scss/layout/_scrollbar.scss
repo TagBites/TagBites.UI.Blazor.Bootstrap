@@ -27,7 +27,15 @@
         }
     } 
 }
+html[data-bs-theme="dark"]{
+    ::-webkit-scrollbar-thumb{
+    background: #464646!important;
+  }
 
+::-webkit-scrollbar-thumb:hover {
+    background: #525252!important;
+  }
+}
 
 /* aside scroll fix*/
 // .tw > aside::-webkit-scrollbar-track {

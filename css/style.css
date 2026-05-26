@@ -13268,6 +13268,13 @@ aside.tf-asview tr.tf-active td {
     scrollbar-width: thin;
   }
 }
+html[data-bs-theme=dark] ::-webkit-scrollbar-thumb {
+  background: #464646 !important;
+}
+html[data-bs-theme=dark] ::-webkit-scrollbar-thumb:hover {
+  background: #525252 !important;
+}
+
 /* aside scroll fix*/
 footer {
   padding: 5px;
