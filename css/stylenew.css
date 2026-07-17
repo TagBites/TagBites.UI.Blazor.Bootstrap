@@ -15110,6 +15110,13 @@ html[data-ui-mode=mini] .td-datagrid .tf-editor .te-combo {
   height: 29px !important;
 }
 
+.td-datagrid:has(tbody + tbody) section > table > tbody > tr > td {
+  border: 1px solid var(--t-border-color);
+}
+.td-datagrid:has(tbody + tbody) section > table > thead > tr > th {
+  border: 1px solid var(--t-border-color) !important;
+}
+
 /* scheduler */
 .tbs-scheduler {
   -webkit-user-select: none;
