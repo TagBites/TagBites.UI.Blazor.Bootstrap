@@ -14999,6 +14999,11 @@ td:has(> img.rounded-circle) {
   padding: 0 6px !important;
 }
 
+td .rounded-circle {
+  max-height: 24px;
+  max-width: 24px;
+}
+
 tr,
 tbody {
   position: relative;
