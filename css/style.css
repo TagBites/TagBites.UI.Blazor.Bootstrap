@@ -16865,6 +16865,10 @@ section:has(> .tc-workspace) {
 .te-tags .te-tags-item > * {
   margin: 0px 4px;
 }
+.te-tags .te-tags-item .rounded-circle {
+  max-height: 24px;
+  max-width: 24px;
+}
 .te-tags .te-tags-item button {
   padding: 0;
 }
