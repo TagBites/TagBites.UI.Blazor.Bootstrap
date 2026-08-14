@@ -145,16 +145,16 @@ code {
     --drop-color: red;
 }
 .drop:not(tr) {
-    border: 2px dashed var(--drop-color) !important;
+    border: 4px solid var(--drop-color) !important;
 }
 tr.drop-before {
-    border-top: 3px dashed var(--drop-color) !important;
+    border-top: 4px solid var(--drop-color) !important;
 }
 tr.drop-after {
-    border-bottom: 3px dashed var(--drop-color) !important;
+    border-bottom: 4px solid var(--drop-color) !important;
 }
 tr.drop-child {
-    border-left: 3px dashed var(--drop-color) !important;
+    border-left: 4px solid var(--drop-color) !important;
 }
 
 .td-webview {
