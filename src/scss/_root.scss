@@ -57,6 +57,7 @@
     --button-border-radius: var(--t-border-radius);
 
     --table-active-background-color: var(--bs-gray-100);
+    --bs-font-sans-serif: Inter, sans-serif;
 }
 .tb-card {
     --bs-card-inner-border-radius: var(--t-border-radius);
@@ -69,5 +70,3 @@
 .tf-fs-large{
     font-size: var(--tv-font-size-large);
 }
-
-

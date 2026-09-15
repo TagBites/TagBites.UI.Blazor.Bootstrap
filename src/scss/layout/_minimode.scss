@@ -6,9 +6,9 @@
         --t-border-radius: 4px;
         --tv-default-margin: 4px 12px;
         --bs-border-radius: var(--t-border-radius);
-        --tv-workspace-sp: 8px;
-        --tv-default-section-padding: 4px;
-        --tv-default-full-margin: 4px;
+        --tv-workspace-sp: 10px;
+        --tv-default-section-padding: 10px;
+        --tv-default-full-margin: 10px;
         .fw-bold {
             font-weight: var(--t-font-weight-bold)!important;
         }
@@ -20,8 +20,9 @@
             min-width: 60px;
             max-width: 82px;
             i {
-                font-size: 24px;
+                font-size: 16px;
                 margin-bottom: 6px;
+                padding: 2px 0;
             }
         }
         .tn-ribbon > section > ul > li > ul {
@@ -30,7 +31,7 @@
         }
         .tn-ribbon .tab-content,
         .tn-ribbon > section {
-            height: 74px;
+            height: 70px;
         }
         .tn-ribbon > section > ul > li > footer {
             display: none;
@@ -62,14 +63,14 @@
 
         .te,
         .te-tags .tc .te {
-            height: 30px;
+            height: 34px;
             /*line-height: 1;*/
         } 
         .te.te-check{
             height: 1em!important;
         }
         .te-tags{
-            min-height: 30px;
+            min-height: 34px;
             height: auto !important;
         }
         div.te {
@@ -79,8 +80,8 @@
 
         .tp-label {
             height: 16px;
-            margin-top:-2px;
-            margin-bottom: 2px;
+        margin-top: -4px;
+        margin-bottom: 6px;
         }
 
         .input-group-text,
@@ -97,8 +98,8 @@
 
         .tc-group-header {
             font-size: 12px;
-            padding: 4px 16px;
-            margin: 4px -4px;
+            padding: 4px 0px;
+            margin: 4px 12px;
             font-weight: var(--t-font-weight-bold);
             color: var(--t-font-color-light);
         }
@@ -114,10 +115,10 @@
         }
 
         .table > :not(caption) > * > * {
-            padding: 0.24rem !important;
+            padding: 5.5px 0.24rem !important;
         }
         .td-datagrid table > :not(caption) > * > * {
-            padding: 0.24rem !important;
+            padding: 5.5px 0.24rem !important;
         }
 
         .tc-tabs > section {
@@ -164,8 +165,19 @@
 @media only screen and (min-width: 767px) and (max-width: 1360px) {
     html[data-ui-mode="mini"] {
         .tc-workspace {
-            margin: -4px !important;
+            margin: var(--tv-default-full-margin)!important;
             height: calc(100% + 8px) !important;
+            & > .tc-tabs > header{
+            border: 1px solid var(--t-border-color);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            }
+            & > .tc-tabs > section {
+                border: 1px solid var(--t-border-color);
+                border-top: none;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
         }
     }
 }

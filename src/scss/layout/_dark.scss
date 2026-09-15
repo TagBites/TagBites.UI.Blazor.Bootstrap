@@ -63,9 +63,10 @@ html[data-bs-theme="dark"] {
         background-color: var(--content-background-hover-color);
     }
     .tc-group-header {
-        background-color: var(--content-background-hover-color);
-        border-bottom: 1px solid var(--t-border-color);
         border-color: var(--t-border-color);
+        span{
+            color:var(--t-font-color-light);
+        }
     }
     .tc-workspace > .tc-tabs:hover,
     .tc-workspace-it > .tc-tabs:hover {
@@ -150,7 +151,7 @@ html[data-bs-theme="dark"] {
         }
     }
     .td-datagrid:not([readonly]) tbody tr[data-handle]:not([data-handle="-1"]) td:not([readonly]):not(.td-datagrid-toolbox, .td-datagrid-expand):not(:has(input)) {
-        background: #3f3f3f;
+        background: transparent;
         cursor: text;
         color: #dbdbdb;
         position: relative;
