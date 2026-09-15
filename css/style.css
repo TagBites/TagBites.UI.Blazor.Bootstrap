@@ -14181,7 +14181,7 @@ html[data-bs-theme=dark] .td-datagrid > section > table .tf-editor button:last-o
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 11px;
-  color: #6b6b6b;
+  color: var(--bs-gray-800);
 }
 .tc-group-header .tn-toolbox button {
   padding-top: 0px;
@@ -17148,6 +17148,7 @@ section > .tc-tabs,
 .tc-group-header {
   padding: 6px 24px;
   margin: 6px -12px;
+  border-color: var(--bs-gray-500);
 }
 
 .tp-label {
@@ -17469,7 +17470,7 @@ div:not(.tl-formgroup) > .te-textarea {
     max-width: 82px;
   }
   html[data-ui-mode=mini] .tn-ribbon > section > ul > li > ul > li i {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 6px;
     padding: 2px 0;
   }
