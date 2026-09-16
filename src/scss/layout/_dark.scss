@@ -4,7 +4,7 @@ html[data-bs-theme="dark"] {
     --nav-background-color: var(--dark-background);
     --content-background-color: var(--dark-background);
     --content-background-hover-color: #383838;
-
+    --bs-body-color: rgb(195 200 205);
     --t-background-color: var(--dark-background);
     --t-table-accent-background-color: var(--dark-background);
     --t-font-color: var(--bs-body-color);
@@ -58,7 +58,8 @@ html[data-bs-theme="dark"] {
 
     .tc-tabs .tc-group header span,
     .tn-ribbon header span,
-    div.page > header span{
+    div.page > header span,
+    .tc-input-group button{
         color: var(--t-font-color-light) !important;
     }
     .tn-ribbon header span{
@@ -163,7 +164,7 @@ html[data-bs-theme="dark"] {
     .td-datagrid:not([readonly]) tbody tr[data-handle]:not([data-handle="-1"]) td:not([readonly]):not(.td-datagrid-toolbox, .td-datagrid-expand):not(:has(input)) {
         background: transparent;
         cursor: text;
-        color: #dbdbdb;
+        color: var(--t-font-color-light);
         position: relative;
     }
     .td-datagrid > section > table .tf-editor button{

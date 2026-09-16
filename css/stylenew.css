@@ -13588,6 +13588,7 @@ html[data-bs-theme=dark] {
   --nav-background-color: var(--dark-background);
   --content-background-color: var(--dark-background);
   --content-background-hover-color: #383838;
+  --bs-body-color: rgb(195 200 205);
   --t-background-color: var(--dark-background);
   --t-table-accent-background-color: var(--dark-background);
   --t-font-color: var(--bs-body-color);
@@ -13635,7 +13636,8 @@ html[data-bs-theme=dark] .tc-tabs .tc-group > header {
 }
 html[data-bs-theme=dark] .tc-tabs .tc-group header span,
 html[data-bs-theme=dark] .tn-ribbon header span,
-html[data-bs-theme=dark] div.page > header span {
+html[data-bs-theme=dark] div.page > header span,
+html[data-bs-theme=dark] .tc-input-group button {
   color: var(--t-font-color-light) !important;
 }
 html[data-bs-theme=dark] .tn-ribbon header span {
@@ -13747,7 +13749,7 @@ html[data-bs-theme=dark] .tc-tabs .tc-group header {
 html[data-bs-theme=dark] .td-datagrid:not([readonly]) tbody tr[data-handle]:not([data-handle="-1"]) td:not([readonly]):not(.td-datagrid-toolbox, .td-datagrid-expand):not(:has(input)) {
   background: transparent;
   cursor: text;
-  color: #dbdbdb;
+  color: var(--t-font-color-light);
   position: relative;
 }
 html[data-bs-theme=dark] .td-datagrid > section > table .tf-editor button {
@@ -17590,9 +17592,11 @@ div:not(.tl-formgroup) > .te-textarea {
   }
   html[data-ui-mode=mini] .tbs-scheduler-task-container div {
     border-radius: 2px;
+    line-height: 15px;
   }
   html[data-ui-mode=mini] .tbs-scheduler-task-container div h5, html[data-ui-mode=mini] .tbs-scheduler-task-container div .h5 {
     font-weight: var(--t-font-weight-bold);
+    line-height: 18px;
   }
   html[data-ui-mode=mini] .tf-editor input, html[data-ui-mode=mini] .tf-editor button {
     height: 28px !important;
