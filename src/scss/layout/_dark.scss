@@ -51,8 +51,18 @@ html[data-bs-theme="dark"] {
         background-color: var(--content-background-hover-color) !important;
         color: var(--t-font-color) !important;
     }
-    .tc-tabs > header {
+    .tc-tabs > header,
+    .tc-tabs .tc-group > header {
         border-color: var(--t-border-color);
+    }
+
+    .tc-tabs .tc-group header span,
+    .tn-ribbon header span,
+    div.page > header span{
+        color: var(--t-font-color-light) !important;
+    }
+    .tn-ribbon header span{
+        font-weight: bold!important;
     }
 
     .td-datagrid table > tbody.tf-active > tr > td,

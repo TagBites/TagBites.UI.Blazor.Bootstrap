@@ -13629,8 +13629,17 @@ html[data-bs-theme=dark] .tn-ribbon > footer > a:hover {
   background-color: var(--content-background-hover-color) !important;
   color: var(--t-font-color) !important;
 }
-html[data-bs-theme=dark] .tc-tabs > header {
+html[data-bs-theme=dark] .tc-tabs > header,
+html[data-bs-theme=dark] .tc-tabs .tc-group > header {
   border-color: var(--t-border-color);
+}
+html[data-bs-theme=dark] .tc-tabs .tc-group header span,
+html[data-bs-theme=dark] .tn-ribbon header span,
+html[data-bs-theme=dark] div.page > header span {
+  color: var(--t-font-color-light) !important;
+}
+html[data-bs-theme=dark] .tn-ribbon header span {
+  font-weight: bold !important;
 }
 html[data-bs-theme=dark] .td-datagrid table > tbody.tf-active > tr > td,
 html[data-bs-theme=dark] table > tbody.tf-active > *,
