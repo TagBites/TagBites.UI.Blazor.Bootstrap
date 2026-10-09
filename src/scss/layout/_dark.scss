@@ -12,6 +12,22 @@ html[data-bs-theme="dark"] {
     --scheduler-background: var(--content-background-color);
     --table-active-background-color: #272727;
 
+    // Lista kafelkowa na telefonie. Kafelek jest JAŚNIEJSZY od tła — to on
+    // ma wyglądać na uniesiony. Etykieta przygaszona względem wartości,
+    // bo na ciemnym tle wszystko jasne zwraca uwagę.
+    --table-tile-page: #1a1d21;
+    --table-tile-surface: #24282d;
+    --table-tile-label-bg: #2b3036;
+    --table-tile-border: #3a4046;
+    --table-tile-line: #33383e;
+    --table-tile-label-color: #9aa3ad; // kontrast 5,2:1 na tle etykiety
+    --table-tile-link-color: #7eb0ff; // $primary daje tu 3,1:1, ten odcień 6,7:1
+    --table-tile-accent: #5b9bff;
+    --table-tile-active-bg: #1f2a3a;
+    --table-tile-active-label-bg: #26344a;
+    --table-tile-active-ring: rgba(91, 155, 255, 0.18);
+    --table-tile-shadow: rgba(0, 0, 0, 0.35);
+
     .tc-group {
         --bs-card-cap-bg: var(--content-background-hover-color);
     }

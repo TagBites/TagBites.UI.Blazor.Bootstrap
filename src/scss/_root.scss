@@ -57,6 +57,20 @@
     --button-border-radius: var(--t-border-radius);
 
     --table-active-background-color: var(--bs-gray-100);
+
+    // Lista kafelkowa na telefonie (ui/_listMobile.scss)
+    --table-tile-page: #ffffff; // tło pod kafelkami
+    --table-tile-surface: #ffffff; // wnętrze kafelka
+    --table-tile-label-bg: #f8fafc; // kolumna etykiet
+    --table-tile-border: #e3e8ef; // ramka kafelka
+    --table-tile-line: #eef2f7; // linie między wierszami
+    --table-tile-label-color: #475467; // tekst etykiety
+    --table-tile-accent: #2563eb;
+    --table-tile-active-bg: #f5f9ff;
+    --table-tile-active-label-bg: #eaf2ff;
+    --table-tile-active-ring: rgba(37, 99, 235, 0.12);
+    --table-tile-shadow: rgba(16, 24, 40, 0.05);
+
     --bs-font-sans-serif: Inter, sans-serif;
 }
 .tb-card {
