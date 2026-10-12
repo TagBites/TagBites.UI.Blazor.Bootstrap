@@ -112,8 +112,10 @@
                 &.tf-active {
                     box-shadow: 0 2px 6px var(--table-tile-active-ring) !important;
 
+                    // akcent tylko po bokach — góra i dół zostają szare
                     &::before {
-                        border-color: var(--table-tile-accent);
+                        border-left-color: var(--table-tile-accent);
+                        border-right-color: var(--table-tile-accent);
                     }
                     > tr > td:not([style*="background"]),
                     .td-datagrid-details td:not([style*="background"]) {
@@ -136,7 +138,8 @@
                         border-color: transparent;
                     }
                     &.tf-active::before {
-                        border-color: var(--table-tile-accent);
+                        border-left-color: var(--table-tile-accent);
+                        border-right-color: var(--table-tile-accent);
                     }
                 }
             }
@@ -171,9 +174,12 @@
                 }
             }
 
-            // miejsce na pasek z kwadracikiem — tylko gdy jest kwadracik
+            // miejsce na pasek z kwadracikiem — tylko gdy jest kwadracik;
+            // linia oddziela pasek od pierwszego wiersza tak jak wiersze
+            // między sobą
             > tbody:has(> tr > td:first-child .tp-checkbox) .td-datagrid-details > table {
                 margin-top: 28px;
+                border-top: 1px solid var(--table-tile-line);
             }
         }
 

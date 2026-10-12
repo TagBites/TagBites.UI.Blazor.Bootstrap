@@ -17708,7 +17708,8 @@ div:not(.tl-formgroup) > .te-textarea {
     box-shadow: 0 2px 6px var(--table-tile-active-ring) !important;
   }
   .td-datagrid > section > table > tbody:not(.td-datagrid-rs).tf-active::before {
-    border-color: var(--table-tile-accent);
+    border-left-color: var(--table-tile-accent);
+    border-right-color: var(--table-tile-accent);
   }
   .td-datagrid > section > table > tbody:not(.td-datagrid-rs).tf-active > tr > td:not([style*=background]),
   .td-datagrid > section > table > tbody:not(.td-datagrid-rs).tf-active .td-datagrid-details td:not([style*=background]) {
@@ -17722,7 +17723,8 @@ div:not(.tl-formgroup) > .te-textarea {
     border-color: transparent;
   }
   .td-datagrid > section > table > tbody:not(.td-datagrid-rs):not(:has(> tr > td.td-datagrid-details)).tf-active::before {
-    border-color: var(--table-tile-accent);
+    border-left-color: var(--table-tile-accent);
+    border-right-color: var(--table-tile-accent);
   }
   .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details):has(> tbody > tr > td:first-child .tp-checkbox) > colgroup > col:first-child {
     width: 0 !important;
@@ -17743,6 +17745,7 @@ div:not(.tl-formgroup) > .te-textarea {
   }
   .td-datagrid > section > table > tbody:has(> tr > td:first-child .tp-checkbox) .td-datagrid-details > table {
     margin-top: 28px;
+    border-top: 1px solid var(--table-tile-line);
   }
   .td-datagrid .td-datagrid-details {
     width: auto !important;
