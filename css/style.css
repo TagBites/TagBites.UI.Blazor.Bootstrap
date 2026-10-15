@@ -17672,44 +17672,13 @@ div:not(.tl-formgroup) > .te-textarea {
     background: transparent !important;
   }
   .td-datagrid > section > table > tbody:not(.td-datagrid-rs) {
-    position: relative;
-    border: none;
     box-shadow: 0 1px 2px var(--table-tile-shadow) !important;
-  }
-  .td-datagrid > section > table > tbody:not(.td-datagrid-rs)::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border: 1px solid var(--table-tile-border);
-    pointer-events: none;
-    z-index: 2;
-  }
-  .td-datagrid > section > table > tbody:not(.td-datagrid-rs) > tr:first-child {
-    border-top: none;
-  }
-  .td-datagrid > section > table > tbody:not(.td-datagrid-rs) > tr:last-child {
-    border-bottom: none;
-  }
-  .td-datagrid > section > table > tbody:not(.td-datagrid-rs) > tr {
-    display: table-row;
-  }
-  .td-datagrid > section > table > tbody:not(.td-datagrid-rs) > tr > td {
-    display: table-cell;
-    width: auto !important;
-    max-width: none !important;
   }
   .td-datagrid > section > table > tbody:not(.td-datagrid-rs) > tr > td:not([style*=background]) {
     background-color: var(--table-tile-surface) !important;
   }
-  .td-datagrid > section > table > tbody:not(.td-datagrid-rs) > tr > td.td-datagrid-details {
-    border: none !important;
-  }
   .td-datagrid > section > table > tbody:not(.td-datagrid-rs).tf-active {
     box-shadow: 0 2px 6px var(--table-tile-active-ring) !important;
-  }
-  .td-datagrid > section > table > tbody:not(.td-datagrid-rs).tf-active::before {
-    border-left-color: var(--table-tile-accent);
-    border-right-color: var(--table-tile-accent);
   }
   .td-datagrid > section > table > tbody:not(.td-datagrid-rs).tf-active > tr > td:not([style*=background]),
   .td-datagrid > section > table > tbody:not(.td-datagrid-rs).tf-active .td-datagrid-details td:not([style*=background]) {
@@ -17718,34 +17687,60 @@ div:not(.tl-formgroup) > .te-textarea {
   .td-datagrid > section > table > tbody:not(.td-datagrid-rs).tf-active .td-datagrid-details td:first-child:not([style*=background]) {
     background-color: var(--table-tile-active-label-bg) !important;
   }
-  .td-datagrid > section > table > tbody:not(.td-datagrid-rs):not(:has(> tr > td.td-datagrid-details))::before {
-    inset: 0 -0.5px -0.5px;
-    border-color: transparent;
+  .td-datagrid > section > table:not(:has(> tbody > tr > td.td-datagrid-details)) > tbody.tf-active:not(.td-datagrid-rs) > tr:first-child > td:first-child {
+    border-left-color: var(--table-tile-accent) !important;
   }
-  .td-datagrid > section > table > tbody:not(.td-datagrid-rs):not(:has(> tr > td.td-datagrid-details)).tf-active::before {
+  .td-datagrid > section > table:not(:has(> tbody > tr > td.td-datagrid-details)) > tbody.tf-active:not(.td-datagrid-rs) > tr:first-child > td:last-child {
+    border-right-color: var(--table-tile-accent) !important;
+  }
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) {
+    display: block;
+    width: 100%;
+  }
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) > colgroup {
+    display: none;
+  }
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) > tbody {
+    display: block;
+  }
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) > tbody.td-datagrid-rs {
+    height: 12px;
+  }
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) > tbody.td-datagrid-rs > tr {
+    display: none;
+  }
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) > tbody:not(.td-datagrid-rs) {
+    position: relative;
+    border: 1px solid var(--table-tile-border);
+    overflow: hidden;
+  }
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) > tbody:not(.td-datagrid-rs).tf-active {
     border-left-color: var(--table-tile-accent);
     border-right-color: var(--table-tile-accent);
   }
-  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details):has(> tbody > tr > td:first-child .tp-checkbox) > colgroup > col:first-child {
-    width: 0 !important;
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) > tbody:not(.td-datagrid-rs) > tr {
+    display: block;
+    border: none;
   }
-  .td-datagrid > section > table > tbody:not(.td-datagrid-rs):has(> tr > td.td-datagrid-details) > tr > td:first-child:has(.tp-checkbox) {
-    width: 0 !important;
-    min-width: 0 !important;
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) > tbody:not(.td-datagrid-rs) > tr > td {
+    display: block;
+    width: auto !important;
+    max-width: none !important;
     padding: 0 !important;
     border: none !important;
-    overflow: visible;
   }
-  .td-datagrid > section > table > tbody:not(.td-datagrid-rs):has(> tr > td.td-datagrid-details) > tr > td:first-child:has(.tp-checkbox) .tp-checkbox {
-    position: absolute;
-    top: 14px;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.2);
-    z-index: 3;
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) > tbody:not(.td-datagrid-rs) > tr > td:not(.td-datagrid-details):not(:has(.tp-checkbox)) {
+    display: none;
   }
-  .td-datagrid > section > table > tbody:has(> tr > td:first-child .tp-checkbox) .td-datagrid-details > table {
-    margin-top: 28px;
-    border-top: 1px solid var(--table-tile-line);
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) > tbody:not(.td-datagrid-rs) > tr > td:has(.tp-checkbox) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    border-bottom: 1px solid var(--table-tile-line) !important;
+  }
+  .td-datagrid > section > table:has(> tbody > tr > td.td-datagrid-details) > tbody:not(.td-datagrid-rs) > tr > td:has(.tp-checkbox) .tp-checkbox {
+    transform: scale(1.2);
   }
   .td-datagrid .td-datagrid-details {
     width: auto !important;

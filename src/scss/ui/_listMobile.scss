@@ -43,7 +43,7 @@
         }
 
         > section > table {
-            // --- Odstęp między kafelkami ---------------------------
+            // --- Odstęp między rekordami ---------------------------
             > tbody.td-datagrid-rs {
                 border: none;
                 box-shadow: none !important;
@@ -60,63 +60,18 @@
                 }
             }
 
-            // --- Kafelek jako karta --------------------------------
-            // Ramkę rysuje ::before, nie border tbody. Przy
-            // border-collapse: collapse krawędź tbody leży na połówce
-            // piksela i przeglądarka zaokrągla ją różnie po obu
-            // stronach — obrys wychodził 1 px z lewej i 2 px z prawej.
-            // Z tego samego powodu bez border-radius (zaokrąglał się
-            // tylko cień, ramka zostawała kwadratowa).
+            // --- Rekord (wspólne dla kafelków i listy zwykłej) ------
             > tbody:not(.td-datagrid-rs) {
-                position: relative;
-                border: none;
                 box-shadow: 0 1px 2px var(--table-tile-shadow) !important;
 
-                &::before {
-                    content: "";
-                    position: absolute;
-                    inset: 0;
-                    border: 1px solid var(--table-tile-border);
-                    pointer-events: none;
-                    z-index: 2;
-                }
-
-                // zewnętrzne krawędzie wierszy dublowałyby ::before
-                > tr:first-child {
-                    border-top: none;
-                }
-                > tr:last-child {
-                    border-bottom: none;
-                }
-
-                > tr {
-                    display: table-row;
-
-                    > td {
-                        display: table-cell;
-                        width: auto !important;
-                        max-width: none !important;
-                        &:not([style*="background"]) {
-                            background-color: var(--table-tile-surface) !important;
-                        }
-                    }
-
-                    // komórka treści miała własną ramkę — po lewej
-                    // rysowała się podwójnie
-                    > td.td-datagrid-details {
-                        border: none !important;
-                    }
+                > tr > td:not([style*="background"]) {
+                    background-color: var(--table-tile-surface) !important;
                 }
 
                 // Rekord bieżący — obrys zamiast plamy na całej karcie.
                 &.tf-active {
                     box-shadow: 0 2px 6px var(--table-tile-active-ring) !important;
 
-                    // akcent tylko po bokach — góra i dół zostają szare
-                    &::before {
-                        border-left-color: var(--table-tile-accent);
-                        border-right-color: var(--table-tile-accent);
-                    }
                     > tr > td:not([style*="background"]),
                     .td-datagrid-details td:not([style*="background"]) {
                         background-color: var(--table-tile-active-bg) !important;
@@ -125,61 +80,93 @@
                         background-color: var(--table-tile-active-label-bg) !important;
                     }
                 }
+            }
 
-                // Lista zwykła (bez .td-datagrid-details, np. Zdarzenia):
-                // krawędź rekordu rysują już ramki komórek, więc ramka
-                // ::before dałaby drugą linię obok. Zostaje tylko obrys
-                // rekordu bieżącego, nałożony dokładnie na zewnętrzne
-                // ramki komórek — w modelu collapse leżą one pół piksela
-                // poza tbody z boków i u dołu, a u góry równo z nim.
-                &:not(:has(> tr > td.td-datagrid-details)) {
-                    &::before {
-                        inset: 0 -0.5px -0.5px;
-                        border-color: transparent;
+            // --- Lista zwykła (bez .td-datagrid-details, np. Zdarzenia)
+            // Zostaje tabelą; krawędź rekordu rysują ramki komórek.
+            // Akcent rekordu bieżącego (tylko po bokach) dostają ramki
+            // skrajnych komórek pierwszego wiersza — bez pozycjonowania,
+            // którego Safari w tabelach nie obsługuje.
+            &:not(:has(> tbody > tr > td.td-datagrid-details)) > tbody.tf-active:not(.td-datagrid-rs) > tr:first-child {
+                > td:first-child {
+                    border-left-color: var(--table-tile-accent) !important;
+                }
+                > td:last-child {
+                    border-right-color: var(--table-tile-accent) !important;
+                }
+            }
+
+            // --- Kafelki (lista z .td-datagrid-details) -------------
+            // Na telefonie rekord przestaje być wierszem tabeli
+            // i staje się zwykłym blokiem. Wcześniej ramkę, pasek
+            // z kwadracikiem i obrys budowało pozycjonowanie względem
+            // tbody (position: relative + absolute), a Safari/iOS
+            // nie traktuje tbody/tr jako punktu odniesienia — kwadraciki
+            // i obrys lądowały poza kafelkiem. Blok nie ma tego problemu.
+            // Rogi celowo proste (bez border-radius).
+            &:has(> tbody > tr > td.td-datagrid-details) {
+                display: block;
+                width: 100%;
+
+                > colgroup {
+                    display: none;
+                }
+
+                > tbody {
+                    display: block;
+                }
+
+                > tbody.td-datagrid-rs {
+                    height: 12px;
+                    > tr {
+                        display: none;
                     }
-                    &.tf-active::before {
+                }
+
+                > tbody:not(.td-datagrid-rs) {
+                    position: relative;
+                    border: 1px solid var(--table-tile-border);
+                    overflow: hidden;
+
+                    // akcent tylko po bokach — góra i dół zostają szare
+                    &.tf-active {
                         border-left-color: var(--table-tile-accent);
                         border-right-color: var(--table-tile-accent);
                     }
+
+                    > tr {
+                        display: block;
+                        border: none;
+                    }
+
+                    > tr > td {
+                        display: block;
+                        width: auto !important;
+                        max-width: none !important;
+                        padding: 0 !important;
+                        border: none !important;
+                    }
+
+                    // Pozostałe komórki (np. przyciski z kolumny 0 px)
+                    // i tak były niewidoczne — w bloku zajęłyby miejsce.
+                    > tr > td:not(.td-datagrid-details):not(:has(.tp-checkbox)) {
+                        display: none;
+                    }
+
+                    // Zaznaczanie: pasek 28 px nad treścią zamiast
+                    // kolumny 34 px ciągnącej się przez cały rekord.
+                    > tr > td:has(.tp-checkbox) {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 28px;
+                        border-bottom: 1px solid var(--table-tile-line) !important;
+
+                        .tp-checkbox {
+                            transform: scale(1.2);
+                        }
+                    }
                 }
-            }
-
-            // --- Zaznaczanie ---------------------------------------
-            // Kolumna 34 px ciągnęła się przez całą wysokość rekordu
-            // i zjadała szerokość treści. Przy table-layout: fixed
-            // o szerokości decyduje wyłącznie <col style="width:34px">,
-            // więc zerujemy sam <col>, a kwadracik idzie na pasek
-            // nad treścią.
-            // Tylko dla kafelków (.td-datagrid-details): lista zwykła
-            // (np. Zdarzenia) zostaje tabelą także na telefonie i tam
-            // kwadracik musi zostać w swojej kolumnie.
-            &:has(> tbody > tr > td.td-datagrid-details):has(> tbody > tr > td:first-child .tp-checkbox) > colgroup > col:first-child {
-                width: 0 !important;
-            }
-
-            > tbody:not(.td-datagrid-rs):has(> tr > td.td-datagrid-details) > tr > td:first-child:has(.tp-checkbox) {
-                width: 0 !important;
-                min-width: 0 !important;
-                padding: 0 !important;
-                border: none !important;
-                overflow: visible;
-
-                // na środku paska nad treścią (pasek ma 28 px)
-                .tp-checkbox {
-                    position: absolute;
-                    top: 14px;
-                    left: 50%;
-                    transform: translate(-50%, -50%) scale(1.2);
-                    z-index: 3;
-                }
-            }
-
-            // miejsce na pasek z kwadracikiem — tylko gdy jest kwadracik;
-            // linia oddziela pasek od pierwszego wiersza tak jak wiersze
-            // między sobą
-            > tbody:has(> tr > td:first-child .tp-checkbox) .td-datagrid-details > table {
-                margin-top: 28px;
-                border-top: 1px solid var(--table-tile-line);
             }
         }
 
