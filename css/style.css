@@ -14201,16 +14201,14 @@ html[data-bs-theme=dark] .td-datagrid > section > table .tf-editor button:last-o
 .tc-group-header {
   margin: 12px -12px 12px -12px;
   padding: 6px 12px;
-  border-bottom: 1px solid #dfe2e6;
-  color: var(--t-font-color);
-  font-size: 16px;
-  font-weight: 500;
+  border-bottom: 1px solid color-mix(in srgb, var(--bs-gray-500) 55%, var(--bs-gray-600)) !important;
 }
 .tc-group-header span {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 11px;
-  color: var(--bs-gray-800);
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.02em;
+  color: var(--bs-gray-700) !important;
 }
 .tc-group-header .tn-toolbox button {
   padding-top: 0px;
@@ -14578,7 +14576,6 @@ input, button, select, optgroup, textarea {
   overflow: auto;
 }
 .td-datagrid > section > table {
-  background-color: var(--t-background-color);
   margin-bottom: 0px;
   color: var(--t-font-color);
 }
@@ -14732,7 +14729,14 @@ input, button, select, optgroup, textarea {
   margin-top: 4px !important;
 }
 .td-datagrid table thead tr {
-  border-bottom-width: 1px;
+  border-bottom: 1px solid var(--bs-gray-500);
+}
+.td-datagrid table thead tr * {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.02em;
+  color: var(--bs-gray-700) !important;
 }
 .td-datagrid table .td-datagrid-group {
   font-weight: bold;
@@ -15934,13 +15938,17 @@ html[data-ui-mode=mini] .td-datagrid .tf-editor .te-combo {
 .tc-tabs .tc-group header {
   background-color: #f3f4f4;
   /*background-color: var(--bs-code-color);*/
-  font-size: 16px;
   padding: 6px 24px;
   margin: 6px 0px;
-  font-weight: 500;
-  color: var(--t-font-color-light);
   border-radius: 0;
-  border-top: 1px solid var(--t-border-color);
+  border-top: 1px solid color-mix(in srgb, var(--bs-gray-500) 55%, var(--bs-gray-600));
+}
+.tc-tabs .tc-group header span {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.02em;
+  color: var(--bs-gray-700) !important;
 }
 .tc-tabs .tl-stack > div:first-child > .tc-group > header {
   margin-top: -13px;
@@ -16185,6 +16193,81 @@ aside .tn-toolbox button {
 
 .btn-warning {
   color: var(--t-font-color);
+}
+
+.tl-wrapgrid > .tp-button.vstack {
+  --bs-btn-bg: var(--bs-body-bg);
+  --bs-btn-border-color: var(--bs-border-color);
+  --bs-btn-hover-bg: var(--bs-primary-bg-subtle);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-bg: var(--bs-primary-bg-subtle);
+  --bs-btn-active-border-color: var(--bs-primary);
+  /* Bootstrap przestawia tekst na biały, gdy przycisk obrysowy
+     wypełnia się na hoverze. Przy jasnym podświetleniu dawało to
+     kontrast 1,09:1 — podpis praktycznie znikał. */
+  --bs-btn-hover-color: var(--bs-body-color);
+  --bs-btn-active-color: var(--bs-body-color);
+  background-color: var(--bs-body-bg) !important;
+  border-color: var(--bs-border-color) !important; /* było #6c757d */
+  border-radius: var(--bs-border-radius-lg) !important; /* było 4px */
+  /* cień bez przesunięcia — rozmycie rozchodzi się równo dookoła */
+  box-shadow: 0 0 6px rgba(var(--bs-black-rgb), 0.12) !important;
+  padding: 16px 12px !important;
+  gap: 10px;
+  justify-content: center;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease, color 0.12s ease !important;
+}
+
+/* Na ciemnym tle cień liczony z --bs-black-rgb jest niewidoczny —
+   tu potrzebna jest czerń z własnym, mocniejszym kryciem. */
+html[data-bs-theme=dark] .tl-wrapgrid > .tp-button.vstack {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* --- Ikona (tylko rozmiar i kolor) --------------------------- */
+.tl-wrapgrid > .tp-button.vstack > i {
+  font-size: 30px; /* było 32px */
+  color: var(--bs-primary) !important; /* było #0d6efd */
+  transition: transform 0.12s ease;
+}
+
+/* #3b71ca na ciemnym tle jest za ciemny — Bootstrap ma na to
+   gotowy, rozjaśniony wariant tego samego koloru. */
+html[data-bs-theme=dark] .tl-wrapgrid > .tp-button.vstack > i {
+  color: var(--bs-primary-text-emphasis) !important;
+}
+
+/* --- Stany ---------------------------------------------------- */
+.tl-wrapgrid > .tp-button.vstack:hover {
+  background-color: var(--bs-primary-bg-subtle) !important;
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0 14px rgba(var(--bs-black-rgb), 0.2) !important;
+}
+
+html[data-bs-theme=dark] .tl-wrapgrid > .tp-button.vstack:hover {
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.6) !important;
+}
+
+.tl-wrapgrid > .tp-button.vstack:hover > i {
+  transform: scale(1.06);
+}
+
+/* podpis zostaje czytelny również pod kursorem i przy kliknięciu */
+.tl-wrapgrid > .tp-button.vstack:hover,
+.tl-wrapgrid > .tp-button.vstack:hover > span,
+.tl-wrapgrid > .tp-button.vstack:active,
+.tl-wrapgrid > .tp-button.vstack:active > span {
+  color: var(--bs-body-color) !important;
+}
+
+.tl-wrapgrid > .tp-button.vstack:active {
+  box-shadow: 0 0 3px rgba(var(--bs-black-rgb), 0.15) !important;
+}
+
+.tl-wrapgrid > .tp-button.vstack:focus-visible {
+  outline: none;
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0 0 var(--bs-focus-ring-width) var(--bs-focus-ring-color) !important;
 }
 
 .tb-carousel button:focus, .tb-carousel button:active {
