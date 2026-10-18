@@ -189,4 +189,7 @@ html[data-bs-theme="dark"] {
             border-right: 1px solid var(--t-border-color);
         }
     }
+    .td-datagrid table thead tr *{
+        color: var(--t-font-color-light);
+    }
 }
