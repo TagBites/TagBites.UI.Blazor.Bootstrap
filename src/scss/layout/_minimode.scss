@@ -168,7 +168,7 @@
     html[data-ui-mode="mini"] {
         .tc-workspace {
             margin: var(--tv-default-full-margin)!important;
-            height: calc(100% + 8px) !important;
+            height: calc(100% - 20px) !important;
             & > .tc-tabs > header{
             border: 1px solid var(--t-border-color);
             border-top-left-radius: 10px;

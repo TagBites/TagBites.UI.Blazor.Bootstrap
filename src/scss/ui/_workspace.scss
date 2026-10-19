@@ -171,7 +171,7 @@ section:has(> .tc-workspace) {
 @media only screen and (max-width: 1360px) {
     .tc-workspace {
         margin: -12px !important;
-        height: calc(100% + 24px) !important;
+        // height: calc(100% + 24px) !important;
         > .tc-tabs {
             &::after {
                 height: 0;

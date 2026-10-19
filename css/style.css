@@ -16759,7 +16759,6 @@ section:has(> .tc-workspace) {
 @media only screen and (max-width: 1360px) {
   .tc-workspace {
     margin: -12px !important;
-    height: calc(100% + 24px) !important;
   }
   .tc-workspace > .tc-tabs::after {
     height: 0;
@@ -17696,7 +17695,7 @@ div:not(.tl-formgroup) > .te-textarea {
 @media only screen and (min-width: 767px) and (max-width: 1360px) {
   html[data-ui-mode=mini] .tc-workspace {
     margin: var(--tv-default-full-margin) !important;
-    height: calc(100% + 8px) !important;
+    height: calc(100% - 20px) !important;
   }
   html[data-ui-mode=mini] .tc-workspace > .tc-tabs > header {
     border: 1px solid var(--t-border-color);
